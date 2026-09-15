@@ -1,0 +1,9 @@
+test_cuda_uses_hardware_peak_counter (test_regressions.RegressionTests.test_cuda_uses_hardware_peak_counter) ... ok
+test_hooks_cleaned_on_failure_and_existing_hook_preserved (test_regressions.RegressionTests.test_hooks_cleaned_on_failure_and_existing_hook_preserved) ... ok
+test_mps_peak_survives_later_deallocation (test_regressions.RegressionTests.test_mps_peak_survives_later_deallocation) ... ok
+test_tied_weight_has_two_names_but_one_contribution (test_regressions.RegressionTests.test_tied_weight_has_two_names_but_one_contribution) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.008s
+
+OK

@@ -1,0 +1,11 @@
+uv run python -m src.inspect_model
+trainable params: 460,800 || all params: 134,975,808 || trainable%: 0.3414
+trainable params: 4,884,480 || all params: 139,399,488 || trainable%: 3.5039
+
+Параметров: 134 515 008 (по таблице) / 134 515 008 (напрямую)
+Условия: macOS-26.5.1-x86_64-i386-64bit, device cpu, dtype float32, seq_len 256, прогонов на режим 3, torch 2.2.2, transformers 4.53.2
+  inference  пик   1031.9 МБ  (RSS процесса: ru_maxrss)
+  full_ft    пик   2627.6 МБ  (RSS процесса: ru_maxrss)
+  lora       пик   1241.5 МБ  (RSS процесса: ru_maxrss)
+
+Отчёт: docs/anatomy.md, график: docs/activations.png
