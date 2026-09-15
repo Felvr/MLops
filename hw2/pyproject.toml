@@ -1,0 +1,19 @@
+[project]
+name = "mlops-hw2"
+version = "0.1.0"
+description = "MLOPS-26, домашняя работа 2: анатомия SmolLM2, хуки, профиль памяти"
+requires-python = ">=3.12,<3.13"
+# Intel macOS: последняя готовая сборка torch — 2.2.2; NumPy закреплён по ABI.
+# На остальных платформах используется torch 2.5.1.
+# psutil нужен для peak_wset на Windows, где нет модуля resource.
+dependencies = [
+    "torch==2.2.2; sys_platform == 'darwin' and platform_machine == 'x86_64'",
+    "torch==2.5.1; sys_platform != 'darwin' or platform_machine != 'x86_64'",
+    "transformers==4.53.2",
+    "accelerate==1.9.0",
+    "peft==0.14.0",
+    "matplotlib==3.9.4",
+    "numpy==1.26.4",
+    "psutil==7.0.0",
+    "pyyaml==6.0.2",
+]

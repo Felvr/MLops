@@ -1,0 +1,43 @@
+# В корне публикуются инструкции, настройки Git и папки готовых ДЗ hw1…hw999.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/agent.md
+!/AGENTS.md
+!/hw[0-9]/
+!/hw[0-9][0-9]/
+!/hw[0-9][0-9][0-9]/
+
+# Исходные материалы и рабочие черновики не входят в готовые работы.
+**/*-broken/
+**/materials/
+**/lectures/
+**/drafts/
+**/scratch/
+**/backups/
+**/.local/
+
+# Окружения, кэши и локальные настройки внутри любой работы.
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.cache/
+**/.ipynb_checkpoints/
+**/.idea/
+**/.vscode/
+**/.DS_Store
+**/Thumbs.db
+*.py[cod]
+*.bak
+*.orig
+*.tmp
+*.swp
+.env
+.env.*
+!.env.example
+.coverage
+htmlcov/

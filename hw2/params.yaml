@@ -1,0 +1,46 @@
+# Настройки модели и эксперимента.
+model:
+  name: "HuggingFaceTB/SmolLM2-135M-Instruct"
+  revision: "12fd25f77366fa6b3b4b768ec3050bf629380bac"
+  dtype: "float32"
+  device: "cpu"             # Intel Mac: переносимый CPU-прогон
+
+runtime:
+  num_threads: 4
+
+generate:
+  seed: 42
+  enable_thinking: false    # Qwen3 без этого отвечает <think>-блоком
+
+hooks:
+  prompt: "Объясни, что такое MLOps, в трёх предложениях."
+  plot: "docs/activations.png"
+
+memory:
+  # Один шаг forward+backward+optimizer на короткой последовательности.
+  # Длина фиксирована во всех трёх режимах для сопоставимого замера.
+  seq_len: 256
+  batch_size: 1
+  lr: 1.0e-5
+  # Сколько раз повторить каждый режим (каждый прогон — отдельный процесс).
+  # Берётся худший пик, число прогонов уходит в «Условия замера» отчёта:
+  # цифра, снятая один раз, и медиана пяти — разные утверждения.
+  repeats: 3
+  poll_interval: 0.01
+
+lora:
+  alpha_ratio: 2            # lora_alpha = alpha_ratio * r
+  dropout: 0.0
+  # Первый конфиг используется ещё и в замере памяти.
+  configs:
+    - name: "r=8, q_proj+v_proj"
+      r: 8
+      target_modules: ["q_proj", "v_proj"]
+    - name: "r=16, все линейные"
+      r: 16
+      target_modules: ["q_proj", "k_proj", "v_proj", "o_proj",
+                       "gate_proj", "up_proj", "down_proj"]
+
+report:
+  json: "docs/report.json"
+  markdown: "docs/anatomy.md"
