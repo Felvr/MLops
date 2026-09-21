@@ -1,0 +1,66 @@
+collect:
+  version: "v2"
+  subset: 3_GHR_QA
+  documents:
+    v1: 400
+    v2: 650
+  question_types:
+  - information
+  - frequency
+  - genetic changes
+  - inheritance
+  system_prompts:
+  - Answer the question about a genetic condition in English using educational medical
+    information.
+  - Provide an English educational answer about the named genetic disorder. Do not
+    infer a diagnosis for an individual.
+  - Explain the requested aspect of the hereditary condition in English for a reader
+    seeking general medical information.
+  - You are an educational medical question-answering assistant. Answer in English
+    about the condition in the question.
+clean:
+  min_user_chars: 30
+  max_user_chars: 4000
+  min_assistant_chars: 2
+  near_dup:
+    enabled: true
+    shingle_words: 4
+    num_perm: 64
+    threshold: 0.85
+  pii:
+    enabled: true
+diversity:
+  min_examples: 1000
+  min_system_prompts: 3
+  min_groups: 50
+  max_group_share: 0.1
+  min_answer_len_ratio: 1.6
+  max_same_length_share: 0.25
+  max_duplicate_answer_share: 0.3
+split:
+  group_key: topic
+  ratios:
+    train: 0.8
+    val: 0.1
+    test: 0.1
+  seed: 42
+contamination:
+  threshold: 0.85
+paths:
+  raw: "data/raw.jsonl"
+  clean: "data/clean.jsonl"
+  train: "data/train.jsonl"
+  val: "data/val.jsonl"
+  test: "data/test.jsonl"
+  metrics_collect: metrics/collect.json
+  metrics_clean: metrics/clean.json
+  metrics_split: metrics/split.json
+  metrics_diversity: metrics/diversity.json
+  datasheet: docs/datasheet.md
+  provenance: "data/provenance.jsonl"
+  metrics_contamination: metrics/contamination.json
+source:
+  url: https://codeload.github.com/abachaa/MedQuAD/zip/577bd37b96c02d1833b2c9eed2de9f96964e96cb
+  revision: 577bd37b96c02d1833b2c9eed2de9f96964e96cb
+  sha256: 161d948f8ce8f82accca1f5769a512dff2a01af2b3004d48f2b3da2758a38a09
+  path: "data/source/medquad.zip"

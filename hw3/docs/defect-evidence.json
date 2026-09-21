@@ -1,0 +1,85 @@
+{
+  "version": "v2",
+  "rows": 2495,
+  "old_random_split_train_test": {
+    "id_overlap": 0,
+    "text_overlap": 0,
+    "group_overlap": 217,
+    "near_dup_pairs": 0,
+    "examples": {
+      "id": [],
+      "group": [
+        "21-hydroxylase deficiency",
+        "9q22.3 microdeletion",
+        "aceruloplasminemia"
+      ],
+      "near_dup": []
+    }
+  },
+  "fixed_split": {
+    "passed": true,
+    "pairs": {
+      "train_val": {
+        "id_overlap": 0,
+        "text_overlap": 0,
+        "group_overlap": 0,
+        "near_dup_pairs": 0,
+        "examples": {
+          "id": [],
+          "group": [],
+          "near_dup": []
+        }
+      },
+      "train_test": {
+        "id_overlap": 0,
+        "text_overlap": 0,
+        "group_overlap": 0,
+        "near_dup_pairs": 0,
+        "examples": {
+          "id": [],
+          "group": [],
+          "near_dup": []
+        }
+      },
+      "val_test": {
+        "id_overlap": 0,
+        "text_overlap": 0,
+        "group_overlap": 0,
+        "near_dup_pairs": 0,
+        "examples": {
+          "id": [],
+          "group": [],
+          "near_dup": []
+        }
+      }
+    }
+  },
+  "degenerate": {
+    "stats": {
+      "examples": 1200,
+      "system_prompts": 1,
+      "groups": 1,
+      "largest_group": "одна-единственная тема - 2025",
+      "largest_group_share": 1.0,
+      "answer_len": {
+        "p10": 17,
+        "p50": 17,
+        "p90": 17,
+        "ratio_p90_p10": 1.0,
+        "cv": 0.0,
+        "min": 17,
+        "max": 17
+      },
+      "same_length_share": 1.0,
+      "duplicate_answer_share": 0.9967
+    },
+    "violations": [
+      "системных промптов 1, нужно ≥ 3 — модель заучит единственную формулировку как константу",
+      "групп 1, нужно ≥ 50",
+      "крупнейшая группа занимает 100.0% (порог 10%): «одна-единственная тема - 2025»",
+      "разброс длин ответа p90/p10 = 1.0, нужно ≥ 1.6 — ответы одной длины выдают шаблон",
+      "100.0% ответов имеют одну и ту же длину (порог 25%)",
+      "99.7% ответов дословно повторяют друг друга (порог 30%)"
+    ]
+  }
+}

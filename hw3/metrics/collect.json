@@ -1,0 +1,20 @@
+{
+  "version": "v2",
+  "source_xml_files": 11274,
+  "domain_xml_files": 1086,
+  "excluded_other_domains": 10188,
+  "selected_documents": 650,
+  "pairs_scanned": 3250,
+  "excluded_question_type": 650,
+  "rows_out": 2600,
+  "questions_by_type": {
+    "information": 650,
+    "frequency": 650,
+    "genetic changes": 650,
+    "inheritance": 650
+  },
+  "system_prompts": 4,
+  "enriched_rows": 2600,
+  "source_revision": "577bd37b96c02d1833b2c9eed2de9f96964e96cb",
+  "excluded_empty": 0
+}

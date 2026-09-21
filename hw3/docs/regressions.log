@@ -1,0 +1,10 @@
+uv run python -m unittest discover -s tests -v
+test_group_assignments_survive_extension_and_reordering (test_regressions.RegressionTests.test_group_assignments_survive_extension_and_reordering) ... ok
+test_jaccard_index_matches_bruteforce (test_regressions.RegressionTests.test_jaccard_index_matches_bruteforce) ... ok
+test_mcq_options_reordering (test_regressions.RegressionTests.test_mcq_options_reordering) ... ok
+test_pii_russian_and_english (test_regressions.RegressionTests.test_pii_russian_and_english) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.076s
+
+OK

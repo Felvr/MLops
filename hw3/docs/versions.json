@@ -1,0 +1,332 @@
+{
+  "v1": {
+    "metrics": {
+      "diversity": {
+        "version": "v1",
+        "examples": 1531,
+        "system_prompts": 4,
+        "groups": 400,
+        "largest_group": "congenital bilateral absence of the vas deferens",
+        "largest_group_share": 0.0026,
+        "answer_len": {
+          "p10": 131,
+          "p50": 790,
+          "p90": 2051,
+          "ratio_p90_p10": 15.66,
+          "cv": 0.831,
+          "min": 44,
+          "max": 4346
+        },
+        "same_length_share": 0.0751,
+        "duplicate_answer_share": 0.0927,
+        "thresholds": {
+          "min_examples": 1000,
+          "min_system_prompts": 3,
+          "min_groups": 50,
+          "max_group_share": 0.1,
+          "min_answer_len_ratio": 1.6,
+          "max_same_length_share": 0.25,
+          "max_duplicate_answer_share": 0.3
+        },
+        "violations": [],
+        "passed": true,
+        "seconds": 0.44
+      },
+      "contamination": {
+        "passed": true,
+        "pairs": {
+          "train_val": {
+            "id_overlap": 0,
+            "text_overlap": 0,
+            "group_overlap": 0,
+            "near_dup_pairs": 0,
+            "examples": {
+              "id": [],
+              "group": [],
+              "near_dup": []
+            }
+          },
+          "train_test": {
+            "id_overlap": 0,
+            "text_overlap": 0,
+            "group_overlap": 0,
+            "near_dup_pairs": 0,
+            "examples": {
+              "id": [],
+              "group": [],
+              "near_dup": []
+            }
+          },
+          "val_test": {
+            "id_overlap": 0,
+            "text_overlap": 0,
+            "group_overlap": 0,
+            "near_dup_pairs": 0,
+            "examples": {
+              "id": [],
+              "group": [],
+              "near_dup": []
+            }
+          }
+        }
+      },
+      "collect": {
+        "version": "v1",
+        "source_xml_files": 11274,
+        "domain_xml_files": 1086,
+        "excluded_other_domains": 10188,
+        "selected_documents": 400,
+        "pairs_scanned": 2000,
+        "excluded_question_type": 400,
+        "rows_out": 1600,
+        "questions_by_type": {
+          "information": 400,
+          "frequency": 400,
+          "genetic changes": 400,
+          "inheritance": 400
+        },
+        "system_prompts": 4,
+        "enriched_rows": 1600,
+        "source_revision": "577bd37b96c02d1833b2c9eed2de9f96964e96cb",
+        "excluded_empty": 0
+      },
+      "split": {
+        "version": "v1",
+        "seed": 42,
+        "group_key": "topic",
+        "groups_total": 400,
+        "sizes": {
+          "train": 1192,
+          "val": 186,
+          "test": 153
+        },
+        "groups": {
+          "train": 312,
+          "val": 49,
+          "test": 39
+        },
+        "ratios_actual": {
+          "train": 0.7786,
+          "val": 0.1215,
+          "test": 0.0999
+        },
+        "contamination": {
+          "id_overlap": 0,
+          "text_overlap": 0,
+          "group_overlap": 0,
+          "near_dup_pairs": 0,
+          "examples": {
+            "id": [],
+            "group": [],
+            "near_dup": []
+          }
+        },
+        "seconds": 0.46
+      },
+      "clean": {
+        "version": "v1",
+        "rows_in": 1600,
+        "rows_out": 1531,
+        "dropped_length": 69,
+        "dropped_exact_dup": 0,
+        "dropped_near_dup": 0,
+        "pii_rows_masked": 0,
+        "pii_hits": {
+          "phone": 0,
+          "email": 0,
+          "birth_date": 0
+        },
+        "groups": 400,
+        "user_chars": {
+          "p50": 56,
+          "p90": 79,
+          "p99": 111,
+          "max": 149
+        },
+        "assistant_chars": {
+          "p50": 790,
+          "p90": 2051,
+          "p99": 3188,
+          "max": 4346
+        },
+        "seconds": 1.86
+      }
+    },
+    "files": {
+      "clean.jsonl": "a1221bca80f8f91c62652be56cf62daf837de68c51676f3b9aaf811035929f7e",
+      "train.jsonl": "65e989bbd95483012b5bdf689589247674739823ddc15c9c60376c1ce1398796",
+      "test.jsonl": "0ec297add692bcb5f12710e962b18b78c5b307e721474f6d7f4c50ca017b71b8",
+      "val.jsonl": "6114cfe3ed00036a232c1b134622a64490e5a374ae9dcb17b5b24fe5819e660e",
+      "provenance.jsonl": "4cbf70b8b316f9db94570b4431dad68a94fdbbd73174ff18e43ab4c0e0e9f79b",
+      "raw.jsonl": "12f909bd7cd6e4b483fa36a275da1e48e54b3bae729a8abdba3e3d2f25c1a178"
+    }
+  },
+  "v2": {
+    "metrics": {
+      "diversity": {
+        "version": "v2",
+        "examples": 2495,
+        "system_prompts": 4,
+        "groups": 650,
+        "largest_group": "congenital bilateral absence of the vas deferens",
+        "largest_group_share": 0.0016,
+        "answer_len": {
+          "p10": 128,
+          "p50": 795,
+          "p90": 2046,
+          "ratio_p90_p10": 15.98,
+          "cv": 0.83,
+          "min": 41,
+          "max": 4346
+        },
+        "same_length_share": 0.0774,
+        "duplicate_answer_share": 0.0982,
+        "thresholds": {
+          "min_examples": 1000,
+          "min_system_prompts": 3,
+          "min_groups": 50,
+          "max_group_share": 0.1,
+          "min_answer_len_ratio": 1.6,
+          "max_same_length_share": 0.25,
+          "max_duplicate_answer_share": 0.3
+        },
+        "violations": [],
+        "passed": true,
+        "seconds": 0.66
+      },
+      "contamination": {
+        "passed": true,
+        "pairs": {
+          "train_val": {
+            "id_overlap": 0,
+            "text_overlap": 0,
+            "group_overlap": 0,
+            "near_dup_pairs": 0,
+            "examples": {
+              "id": [],
+              "group": [],
+              "near_dup": []
+            }
+          },
+          "train_test": {
+            "id_overlap": 0,
+            "text_overlap": 0,
+            "group_overlap": 0,
+            "near_dup_pairs": 0,
+            "examples": {
+              "id": [],
+              "group": [],
+              "near_dup": []
+            }
+          },
+          "val_test": {
+            "id_overlap": 0,
+            "text_overlap": 0,
+            "group_overlap": 0,
+            "near_dup_pairs": 0,
+            "examples": {
+              "id": [],
+              "group": [],
+              "near_dup": []
+            }
+          }
+        }
+      },
+      "collect": {
+        "version": "v2",
+        "source_xml_files": 11274,
+        "domain_xml_files": 1086,
+        "excluded_other_domains": 10188,
+        "selected_documents": 650,
+        "pairs_scanned": 3250,
+        "excluded_question_type": 650,
+        "rows_out": 2600,
+        "questions_by_type": {
+          "information": 650,
+          "frequency": 650,
+          "genetic changes": 650,
+          "inheritance": 650
+        },
+        "system_prompts": 4,
+        "enriched_rows": 2600,
+        "source_revision": "577bd37b96c02d1833b2c9eed2de9f96964e96cb",
+        "excluded_empty": 0
+      },
+      "split": {
+        "version": "v2",
+        "seed": 42,
+        "group_key": "topic",
+        "groups_total": 650,
+        "sizes": {
+          "train": 1972,
+          "val": 266,
+          "test": 257
+        },
+        "groups": {
+          "train": 514,
+          "val": 70,
+          "test": 66
+        },
+        "ratios_actual": {
+          "train": 0.7904,
+          "val": 0.1066,
+          "test": 0.103
+        },
+        "contamination": {
+          "id_overlap": 0,
+          "text_overlap": 0,
+          "group_overlap": 0,
+          "near_dup_pairs": 0,
+          "examples": {
+            "id": [],
+            "group": [],
+            "near_dup": []
+          }
+        },
+        "seconds": 0.82
+      },
+      "clean": {
+        "version": "v2",
+        "rows_in": 2600,
+        "rows_out": 2495,
+        "dropped_length": 105,
+        "dropped_exact_dup": 0,
+        "dropped_near_dup": 0,
+        "pii_rows_masked": 0,
+        "pii_hits": {
+          "phone": 0,
+          "email": 0,
+          "birth_date": 0
+        },
+        "groups": 650,
+        "user_chars": {
+          "p50": 56,
+          "p90": 78,
+          "p99": 107,
+          "max": 149
+        },
+        "assistant_chars": {
+          "p50": 795,
+          "p90": 2046,
+          "p99": 3171,
+          "max": 4346
+        },
+        "seconds": 3.25
+      }
+    },
+    "files": {
+      "clean.jsonl": "adb8662bfca777df67bd72c66b0958d95dfd56142424cc146069cc721f81fbdc",
+      "train.jsonl": "5b641da30aed72481c9b10e083a52a38c95f3609f221a8c124b6ac49ae768183",
+      "test.jsonl": "4b5403dbd72c57a1e1f13730570fc712a08829d3e4b0fd71d4429a4c5c47976d",
+      "val.jsonl": "1dda11055f8377068788eaa57e8e6c709d888f0d807de903edf4da444c229f20",
+      "provenance.jsonl": "0d9f12eb2cf6eaab61fc903cfa38415e15d82660a67d1810a7d4691680df4ae8",
+      "raw.jsonl": "cdb2590ecb6856850f1f78f670e9e01a96a660c0c7c3d0f9448af0ebef288574"
+    }
+  },
+  "extension_check": {
+    "v1_rows_preserved": true,
+    "v1_clean_rows": 1531,
+    "v2_clean_rows": 2495,
+    "new_clean_rows": 964
+  }
+}
