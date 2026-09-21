@@ -1,5 +1,5 @@
 collect:
-  version: v1
+  version: "v2"
   subset: 3_GHR_QA
   documents:
     v1: 400
