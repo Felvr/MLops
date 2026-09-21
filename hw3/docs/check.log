@@ -3,7 +3,7 @@ bash tests/check.sh
 1. Данные не в git и под управлением DVC
   ✓ git не отслеживает ни одного файла в data/
   ✓ data/ перечислен в .gitignore проекта
-  ✓ remote DVC настроен: local /Users/revyak/Documents/ChatGPT/MLops/.local/hw3-dvc-remote 
+  ✓ remote DVC настроен: local /Users/revyak/Documents/ChatGPT/MLops/.local/hw3-dvc-remote
   ✓ все артефакты из params.paths объявлены в outs dvc.yaml
 
 2. Дедупликация ловит не только буквальные повторы
@@ -31,4 +31,3 @@ bash tests/check.sh
   ✓ в git нет мусора и файлов тяжелее 5 МБ
 
 Все проверки пройдены. Не забудьте docs/datasheet.md и разбор дефектов.
-
