@@ -1,0 +1,379 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python -m src.download
+    deps:
+    - path: pyproject.toml
+      hash: md5
+      md5: d4c235e0505fbf48bea4db65211a2288
+      size: 544
+    - path: src/config.py
+      hash: md5
+      md5: eb7f43a524c6a1f51e1dbd2e9678a918
+      size: 550
+    - path: src/download.py
+      hash: md5
+      md5: 760880142580bc6848a78db84365eeee
+      size: 1285
+    - path: uv.lock
+      hash: md5
+      md5: 15b2da596077385d1ff4b7db5d1aea48
+      size: 397487
+    params:
+      params.yaml:
+        source:
+          url:
+            https://codeload.github.com/abachaa/MedQuAD/zip/577bd37b96c02d1833b2c9eed2de9f96964e96cb
+          revision: 577bd37b96c02d1833b2c9eed2de9f96964e96cb
+          sha256:
+            161d948f8ce8f82accca1f5769a512dff2a01af2b3004d48f2b3da2758a38a09
+          path: data/source/medquad.zip
+    outs:
+    - path: data/source/medquad.zip
+      hash: md5
+      md5: c7c069fd044686031f632d9e9691dcd4
+      size: 16953181
+  collect:
+    cmd: python -m src.collect
+    deps:
+    - path: data/source/medquad.zip
+      hash: md5
+      md5: c7c069fd044686031f632d9e9691dcd4
+      size: 16953181
+    - path: pyproject.toml
+      hash: md5
+      md5: d4c235e0505fbf48bea4db65211a2288
+      size: 544
+    - path: src/collect.py
+      hash: md5
+      md5: f1b49470aa0e326006b806843931a5ac
+      size: 4319
+    - path: src/config.py
+      hash: md5
+      md5: eb7f43a524c6a1f51e1dbd2e9678a918
+      size: 550
+    - path: src/schema.py
+      hash: md5
+      md5: ad834fcb5caa483d3d5d5bfabb433cc0
+      size: 3054
+    - path: uv.lock
+      hash: md5
+      md5: 15b2da596077385d1ff4b7db5d1aea48
+      size: 397487
+    params:
+      params.yaml:
+        collect:
+          version: v1
+          subset: 3_GHR_QA
+          documents:
+            v1: 400
+            v2: 650
+          question_types:
+          - information
+          - frequency
+          - genetic changes
+          - inheritance
+          system_prompts:
+          - Answer the question about a genetic condition in English using
+            educational medical information.
+          - Provide an English educational answer about the named genetic
+            disorder. Do not infer a diagnosis for an individual.
+          - Explain the requested aspect of the hereditary condition in English
+            for a reader seeking general medical information.
+          - You are an educational medical question-answering assistant. Answer
+            in English about the condition in the question.
+        paths.metrics_collect: metrics/collect.json
+        paths.provenance: data/provenance.jsonl
+        paths.raw: data/raw.jsonl
+        source:
+          url:
+            https://codeload.github.com/abachaa/MedQuAD/zip/577bd37b96c02d1833b2c9eed2de9f96964e96cb
+          revision: 577bd37b96c02d1833b2c9eed2de9f96964e96cb
+          sha256:
+            161d948f8ce8f82accca1f5769a512dff2a01af2b3004d48f2b3da2758a38a09
+          path: data/source/medquad.zip
+    outs:
+    - path: data/provenance.jsonl
+      hash: md5
+      md5: 028f50d26a4929184805e482f80660fb
+      size: 401504
+    - path: data/raw.jsonl
+      hash: md5
+      md5: a9363a0a6f0e8bfbe5cbb1f3c462e951
+      size: 2052295
+    - path: metrics/collect.json
+      hash: md5
+      md5: 3336d890c129f7b4a4b3fe58f243078f
+      size: 484
+  clean:
+    cmd: python -m src.clean
+    deps:
+    - path: data/raw.jsonl
+      hash: md5
+      md5: a9363a0a6f0e8bfbe5cbb1f3c462e951
+      size: 2052295
+    - path: pyproject.toml
+      hash: md5
+      md5: d4c235e0505fbf48bea4db65211a2288
+      size: 544
+    - path: src/clean.py
+      hash: md5
+      md5: 3e7c246915d121c7a948d82f94995ee0
+      size: 4368
+    - path: src/config.py
+      hash: md5
+      md5: eb7f43a524c6a1f51e1dbd2e9678a918
+      size: 550
+    - path: src/dedup.py
+      hash: md5
+      md5: bafd222898448a49ccae46593448a734
+      size: 2782
+    - path: src/pii.py
+      hash: md5
+      md5: a89553acf5e92dac79a75bb359b32f21
+      size: 2524
+    - path: src/schema.py
+      hash: md5
+      md5: ad834fcb5caa483d3d5d5bfabb433cc0
+      size: 3054
+    - path: src/stats.py
+      hash: md5
+      md5: a54925032eff4769647b5775d72dd423
+      size: 2222
+    - path: src/textnorm.py
+      hash: md5
+      md5: f8e6ebc70dd421e0f0e76f7507e412e4
+      size: 2104
+    - path: uv.lock
+      hash: md5
+      md5: 15b2da596077385d1ff4b7db5d1aea48
+      size: 397487
+    params:
+      params.yaml:
+        clean:
+          min_user_chars: 30
+          max_user_chars: 4000
+          min_assistant_chars: 2
+          near_dup:
+            enabled: true
+            shingle_words: 4
+            num_perm: 64
+            threshold: 0.85
+          pii:
+            enabled: true
+        collect.version: v1
+        contamination.threshold: 0.85
+        paths.clean: data/clean.jsonl
+        paths.metrics_clean: metrics/clean.json
+        paths.raw: data/raw.jsonl
+    outs:
+    - path: data/clean.jsonl
+      hash: md5
+      md5: 28b97491d0b1533fd85aa3705786aacd
+      size: 1963818
+    - path: metrics/clean.json
+      hash: md5
+      md5: 7d7da6e9bdd59b223f87e620672f69d3
+      size: 447
+  diversity:
+    cmd: python -m src.diversity
+    deps:
+    - path: data/clean.jsonl
+      hash: md5
+      md5: 28b97491d0b1533fd85aa3705786aacd
+      size: 1963818
+    - path: pyproject.toml
+      hash: md5
+      md5: d4c235e0505fbf48bea4db65211a2288
+      size: 544
+    - path: src/config.py
+      hash: md5
+      md5: eb7f43a524c6a1f51e1dbd2e9678a918
+      size: 550
+    - path: src/diversity.py
+      hash: md5
+      md5: 16ed6c6e1ef3eb81876515ac071feb6c
+      size: 6456
+    - path: src/schema.py
+      hash: md5
+      md5: ad834fcb5caa483d3d5d5bfabb433cc0
+      size: 3054
+    - path: src/stats.py
+      hash: md5
+      md5: a54925032eff4769647b5775d72dd423
+      size: 2222
+    - path: src/textnorm.py
+      hash: md5
+      md5: f8e6ebc70dd421e0f0e76f7507e412e4
+      size: 2104
+    - path: uv.lock
+      hash: md5
+      md5: 15b2da596077385d1ff4b7db5d1aea48
+      size: 397487
+    params:
+      params.yaml:
+        collect.version: v1
+        diversity:
+          min_examples: 1000
+          min_system_prompts: 3
+          min_groups: 50
+          max_group_share: 0.1
+          min_answer_len_ratio: 1.6
+          max_same_length_share: 0.25
+          max_duplicate_answer_share: 0.3
+        paths.clean: data/clean.jsonl
+        paths.metrics_diversity: metrics/diversity.json
+        split.group_key: topic
+    outs:
+    - path: metrics/diversity.json
+      hash: md5
+      md5: 6164c5156376df7e32db7987db476bbd
+      size: 692
+  split:
+    cmd: python -m src.split
+    deps:
+    - path: data/clean.jsonl
+      hash: md5
+      md5: 28b97491d0b1533fd85aa3705786aacd
+      size: 1963818
+    - path: metrics/diversity.json
+      hash: md5
+      md5: 6164c5156376df7e32db7987db476bbd
+      size: 692
+    - path: pyproject.toml
+      hash: md5
+      md5: d4c235e0505fbf48bea4db65211a2288
+      size: 544
+    - path: src/config.py
+      hash: md5
+      md5: eb7f43a524c6a1f51e1dbd2e9678a918
+      size: 550
+    - path: src/contamination.py
+      hash: md5
+      md5: 9293919fc5964067833313514c6f9f2b
+      size: 2249
+    - path: src/dedup.py
+      hash: md5
+      md5: bafd222898448a49ccae46593448a734
+      size: 2782
+    - path: src/schema.py
+      hash: md5
+      md5: ad834fcb5caa483d3d5d5bfabb433cc0
+      size: 3054
+    - path: src/split.py
+      hash: md5
+      md5: 44e0e67435852c2dd695dd3442e5056e
+      size: 3636
+    - path: src/textnorm.py
+      hash: md5
+      md5: f8e6ebc70dd421e0f0e76f7507e412e4
+      size: 2104
+    - path: uv.lock
+      hash: md5
+      md5: 15b2da596077385d1ff4b7db5d1aea48
+      size: 397487
+    params:
+      params.yaml:
+        clean.near_dup:
+          enabled: true
+          shingle_words: 4
+          num_perm: 64
+          threshold: 0.85
+        collect.version: v1
+        contamination:
+          threshold: 0.85
+        paths.clean: data/clean.jsonl
+        paths.metrics_split: metrics/split.json
+        paths.test: data/test.jsonl
+        paths.train: data/train.jsonl
+        paths.val: data/val.jsonl
+        split:
+          group_key: topic
+          ratios:
+            train: 0.8
+            val: 0.1
+            test: 0.1
+          seed: 42
+    outs:
+    - path: data/test.jsonl
+      hash: md5
+      md5: 3c3c56c4964dba88d15613a6e468a734
+      size: 195190
+    - path: data/train.jsonl
+      hash: md5
+      md5: d4360d338d3fd6eb9f35cf14af127d6c
+      size: 1525263
+    - path: data/val.jsonl
+      hash: md5
+      md5: 8eb09091e98c7b924db4d7fb28c39a4b
+      size: 243365
+    - path: metrics/split.json
+      hash: md5
+      md5: 8e64979427cf9a1b637a71c596644084
+      size: 522
+  contamination:
+    cmd: python scripts/check_contamination.py
+    deps:
+    - path: data/test.jsonl
+      hash: md5
+      md5: 3c3c56c4964dba88d15613a6e468a734
+      size: 195190
+    - path: data/train.jsonl
+      hash: md5
+      md5: d4360d338d3fd6eb9f35cf14af127d6c
+      size: 1525263
+    - path: data/val.jsonl
+      hash: md5
+      md5: 8eb09091e98c7b924db4d7fb28c39a4b
+      size: 243365
+    - path: pyproject.toml
+      hash: md5
+      md5: d4c235e0505fbf48bea4db65211a2288
+      size: 544
+    - path: scripts/check_contamination.py
+      hash: md5
+      md5: 88be9873a7d12d56f90e758cd4255252
+      size: 1633
+      isexec: true
+    - path: src/config.py
+      hash: md5
+      md5: eb7f43a524c6a1f51e1dbd2e9678a918
+      size: 550
+    - path: src/contamination.py
+      hash: md5
+      md5: 9293919fc5964067833313514c6f9f2b
+      size: 2249
+    - path: src/dedup.py
+      hash: md5
+      md5: bafd222898448a49ccae46593448a734
+      size: 2782
+    - path: src/schema.py
+      hash: md5
+      md5: ad834fcb5caa483d3d5d5bfabb433cc0
+      size: 3054
+    - path: src/textnorm.py
+      hash: md5
+      md5: f8e6ebc70dd421e0f0e76f7507e412e4
+      size: 2104
+    - path: uv.lock
+      hash: md5
+      md5: 15b2da596077385d1ff4b7db5d1aea48
+      size: 397487
+    params:
+      params.yaml:
+        clean.near_dup:
+          enabled: true
+          shingle_words: 4
+          num_perm: 64
+          threshold: 0.85
+        contamination:
+          threshold: 0.85
+        paths.metrics_contamination: metrics/contamination.json
+        paths.test: data/test.jsonl
+        paths.train: data/train.jsonl
+        paths.val: data/val.jsonl
+    outs:
+    - path: metrics/contamination.json
+      hash: md5
+      md5: 47b98641ca376b6200cf6f9f849a464a
+      size: 689

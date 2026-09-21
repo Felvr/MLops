@@ -1,0 +1,31 @@
+{
+  "version": "v1",
+  "examples": 1531,
+  "system_prompts": 4,
+  "groups": 400,
+  "largest_group": "congenital bilateral absence of the vas deferens",
+  "largest_group_share": 0.0026,
+  "answer_len": {
+    "p10": 131,
+    "p50": 790,
+    "p90": 2051,
+    "ratio_p90_p10": 15.66,
+    "cv": 0.831,
+    "min": 44,
+    "max": 4346
+  },
+  "same_length_share": 0.0751,
+  "duplicate_answer_share": 0.0927,
+  "thresholds": {
+    "min_examples": 1000,
+    "min_system_prompts": 3,
+    "min_groups": 50,
+    "max_group_share": 0.1,
+    "min_answer_len_ratio": 1.6,
+    "max_same_length_share": 0.25,
+    "max_duplicate_answer_share": 0.3
+  },
+  "violations": [],
+  "passed": true,
+  "seconds": 0.44
+}

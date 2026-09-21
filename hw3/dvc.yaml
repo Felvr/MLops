@@ -1,0 +1,132 @@
+stages:
+  download:
+    cmd: python -m src.download
+    deps:
+    - src/download.py
+    - src/config.py
+    - pyproject.toml
+    - uv.lock
+    params:
+    - source
+    outs:
+    - data/source/medquad.zip
+  collect:
+    cmd: python -m src.collect
+    deps:
+    - data/source/medquad.zip
+    - src/collect.py
+    - src/config.py
+    - src/schema.py
+    - pyproject.toml
+    - uv.lock
+    params:
+    - collect
+    - source
+    - paths.raw
+    - paths.provenance
+    - paths.metrics_collect
+    outs:
+    - data/raw.jsonl
+    - data/provenance.jsonl
+    metrics:
+    - metrics/collect.json:
+        cache: false
+  clean:
+    cmd: python -m src.clean
+    deps:
+    - data/raw.jsonl
+    - src/clean.py
+    - src/dedup.py
+    - src/pii.py
+    - src/schema.py
+    - src/textnorm.py
+    - src/config.py
+    - src/stats.py
+    - pyproject.toml
+    - uv.lock
+    params:
+    - clean
+    - contamination.threshold
+    - collect.version
+    - paths.raw
+    - paths.clean
+    - paths.metrics_clean
+    outs:
+    - data/clean.jsonl
+    metrics:
+    - metrics/clean.json:
+        cache: false
+  diversity:
+    cmd: python -m src.diversity
+    deps:
+    - data/clean.jsonl
+    - src/diversity.py
+    - src/stats.py
+    - src/schema.py
+    - src/textnorm.py
+    - src/config.py
+    - pyproject.toml
+    - uv.lock
+    params:
+    - diversity
+    - split.group_key
+    - collect.version
+    - paths.clean
+    - paths.metrics_diversity
+    metrics:
+    - metrics/diversity.json:
+        cache: false
+  split:
+    cmd: python -m src.split
+    deps:
+    - data/clean.jsonl
+    - metrics/diversity.json
+    - src/split.py
+    - src/contamination.py
+    - src/dedup.py
+    - src/schema.py
+    - src/textnorm.py
+    - src/config.py
+    - pyproject.toml
+    - uv.lock
+    params:
+    - split
+    - contamination
+    - clean.near_dup
+    - collect.version
+    - paths.clean
+    - paths.train
+    - paths.val
+    - paths.test
+    - paths.metrics_split
+    outs:
+    - data/train.jsonl
+    - data/val.jsonl
+    - data/test.jsonl
+    metrics:
+    - metrics/split.json:
+        cache: false
+  contamination:
+    cmd: python scripts/check_contamination.py
+    deps:
+    - data/train.jsonl
+    - data/val.jsonl
+    - data/test.jsonl
+    - scripts/check_contamination.py
+    - src/contamination.py
+    - src/dedup.py
+    - src/schema.py
+    - src/textnorm.py
+    - src/config.py
+    - pyproject.toml
+    - uv.lock
+    params:
+    - contamination
+    - clean.near_dup
+    - paths.train
+    - paths.val
+    - paths.test
+    - paths.metrics_contamination
+    metrics:
+    - metrics/contamination.json:
+        cache: false

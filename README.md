@@ -8,6 +8,7 @@
 |---|---|---|
 | [ДЗ1](hw1/README.md) | Окружение, инференс Qwen3 и бенчмарк | [hardware.md](hw1/docs/hardware.md) |
 | [ДЗ2](hw2/README.md) | Параметры модели, хуки, LoRA и память | [anatomy.md](hw2/docs/anatomy.md) |
+| [ДЗ3](hw3/README.md) | Медицинские данные MedQuAD, DVC, очистка и честный сплит | [datasheet.md](hw3/docs/datasheet.md) |
 
 ## Запуск
 
@@ -25,6 +26,15 @@ make check
 ```bash
 cd hw2
 uv sync --locked
+make check
+```
+
+Для третьей работы:
+
+```bash
+cd hw3
+uv sync --locked
+make repro
 make check
 ```
 
