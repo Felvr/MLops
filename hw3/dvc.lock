@@ -22,10 +22,10 @@ stages:
     params:
       params.yaml:
         source:
-          url:
+          url: 
             https://codeload.github.com/abachaa/MedQuAD/zip/577bd37b96c02d1833b2c9eed2de9f96964e96cb
           revision: 577bd37b96c02d1833b2c9eed2de9f96964e96cb
-          sha256:
+          sha256: 
             161d948f8ce8f82accca1f5769a512dff2a01af2b3004d48f2b3da2758a38a09
           path: data/source/medquad.zip
     outs:
@@ -74,22 +74,22 @@ stages:
           - genetic changes
           - inheritance
           system_prompts:
-          - Answer the question about a genetic condition in English using
+          - Answer the question about a genetic condition in English using 
             educational medical information.
-          - Provide an English educational answer about the named genetic
+          - Provide an English educational answer about the named genetic 
             disorder. Do not infer a diagnosis for an individual.
-          - Explain the requested aspect of the hereditary condition in English
+          - Explain the requested aspect of the hereditary condition in English 
             for a reader seeking general medical information.
-          - You are an educational medical question-answering assistant. Answer
+          - You are an educational medical question-answering assistant. Answer 
             in English about the condition in the question.
         paths.metrics_collect: metrics/collect.json
         paths.provenance: data/provenance.jsonl
         paths.raw: data/raw.jsonl
         source:
-          url:
+          url: 
             https://codeload.github.com/abachaa/MedQuAD/zip/577bd37b96c02d1833b2c9eed2de9f96964e96cb
           revision: 577bd37b96c02d1833b2c9eed2de9f96964e96cb
-          sha256:
+          sha256: 
             161d948f8ce8f82accca1f5769a512dff2a01af2b3004d48f2b3da2758a38a09
           path: data/source/medquad.zip
     outs:
