@@ -1,0 +1,12 @@
+{
+  "train": {
+    "source": "../hw3/data/train.jsonl",
+    "sha256": "5b641da30aed72481c9b10e083a52a38c95f3609f221a8c124b6ac49ae768183",
+    "rows": 1972
+  },
+  "val": {
+    "source": "../hw3/data/val.jsonl",
+    "sha256": "1dda11055f8377068788eaa57e8e6c709d888f0d807de903edf4da444c229f20",
+    "rows": 266
+  }
+}

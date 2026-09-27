@@ -9,6 +9,7 @@
 | [ДЗ1](hw1/README.md) | Окружение, инференс Qwen3 и бенчмарк | [hardware.md](hw1/docs/hardware.md) |
 | [ДЗ2](hw2/README.md) | Параметры модели, хуки, LoRA и память | [anatomy.md](hw2/docs/anatomy.md) |
 | [ДЗ3](hw3/README.md) | Медицинские данные MedQuAD, DVC, очистка и честный сплит | [datasheet.md](hw3/docs/datasheet.md) |
+| [ДЗ4](hw4/README.md) | Токенизация MedQuAD, шаблон чата, маска лосса и паддинг | [defects.md](hw4/docs/defects.md), [tokenize_report.md](hw4/docs/tokenize_report.md) |
 
 ## Запуск
 
@@ -36,6 +37,16 @@ cd hw3
 uv sync --locked
 make repro
 make check
+```
+
+Для четвёртой работы (после восстановления данных ДЗ3):
+
+```bash
+cd hw4
+uv sync --locked
+make repro
+make check
+make test
 ```
 
 Подробные команды и условия экспериментов приведены в README каждой работы.

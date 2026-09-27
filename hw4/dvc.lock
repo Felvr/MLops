@@ -1,0 +1,173 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python -m scripts.prepare_data
+    deps:
+    - path: ../hw3/data/train.jsonl
+      hash: md5
+      md5: 305d7c0f5a10135c1574ba4dfc8af8bb
+      size: 2521145
+    - path: ../hw3/data/val.jsonl
+      hash: md5
+      md5: 10c26838b05f51a6fc8010d5b4fe41d0
+      size: 363323
+    - path: pyproject.toml
+      hash: md5
+      md5: 8bdd028109e74885a88d5d0920a59f0d
+      size: 410
+    - path: scripts/prepare_data.py
+      hash: md5
+      md5: dd2675a5279121131efa1ef3a8920edb
+      size: 1279
+    - path: src/config.py
+      hash: md5
+      md5: d1af94455f9641952ff6c34f46ac6060
+      size: 336
+    - path: uv.lock
+      hash: md5
+      md5: d4418e06b7bdab58229f29745e7c8e1b
+      size: 192597
+    params:
+      params.yaml:
+        data.source_train: ../hw3/data/train.jsonl
+        data.source_val: ../hw3/data/val.jsonl
+        data.train_jsonl: data/train.jsonl
+        data.val_jsonl: data/val.jsonl
+    outs:
+    - path: data/train.jsonl
+      hash: md5
+      md5: 305d7c0f5a10135c1574ba4dfc8af8bb
+      size: 2521145
+    - path: data/val.jsonl
+      hash: md5
+      md5: 10c26838b05f51a6fc8010d5b4fe41d0
+      size: 363323
+    - path: metrics/input.json
+      hash: md5
+      md5: eff6f9ed2c81cff1591786b03641402b
+      size: 314
+  tokenize:
+    cmd: python -m src.tokenize_data
+    deps:
+    - path: data/train.jsonl
+      hash: md5
+      md5: 305d7c0f5a10135c1574ba4dfc8af8bb
+      size: 2521145
+    - path: data/val.jsonl
+      hash: md5
+      md5: 10c26838b05f51a6fc8010d5b4fe41d0
+      size: 363323
+    - path: pyproject.toml
+      hash: md5
+      md5: 8bdd028109e74885a88d5d0920a59f0d
+      size: 410
+    - path: src/collate.py
+      hash: md5
+      md5: 3f589814c25be76d30b8e9ef565ef5a7
+      size: 1517
+    - path: src/config.py
+      hash: md5
+      md5: d1af94455f9641952ff6c34f46ac6060
+      size: 336
+    - path: src/prompt.py
+      hash: md5
+      md5: 936b3527483a0dd8526af4f51b44dd5e
+      size: 4471
+    - path: src/tokenize_data.py
+      hash: md5
+      md5: 431d5e7050a839aee3ba03e1e6b29fcd
+      size: 16178
+    - path: uv.lock
+      hash: md5
+      md5: d4418e06b7bdab58229f29745e7c8e1b
+      size: 192597
+    params:
+      params.yaml:
+        data.out_dir: data/tokenized
+        data.train_jsonl: data/train.jsonl
+        data.val_jsonl: data/val.jsonl
+        model:
+          name: Qwen/Qwen3-0.6B
+          revision: c1899de289a04d12100db370d81485cdf75e47ca
+          enable_thinking: false
+        packing:
+          enabled: false
+          batch_size: 8
+        tokenize:
+          max_seq_len: 768
+          truncated_warn_ratio: 0.05
+          padding_side: left
+        train_estimate:
+          epochs: 3
+          tokens_per_sec: 3.28
+          source: ../hw1/docs/hardware.md
+    outs:
+    - path: data/tokenized
+      hash: md5
+      md5: 51763af93e04e4add262d9af95e9bfdd.dir
+      size: 4713512
+      nfiles: 2
+    - path: docs/tokenize_report.md
+      hash: md5
+      md5: 24c8d856266a79867c4b2fce407c6dab
+      size: 3154
+    - path: metrics/tokenize.json
+      hash: md5
+      md5: 94ace8a9869c192c6c01dc4b32317cdf
+      size: 2562
+  lengths:
+    cmd: python -m scripts.analyze_lengths
+    deps:
+    - path: data/train.jsonl
+      hash: md5
+      md5: 305d7c0f5a10135c1574ba4dfc8af8bb
+      size: 2521145
+    - path: data/val.jsonl
+      hash: md5
+      md5: 10c26838b05f51a6fc8010d5b4fe41d0
+      size: 363323
+    - path: pyproject.toml
+      hash: md5
+      md5: 8bdd028109e74885a88d5d0920a59f0d
+      size: 410
+    - path: scripts/analyze_lengths.py
+      hash: md5
+      md5: e592e1cc52904ca4343dcc36ce4a6911
+      size: 1646
+    - path: src/collate.py
+      hash: md5
+      md5: 3f589814c25be76d30b8e9ef565ef5a7
+      size: 1517
+    - path: src/config.py
+      hash: md5
+      md5: d1af94455f9641952ff6c34f46ac6060
+      size: 336
+    - path: src/prompt.py
+      hash: md5
+      md5: 936b3527483a0dd8526af4f51b44dd5e
+      size: 4471
+    - path: src/tokenize_data.py
+      hash: md5
+      md5: 431d5e7050a839aee3ba03e1e6b29fcd
+      size: 16178
+    - path: uv.lock
+      hash: md5
+      md5: d4418e06b7bdab58229f29745e7c8e1b
+      size: 192597
+    params:
+      params.yaml:
+        data.train_jsonl: data/train.jsonl
+        data.val_jsonl: data/val.jsonl
+        model:
+          name: Qwen/Qwen3-0.6B
+          revision: c1899de289a04d12100db370d81485cdf75e47ca
+          enable_thinking: false
+        tokenize:
+          max_seq_len: 768
+          truncated_warn_ratio: 0.05
+          padding_side: left
+    outs:
+    - path: metrics/length_sweep.json
+      hash: md5
+      md5: ea15603bbfd641a3a31f672263589093
+      size: 3011

@@ -1,0 +1,146 @@
+uv run dvc repro
+Running stage 'prepare':
+> python -m scripts.prepare_data
+Сплиты ДЗ3 скопированы без изменений: ../hw3/data/train.jsonl, ../hw3/data/val.jsonl
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Running stage 'tokenize':
+> python -m src.tokenize_data
+  train: 1972 примеров, токенов 477798 (в лосс идёт 380951), p50/p90/max = 215/464/999
+  val: 266 примеров, токенов 68965 (в лосс идёт 55914), p50/p90/max = 221/499/865
+  -> data/tokenized/, metrics/tokenize.json, docs/tokenize_report.md
+Updating lock file 'dvc.lock'
+
+Running stage 'lengths':
+> python -m scripts.analyze_lengths
+{
+  "model": {
+    "name": "Qwen/Qwen3-0.6B",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "enable_thinking": false
+  },
+  "splits": {
+    "train": {
+      "examples": 1972,
+      "length_tokens": {
+        "count": 1972,
+        "mean": 242.7,
+        "p50": 215,
+        "p90": 464,
+        "p99": 689,
+        "max": 999
+      },
+      "candidates": [
+        {
+          "max_seq_len": 232,
+          "truncated": 917,
+          "truncated_ratio": 0.46501014198782964,
+          "dropped_no_supervision": 0,
+          "supervised_tokens_lost": 137892
+        },
+        {
+          "max_seq_len": 512,
+          "truncated": 121,
+          "truncated_ratio": 0.06135902636916836,
+          "dropped_no_supervision": 0,
+          "supervised_tokens_lost": 13141
+        },
+        {
+          "max_seq_len": 768,
+          "truncated": 7,
+          "truncated_ratio": 0.0035496957403651115,
+          "dropped_no_supervision": 0,
+          "supervised_tokens_lost": 805
+        },
+        {
+          "max_seq_len": 1024,
+          "truncated": 0,
+          "truncated_ratio": 0.0,
+          "dropped_no_supervision": 0,
+          "supervised_tokens_lost": 0
+        },
+        {
+          "max_seq_len": 1536,
+          "truncated": 0,
+          "truncated_ratio": 0.0,
+          "dropped_no_supervision": 0,
+          "supervised_tokens_lost": 0
+        },
+        {
+          "max_seq_len": 2048,
+          "truncated": 0,
+          "truncated_ratio": 0.0,
+          "dropped_no_supervision": 0,
+          "supervised_tokens_lost": 0
+        }
+      ]
+    },
+    "val": {
+      "examples": 266,
+      "length_tokens": {
+        "count": 266,
+        "mean": 259.7,
+        "p50": 221,
+        "p90": 499,
+        "p99": 758,
+        "max": 865
+      },
+      "candidates": [
+        {
+          "max_seq_len": 232,
+          "truncated": 128,
+          "truncated_ratio": 0.48120300751879697,
+          "dropped_no_supervision": 0,
+          "supervised_tokens_lost": 22352
+        },
+        {
+          "max_seq_len": 512,
+          "truncated": 23,
+          "truncated_ratio": 0.08646616541353383,
+          "dropped_no_supervision": 0,
+          "supervised_tokens_lost": 2844
+        },
+        {
+          "max_seq_len": 768,
+          "truncated": 3,
+          "truncated_ratio": 0.011278195488721804,
+          "dropped_no_supervision": 0,
+          "supervised_tokens_lost": 123
+        },
+        {
+          "max_seq_len": 1024,
+          "truncated": 0,
+          "truncated_ratio": 0.0,
+          "dropped_no_supervision": 0,
+          "supervised_tokens_lost": 0
+        },
+        {
+          "max_seq_len": 1536,
+          "truncated": 0,
+          "truncated_ratio": 0.0,
+          "dropped_no_supervision": 0,
+          "supervised_tokens_lost": 0
+        },
+        {
+          "max_seq_len": 2048,
+          "truncated": 0,
+          "truncated_ratio": 0.0,
+          "dropped_no_supervision": 0,
+          "supervised_tokens_lost": 0
+        }
+      ]
+    }
+  }
+}
+
+Updating lock file 'dvc.lock'
+
+To track the changes with git, run:
+
+	git add dvc.lock
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Use `dvc push` to send your updates to remote storage.

@@ -1,0 +1,15 @@
+uv run python -m unittest discover -s tests -v
+test_bpe_cross_boundary_masked (test_regressions.TokenizationTests.test_bpe_cross_boundary_masked) ... ok
+test_drop_count_uses_all_inputs (test_regressions.TokenizationTests.test_drop_count_uses_all_inputs) ... ok
+test_exact_limit_and_answer_removed (test_regressions.TokenizationTests.test_exact_limit_and_answer_removed) ... ok
+test_inference_with_and_without_answer (test_regressions.TokenizationTests.test_inference_with_and_without_answer) ... ok
+test_left_padding_values_and_dynamic_width (test_regressions.TokenizationTests.test_left_padding_values_and_dynamic_width) ... ok
+test_mask_and_eos (test_regressions.TokenizationTests.test_mask_and_eos) ... ok
+test_multiturn_only_last_answer (test_regressions.TokenizationTests.test_multiturn_only_last_answer) ... ok
+test_warning_threshold_equality (test_regressions.TokenizationTests.test_warning_threshold_equality) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.632s
+
+OK
+  test: 1 примеров, токенов 41 (в лосс идёт 7), p50/p90/max = 536/932/1031

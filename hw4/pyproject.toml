@@ -1,0 +1,13 @@
+[project]
+name = "mlops-hw4"
+version = "0.1.0"
+description = "MLOps HW4: reproducible tokenization of MedQuAD"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch==2.2.2; sys_platform == 'darwin' and platform_machine == 'x86_64'",
+    "torch==2.5.1; sys_platform != 'darwin' or platform_machine != 'x86_64'",
+    "transformers==4.53.2",
+    "numpy==1.26.4",
+    "pyyaml==6.0.2",
+    "dvc>=3.55,<4",
+]

@@ -1,0 +1,67 @@
+stages:
+  prepare:
+    cmd: python -m scripts.prepare_data
+    deps:
+      - ../hw3/data/train.jsonl
+      - ../hw3/data/val.jsonl
+      - scripts/prepare_data.py
+      - src/config.py
+      - pyproject.toml
+      - uv.lock
+    params:
+      - data.source_train
+      - data.source_val
+      - data.train_jsonl
+      - data.val_jsonl
+    outs:
+      - data/train.jsonl
+      - data/val.jsonl
+    metrics:
+      - metrics/input.json:
+          cache: false
+  tokenize:
+    cmd: python -m src.tokenize_data
+    deps:
+      - data/train.jsonl
+      - data/val.jsonl
+      - src/tokenize_data.py
+      - src/prompt.py
+      - src/collate.py
+      - src/config.py
+      - pyproject.toml
+      - uv.lock
+    params:
+      - model
+      - tokenize
+      - packing
+      - train_estimate
+      - data.train_jsonl
+      - data.val_jsonl
+      - data.out_dir
+    metrics:
+      - metrics/tokenize.json:
+          cache: false
+    outs:
+      - data/tokenized
+      - docs/tokenize_report.md:
+          cache: false
+  lengths:
+    cmd: python -m scripts.analyze_lengths
+    deps:
+      - data/train.jsonl
+      - data/val.jsonl
+      - scripts/analyze_lengths.py
+      - src/tokenize_data.py
+      - src/prompt.py
+      - src/config.py
+      - src/collate.py
+      - pyproject.toml
+      - uv.lock
+    params:
+      - model
+      - tokenize
+      - data.train_jsonl
+      - data.val_jsonl
+    metrics:
+      - metrics/length_sweep.json:
+          cache: false
