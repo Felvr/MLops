@@ -1,0 +1,7 @@
+uv run dvc repro
+Stage 'prepare' didn't change, skipping
+Stage 'train_all' didn't change, skipping
+Stage 'train_freeze' didn't change, skipping
+Stage 'compare' didn't change, skipping
+Stage 'plot' didn't change, skipping
+Data and pipelines are up to date.

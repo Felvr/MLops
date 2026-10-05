@@ -1,0 +1,2 @@
+uv run python -m scripts.finalize_report
+-> docs/defects.md

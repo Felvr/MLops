@@ -10,6 +10,7 @@
 | [ДЗ2](hw2/README.md) | Параметры модели, хуки, LoRA и память | [anatomy.md](hw2/docs/anatomy.md) |
 | [ДЗ3](hw3/README.md) | Медицинские данные MedQuAD, DVC, очистка и честный сплит | [datasheet.md](hw3/docs/datasheet.md) |
 | [ДЗ4](hw4/README.md) | Токенизация MedQuAD, шаблон чата, маска лосса и паддинг | [defects.md](hw4/docs/defects.md), [tokenize_report.md](hw4/docs/tokenize_report.md) |
+| [ДЗ5](hw5/README.md) | LoRA-прогон на 32/8 примерах MedQuAD, все 9 проверок пройдены | [defects.md](hw5/docs/defects.md), [compare.md](hw5/docs/compare.md) |
 
 ## Запуск
 
@@ -47,6 +48,17 @@ uv sync --locked
 make repro
 make check
 make test
+```
+
+Для пятой работы после подготовки данных ДЗ4:
+
+```bash
+cd hw5
+uv sync --locked
+make prepare
+make repro
+make report
+make check
 ```
 
 Подробные команды и условия экспериментов приведены в README каждой работы.
