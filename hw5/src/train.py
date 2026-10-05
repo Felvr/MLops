@@ -31,7 +31,7 @@ from peft import LoraConfig, get_peft_model
 from transformers import AutoModelForCausalLM, AutoTokenizer, get_cosine_schedule_with_warmup
 
 from src.config import load_params
-from src.data import LABEL_PAD_ID, batches, load_split
+from src.data import LABEL_PAD_ID, batches, load_split, validate_subset
 from src.runtime import allocated_bytes, memory_metric, resolve_device, resolve_dtype, set_seed
 
 
@@ -127,6 +127,9 @@ def main() -> None:
 
     train_blob = load_split(params["data"]["train"])
     val_blob = load_split(params["data"]["val"])
+    subset_config = params["data"].get("subset", {})
+    validate_subset(train_blob, subset_config, "train")
+    validate_subset(val_blob, subset_config, "val")
     if max_steps is not None and max_steps < 1:
         raise ValueError("max_steps must be positive or null")
     if args.val_limit is not None and args.val_limit < 1:
@@ -243,6 +246,8 @@ def main() -> None:
         "steps": step,
         "max_steps": max_steps,
         "train_examples": len(examples),
+        "data_subset": train_blob.get("subset"),
+        "validation_subset": val_blob.get("subset"),
         "val_examples": len(val_blob["examples"]),
         "processed_tokens": processed_tokens,
         "revision": params["model"].get("revision"),

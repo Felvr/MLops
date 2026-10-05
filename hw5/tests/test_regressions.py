@@ -4,7 +4,8 @@ from types import SimpleNamespace
 import torch
 from peft import get_peft_model
 from transformers import Qwen3Config, Qwen3ForCausalLM
-from src.data import pad_batch, batches
+from src.data import pad_batch, batches, validate_subset
+from scripts.prepare_data import select_examples
 from src.runtime import set_seed
 from src.train import evaluate, lora_config
 
@@ -64,6 +65,46 @@ class RegressionTests(unittest.TestCase):
                 self.assertTrue(torch.equal(p, dict(repeated.named_parameters())[name]))
         with self.assertRaises(ValueError):
             lora_config(params, 4, 4)
+
+
+class SubsetTests(unittest.TestCase):
+    def setUp(self):
+        self.data = [{'id': f'id-{i}', **example([i] * (i + 2), [-100] + [i] * (i + 1))}
+                     for i in range(1, 20)]
+        self.blob = {'examples': self.data}
+        self.config = dict(enabled=True, train_size=5, val_size=3, max_example_tokens=12, seed=42)
+
+    def test_stable_order_independent_selection_without_truncation(self):
+        selected = select_examples(self.blob, self.config, 'train')
+        reversed_blob = {'examples': list(reversed(self.data))}
+        self.assertEqual(selected, select_examples(reversed_blob, self.config, 'train'))
+        self.assertEqual(len(selected), 5)
+        self.assertTrue(all(len(e['input_ids']) <= 12 for e in selected))
+        for item in selected:
+            original = next(e for e in self.data if e['id'] == item['id'])
+            self.assertIs(item, original)
+        different = select_examples(self.blob, {**self.config, 'seed': 43}, 'train')
+        self.assertNotEqual(selected, different)
+
+    def test_selection_stays_inside_its_split_and_full_mode_keeps_everything(self):
+        validation = {'examples': [{**e, 'id': 'val-' + e['id']} for e in self.data]}
+        selected = select_examples(validation, self.config, 'val')
+        self.assertEqual(len(selected), 3)
+        self.assertTrue(all(e['id'].startswith('val-') for e in selected))
+        self.assertIs(select_examples(self.blob, {'enabled': False}, 'train'), self.data)
+        with self.assertRaises(ValueError):
+            select_examples(self.blob, {**self.config, 'train_size': 100}, 'train')
+
+    def test_stale_full_or_subset_inputs_rejected(self):
+        with self.assertRaises(ValueError):
+            validate_subset(self.blob, self.config, 'train')
+        blob = {'examples': select_examples(self.blob, self.config, 'train'),
+                'subset': {'seed': 42, 'max_example_tokens': 12}}
+        validate_subset(blob, self.config, 'train')
+        with self.assertRaises(ValueError):
+            validate_subset(blob, {'enabled': False}, 'train')
+        with self.assertRaises(ValueError):
+            validate_subset(blob, {**self.config, 'seed': 43}, 'train')
 
 
 if __name__ == '__main__':

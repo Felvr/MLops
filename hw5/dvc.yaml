@@ -6,6 +6,7 @@ stages:
     - ../hw4/data/tokenized/val.pt
     - scripts/prepare_data.py
     - src/config.py
+    - uv.lock
     params:
     - data
     - model.name

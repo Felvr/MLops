@@ -10,7 +10,7 @@
 | [ДЗ2](hw2/README.md) | Параметры модели, хуки, LoRA и память | [anatomy.md](hw2/docs/anatomy.md) |
 | [ДЗ3](hw3/README.md) | Медицинские данные MedQuAD, DVC, очистка и честный сплит | [datasheet.md](hw3/docs/datasheet.md) |
 | [ДЗ4](hw4/README.md) | Токенизация MedQuAD, шаблон чата, маска лосса и паддинг | [defects.md](hw4/docs/defects.md), [tokenize_report.md](hw4/docs/tokenize_report.md) |
-| [ДЗ5](hw5/README.md) | Подготовка LoRA на MedQuAD; обучение выполняется пользователем | [порядок запуска](hw5/README.md) |
+| [ДЗ5](hw5/README.md) | Быстрый LoRA-прогон на 32/8 примерах MedQuAD; запуск пользователем | [порядок запуска](hw5/README.md) |
 
 ## Запуск
 

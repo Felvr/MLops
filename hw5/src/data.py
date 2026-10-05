@@ -48,3 +48,18 @@ def batches(examples: list[dict], batch_size: int, pad_id: int, shuffle: bool, s
         random.Random(seed).shuffle(order)
     for i in range(0, len(order), batch_size):
         yield pad_batch([examples[j] for j in order[i:i + batch_size]], pad_id)
+
+
+def validate_subset(blob: dict, config: dict, split: str) -> None:
+    """Prevent a fast config accidentally consuming old full data (or vice versa)."""
+    prepared = blob.get('subset')
+    if config.get('enabled', False):
+        valid = (prepared is not None
+                 and len(blob['examples']) == config[f'{split}_size']
+                 and prepared.get('seed') == config['seed']
+                 and prepared.get('max_example_tokens') == config['max_example_tokens']
+                 and all(len(e['input_ids']) <= config['max_example_tokens'] for e in blob['examples']))
+    else:
+        valid = prepared is None
+    if not valid:
+        raise ValueError(f'{split}: данные не соответствуют data.subset; выполните make prepare или make repro')
