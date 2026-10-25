@@ -35,6 +35,7 @@ def main():
         run('make', target)
     run(sys.executable, '-m', 'scripts.finalize_report')
     run('make', 'check-all')
+    run(sys.executable, '-m', 'scripts.finalize_report')
     print('Finished. See docs/conclusion.md; record your own video.', flush=True)
 
 

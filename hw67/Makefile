@@ -29,6 +29,7 @@ eval:
 	uv run python -m evaluation.cli gate
 check-eval:
 	uv run python -m unittest discover -s tests -p 'test_*.py' -v
+	uv run python -m unittest discover -s checks -p 'test_*.py' -v
 check-negative:
 	uv run python -m evaluation.cli negative
 check-all: check check-eval

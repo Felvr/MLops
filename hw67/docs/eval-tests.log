@@ -1,3 +1,4 @@
+uv run python -m unittest discover -s tests -p 'test_*.py' -v
 test_behavioral_failure_rejected (test_eval.GateContract.test_behavioral_failure_rejected) ... ok
 test_critical_regression_despite_average_growth (test_eval.GateContract.test_critical_regression_despite_average_growth) ... ok
 test_equal_passes (test_eval.GateContract.test_equal_passes) ... ok
@@ -24,7 +25,7 @@ test_protocol_or_raw_changes_rejected (test_pipeline.PipelineContract.test_proto
 test_refused_candidate_keeps_alias (test_pipeline.PipelineContract.test_refused_candidate_keeps_alias) ... ok
 
 ----------------------------------------------------------------------
-Ran 24 tests in 0.185s
+Ran 24 tests in 0.310s
 
 OK
 Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
@@ -34,3 +35,14 @@ champion -> models:/fixture-model/2
 Baseline обновлён явно; старый сохранён. Следующая оценка сравнит с принятой версией
 Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
 Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+uv run python -m unittest discover -s checks -p 'test_*.py' -v
+test_changed_group_membership_rejected_with_same_group_counts (test_contract_edges.StrictEdges.test_changed_group_membership_rejected_with_same_group_counts) ... ok
+test_duplicate_json_key_rejected (test_contract_edges.StrictEdges.test_duplicate_json_key_rejected) ... ok
+test_generation_error_with_correct_json_stays_in_denominator (test_contract_edges.StrictEdges.test_generation_error_with_correct_json_stays_in_denominator) ... ok
+test_infinite_and_fractional_counts_rejected (test_contract_edges.StrictEdges.test_infinite_and_fractional_counts_rejected) ... ok
+test_unpinned_model_rejected (test_contract_edges.StrictEdges.test_unpinned_model_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.015s
+
+OK

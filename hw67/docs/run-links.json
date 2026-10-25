@@ -1,0 +1,10 @@
+{
+  "sweep": "http://127.0.0.1:5006/#/experiments/1/runs/7c40fb32a9114554b47f9c0bece0d7c3",
+  "evaluation": "http://127.0.0.1:5006/#/experiments/2/runs/4ff816cc42de4325aa616c5ef3ee1d44",
+  "all-r8-high": "http://127.0.0.1:5006/#/experiments/1/runs/14bf51e70f58417291ef58de4d1d958b",
+  "qv-r8-high": "http://127.0.0.1:5006/#/experiments/1/runs/29c7d830fa57404f83cc289e8a45ce24",
+  "all-r8-low": "http://127.0.0.1:5006/#/experiments/1/runs/0f95e25d39ac4fada42e01b9c068975e",
+  "qv-r4-high": "http://127.0.0.1:5006/#/experiments/1/runs/4d0c6700fe274d808e7d94b5089bd815",
+  "qv-r8-low": "http://127.0.0.1:5006/#/experiments/1/runs/c00d99773ea9414694e1d04c419f6d14",
+  "qv-r4-low": "http://127.0.0.1:5006/#/experiments/1/runs/3b3237e6918f4ea6a7931d6ba983a3d2"
+}

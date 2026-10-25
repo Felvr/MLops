@@ -235,8 +235,10 @@ def negative():
     broken_outputs = [dict(id=r['id'], raw='INVALID', error=None) for r in rows]
     broken = copy.deepcopy(candidate)
     broken.update(score(rows, broken_outputs))
-    broken['behavioral']['overall']['correct'] = 0
-    broken['behavioral']['overall']['accuracy'] = 0.0
+    behavioral_rows = read_rows(read_json('evaluation/params.json')['behavioral'])
+    broken_behavior = [dict(id=r['id'], raw='INVALID', error=None) for r in behavioral_rows]
+    broken['behavioral'] = score(behavioral_rows, broken_behavior)
+    write_json('metrics/negative-outputs.json', broken_outputs + broken_behavior)
     try:
         quality_gate(baseline, broken, read_json('evaluation/params.json')['critical_slices'])
     except ValueError as exc:

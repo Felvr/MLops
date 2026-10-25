@@ -1,0 +1,225 @@
+uv run python -m scripts.run_pipeline --after-sweep
++ make report
+uv run python -m src.report
+name,run_id,r,lr,target_modules,base_val_loss,final_val_loss,seconds,peak_memory_mb,adapter_mb
+all-r8-high,14bf51e70f58417291ef58de4d1d958b,8,0.0003,"q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj",2.191601145900305,1.7885095751610514,87.9973636379982,3126.484375,34.45200157165527
+qv-r8-high,29c7d830fa57404f83cc289e8a45ce24,8,0.0003,"q_proj,v_proj",2.191601145900305,1.924844163904231,78.22360926400142,2651.5703125,19.54188632965088
+all-r8-low,0f95e25d39ac4fada42e01b9c068975e,8,0.0001,"q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj",2.191601145900305,1.9510684570930952,77.89570555700266,4625.23046875,34.45200061798096
+qv-r4-high,4d0c6700fe274d808e7d94b5089bd815,4,0.0003,"q_proj,v_proj",2.191601145900305,2.0328098162688004,141.13445062399842,3636.3359375,17.354331970214844
+qv-r8-low,c00d99773ea9414694e1d04c419f6d14,8,0.0001,"q_proj,v_proj",2.191601145900305,2.0856145818743164,104.90665681099927,2754.0078125,19.541885375976562
+qv-r4-low,3b3237e6918f4ea6a7931d6ba983a3d2,4,0.0001,"q_proj,v_proj",2.191601145900305,2.138567361462236,93.3892423569996,2407.12109375,17.354331016540527
+
++ make candidate
+uv run python -m evaluation.cli candidate
+Successfully registered model 'my-qwen-adapter'.
+2026/10/25 17:14:07 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: my-qwen-adapter, version 1
+Created version '1' of model 'my-qwen-adapter'.
+{
+  "kind": "adapter",
+  "name": "my-qwen-adapter",
+  "version": "1",
+  "run_id": "14bf51e70f58417291ef58de4d1d958b",
+  "uri": "models:/my-qwen-adapter/1"
+}
++ make baseline-init
+uv run python -m evaluation.cli baseline-init
+Downloading artifacts:   0%|          | 0/19 [00:00<?, ?it/s]Downloading artifacts:   5%|▌         | 1/19 [00:00<00:00, 3572.66it/s]Downloading artifacts:  11%|█         | 2/19 [00:00<00:00, 3323.54it/s]Downloading artifacts:  16%|█▌        | 3/19 [00:00<00:00, 205.50it/s] Downloading artifacts:  21%|██        | 4/19 [00:00<00:00, 213.77it/s]Downloading artifacts:  26%|██▋       | 5/19 [00:00<00:00, 48.39it/s] Downloading artifacts:  26%|██▋       | 5/19 [00:00<00:00, 48.39it/s]Downloading artifacts:  32%|███▏      | 6/19 [00:01<00:00, 48.39it/s]Downloading artifacts:  37%|███▋      | 7/19 [00:01<00:00, 48.39it/s]Downloading artifacts:  42%|████▏     | 8/19 [00:01<00:00, 48.39it/s]Downloading artifacts:  47%|████▋     | 9/19 [00:01<00:00, 48.39it/s]Downloading artifacts:  53%|█████▎    | 10/19 [00:01<00:01,  4.87it/s]Downloading artifacts:  53%|█████▎    | 10/19 [00:01<00:01,  4.87it/s]Downloading artifacts:  58%|█████▊    | 11/19 [00:01<00:01,  4.87it/s]Downloading artifacts:  63%|██████▎   | 12/19 [00:01<00:01,  4.87it/s]Downloading artifacts:  68%|██████▊   | 13/19 [00:01<00:01,  4.87it/s]Downloading artifacts:  74%|███████▎  | 14/19 [00:01<00:01,  4.87it/s]Downloading artifacts:  79%|███████▉  | 15/19 [00:01<00:00,  4.87it/s]Downloading artifacts:  84%|████████▍ | 16/19 [00:01<00:00,  4.87it/s]Downloading artifacts:  89%|████████▉ | 17/19 [00:06<00:00,  2.25it/s]Downloading artifacts:  89%|████████▉ | 17/19 [00:06<00:00,  2.25it/s]Downloading artifacts:  95%|█████████▍| 18/19 [00:06<00:00,  2.25it/s]Downloading artifacts:  95%|█████████▍| 18/19 [00:20<00:00,  2.25it/s]Downloading artifacts: 100%|██████████| 19/19 [00:29<00:00,  2.49s/it]Downloading artifacts: 100%|██████████| 19/19 [00:29<00:00,  2.49s/it]Downloading artifacts: 100%|██████████| 19/19 [00:29<00:00,  1.57s/it]
+Baseline: исходная модель с точной ревизией. Сохраните evaluation/baseline.json в Git
++ make evaluate
+uv run python -m evaluation.cli evaluate
+Downloading artifacts:   0%|          | 0/19 [00:00<?, ?it/s]Downloading artifacts:   5%|▌         | 1/19 [00:00<00:00, 3045.97it/s]Downloading artifacts:  11%|█         | 2/19 [00:00<00:00, 2508.56it/s]Downloading artifacts:  16%|█▌        | 3/19 [00:19<01:45,  6.60s/it]  Downloading artifacts:  16%|█▌        | 3/19 [00:19<01:45,  6.60s/it]Downloading artifacts:  21%|██        | 4/19 [00:19<01:39,  6.60s/it]Downloading artifacts:  26%|██▋       | 5/19 [00:24<01:02,  4.46s/it]Downloading artifacts:  26%|██▋       | 5/19 [00:24<01:02,  4.46s/it]Downloading artifacts:  32%|███▏      | 6/19 [00:24<00:57,  4.46s/it]Downloading artifacts:  37%|███▋      | 7/19 [00:24<00:53,  4.46s/it]Downloading artifacts:  42%|████▏     | 8/19 [00:24<00:49,  4.46s/it]Downloading artifacts:  47%|████▋     | 9/19 [00:24<00:44,  4.46s/it]Downloading artifacts:  53%|█████▎    | 10/19 [00:24<00:40,  4.46s/it]Downloading artifacts:  58%|█████▊    | 11/19 [00:24<00:35,  4.46s/it]Downloading artifacts:  63%|██████▎   | 12/19 [00:24<00:31,  4.46s/it]Downloading artifacts:  68%|██████▊   | 13/19 [00:24<00:26,  4.46s/it]Downloading artifacts:  74%|███████▎  | 14/19 [00:24<00:22,  4.46s/it]Downloading artifacts:  79%|███████▉  | 15/19 [00:24<00:17,  4.46s/it]Downloading artifacts:  84%|████████▍ | 16/19 [00:26<00:03,  1.07s/it]Downloading artifacts:  84%|████████▍ | 16/19 [00:26<00:03,  1.07s/it]Downloading artifacts:  89%|████████▉ | 17/19 [00:26<00:02,  1.07s/it]Downloading artifacts:  95%|█████████▍| 18/19 [00:26<00:01,  1.07s/it]Downloading artifacts: 100%|██████████| 19/19 [00:26<00:00,  1.07s/it]Downloading artifacts: 100%|██████████| 19/19 [00:26<00:00,  1.39s/it]
+`torch_dtype` is deprecated! Use `dtype` instead!
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+base med-01 1/53: 2.91s
+base med-02 2/53: 2.51s
+base med-03 3/53: 2.27s
+base med-04 4/53: 2.25s
+base med-05 5/53: 2.31s
+base med-06 6/53: 2.62s
+base med-07 7/53: 2.20s
+base med-08 8/53: 2.31s
+base med-09 9/53: 2.39s
+base med-10 10/53: 2.76s
+base med-11 11/53: 2.31s
+base med-12 12/53: 2.82s
+base med-13 13/53: 2.46s
+base med-14 14/53: 2.48s
+base med-15 15/53: 2.19s
+base med-16 16/53: 2.39s
+base med-17 17/53: 4.92s
+base med-18 18/53: 2.02s
+base med-19 19/53: 2.17s
+base med-20 20/53: 2.43s
+base med-21 21/53: 2.47s
+base med-22 22/53: 1.94s
+base med-23 23/53: 1.94s
+base med-24 24/53: 2.10s
+base med-25 25/53: 2.22s
+base med-26 26/53: 2.11s
+base med-27 27/53: 2.74s
+base med-28 28/53: 2.18s
+base med-29 29/53: 2.08s
+base med-30 30/53: 1.99s
+base med-31 31/53: 2.58s
+base med-32 32/53: 2.50s
+base med-33 33/53: 2.54s
+base med-34 34/53: 2.33s
+base med-35 35/53: 2.41s
+base med-36 36/53: 2.09s
+base med-37 37/53: 1.99s
+base med-38 38/53: 2.18s
+base med-39 39/53: 2.01s
+base med-40 40/53: 1.99s
+base med-41 41/53: 2.25s
+base med-42 42/53: 2.01s
+base med-43 43/53: 2.19s
+base med-44 44/53: 2.04s
+base med-45 45/53: 2.05s
+base med-46 46/53: 2.23s
+base med-47 47/53: 2.54s
+base med-48 48/53: 2.51s
+base med-49 49/53: 3.76s
+base med-50 50/53: 2.63s
+base behavior-format 51/53: 3.63s
+base behavior-paraphrase 52/53: 2.79s
+base behavior-refusal 53/53: 1.78s
+Downloading artifacts:   0%|          | 0/19 [00:00<?, ?it/s]Downloading artifacts:   5%|▌         | 1/19 [00:00<00:00, 7157.52it/s]Downloading artifacts:  11%|█         | 2/19 [00:00<00:00, 4417.38it/s]Downloading artifacts:  16%|█▌        | 3/19 [00:00<00:00, 78.53it/s]  Downloading artifacts:  21%|██        | 4/19 [00:00<00:00, 92.41it/s]Downloading artifacts:  26%|██▋       | 5/19 [00:00<00:00, 90.89it/s]Downloading artifacts:  32%|███▏      | 6/19 [00:00<00:00, 92.09it/s]Downloading artifacts:  37%|███▋      | 7/19 [00:00<00:00, 101.34it/s]Downloading artifacts:  42%|████▏     | 8/19 [00:04<00:05,  1.92it/s] Downloading artifacts:  42%|████▏     | 8/19 [00:04<00:05,  1.92it/s]Downloading artifacts:  47%|████▋     | 9/19 [00:23<00:33,  3.30s/it]Downloading artifacts:  47%|████▋     | 9/19 [00:23<00:33,  3.30s/it]Downloading artifacts:  53%|█████▎    | 10/19 [00:23<00:29,  3.30s/it]Downloading artifacts:  58%|█████▊    | 11/19 [00:25<00:21,  2.64s/it]Downloading artifacts:  58%|█████▊    | 11/19 [00:25<00:21,  2.64s/it]Downloading artifacts:  63%|██████▎   | 12/19 [00:25<00:18,  2.64s/it]Downloading artifacts:  68%|██████▊   | 13/19 [00:25<00:15,  2.64s/it]Downloading artifacts:  74%|███████▎  | 14/19 [00:25<00:13,  2.64s/it]Downloading artifacts:  79%|███████▉  | 15/19 [00:25<00:10,  2.64s/it]Downloading artifacts:  84%|████████▍ | 16/19 [00:25<00:07,  2.64s/it]Downloading artifacts:  89%|████████▉ | 17/19 [00:25<00:05,  2.64s/it]Downloading artifacts:  95%|█████████▍| 18/19 [00:25<00:02,  2.64s/it]Downloading artifacts: 100%|██████████| 19/19 [00:25<00:00,  1.02it/s]Downloading artifacts: 100%|██████████| 19/19 [00:25<00:00,  1.02it/s]Downloading artifacts: 100%|██████████| 19/19 [00:25<00:00,  1.33s/it]
+adapter med-01 1/53: 4.19s
+adapter med-02 2/53: 2.84s
+adapter med-03 3/53: 2.66s
+adapter med-04 4/53: 2.22s
+adapter med-05 5/53: 2.45s
+adapter med-06 6/53: 2.43s
+adapter med-07 7/53: 2.38s
+adapter med-08 8/53: 3.91s
+adapter med-09 9/53: 3.19s
+adapter med-10 10/53: 5.11s
+adapter med-11 11/53: 4.79s
+adapter med-12 12/53: 3.91s
+adapter med-13 13/53: 3.48s
+adapter med-14 14/53: 3.53s
+adapter med-15 15/53: 3.44s
+adapter med-16 16/53: 4.21s
+adapter med-17 17/53: 3.56s
+adapter med-18 18/53: 3.65s
+adapter med-19 19/53: 3.61s
+adapter med-20 20/53: 3.78s
+adapter med-21 21/53: 3.71s
+adapter med-22 22/53: 3.02s
+adapter med-23 23/53: 3.18s
+adapter med-24 24/53: 4.52s
+adapter med-25 25/53: 3.76s
+adapter med-26 26/53: 3.78s
+adapter med-27 27/53: 4.10s
+adapter med-28 28/53: 3.57s
+adapter med-29 29/53: 3.71s
+adapter med-30 30/53: 3.68s
+adapter med-31 31/53: 4.91s
+adapter med-32 32/53: 3.90s
+adapter med-33 33/53: 4.53s
+adapter med-34 34/53: 5.02s
+adapter med-35 35/53: 4.90s
+adapter med-36 36/53: 3.89s
+adapter med-37 37/53: 6.97s
+adapter med-38 38/53: 4.47s
+adapter med-39 39/53: 3.63s
+adapter med-40 40/53: 3.06s
+adapter med-41 41/53: 2.87s
+adapter med-42 42/53: 2.66s
+adapter med-43 43/53: 2.65s
+adapter med-44 44/53: 2.67s
+adapter med-45 45/53: 2.89s
+adapter med-46 46/53: 2.47s
+adapter med-47 47/53: 2.42s
+adapter med-48 48/53: 2.59s
+adapter med-49 49/53: 2.88s
+adapter med-50 50/53: 3.58s
+adapter behavior-format 51/53: 3.40s
+adapter behavior-paraphrase 52/53: 3.06s
+adapter behavior-refusal 53/53: 2.72s
+2026/10/25 17:21:25 INFO mlflow.tracking.fluent: Experiment with name 'hw67-evaluation' does not exist. Creating a new experiment.
+🏃 View run baseline-vs-candidate at: http://127.0.0.1:5006/#/experiments/2/runs/4ff816cc42de4325aa616c5ef3ee1d44
+🧪 View experiment at: http://127.0.0.1:5006/#/experiments/2
+Отчёты и сырые ответы сохранены. Далее: make eval; только после PASS - make promote
+Отказ: Mandatory behavioral cases failed
+Quality release refused; keeping candidate and baseline.
++ make check-negative
+uv run python -m evaluation.cli negative
+PASS: испорченные ответы отклонены, alias не менялся
++ make check-storage
+uv run python tests/check_storage.py
+ Container mlops-hw6-mlflow-1  Recreate
+ Container mlops-hw6-mlflow-1  Recreated
+ Container mlops-hw6-mlflow-1  Starting
+ Container mlops-hw6-mlflow-1  Started
+ Container mlops-hw6-mlflow-1  Waiting
+ Container mlops-hw6-mlflow-1  Healthy
+🏃 View run storage-probe at: http://127.0.0.1:5006/#/experiments/1/runs/00100783f23f42e0bb02728edd799d78
+🧪 View experiment at: http://127.0.0.1:5006/#/experiments/1
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 3597.17it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 1834.78it/s]
+PASS: новый контейнер вернул тот же артефакт, SHA256 совпал
++ /Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/bin/python3 -m scripts.finalize_report
++ make check-all
+bash tests/check.sh
+PASS 1. Минимум шесть отдельных законченных runs
+PASS 2. Код, данные, конфиг и база имеют версии
+PASS 3. Конфигурации и кривые соответствуют бюджету
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 3248.88it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 1865.79it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 93.54it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 90.60it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 53.08it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 51.69it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 87.27it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 85.63it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 89.65it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 87.15it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 74.61it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 72.93it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 59.86it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 59.10it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 107.59it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 104.40it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 112.83it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 110.33it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 98.80it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 96.61it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 76.17it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 75.03it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 100.55it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 98.52it/s] 
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 105.16it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 102.87it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 100.10it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 97.63it/s] 
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 70.33it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 69.27it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 101.76it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 99.70it/s] 
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 95.30it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 93.12it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 105.34it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 103.16it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 62.32it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 61.49it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 103.84it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 101.73it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 119.86it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 116.96it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 109.80it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 107.39it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 80.15it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 78.88it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 118.79it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 116.01it/s]
+PASS 4. Реальный адаптер, токенизатор, signature и пример входа
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 130.04it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 126.90it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 127.27it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 124.28it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 132.77it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 129.25it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 119.02it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 113.39it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 124.80it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 121.73it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 123.54it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 120.36it/s]
+PASS 5. Одинаковые промпты и непустые примеры генерации
+PASS 6. Запрет регистрации при непройденном пороге
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 99.69it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 97.73it/s]
+FAIL 7. Загрузка из реестра в новом процессе, без локального конфига artifacts/1/14bf51e70f58417291ef58de4d1d958b/artifacts/model/requirements.txt failed with exception HTTPConnectionPool(host='127.0.0.1', port=5006): Max retries exceeded with url: /api/2.0/mlflow-artifacts/artifacts/1/14bf51e70f58417291ef58de4d1d958b/artifacts/model/requirements.txt (Caused by ReadTimeoutError("HTTPConnectionPool(host='127.0.0.1', port=5006): Read timed out. (read timeout=10)"))
+##### File artifacts/adapter/adapter_model.safetensors #####
+API request to http://127.0.0.1:5006/api/2.0/mlflow-artifacts/artifacts/1/14bf51e70f58417291ef58de4d1d958b/artifacts/model/artifacts/adapter/adapter_model.safetensors failed with exception HTTPConnectionPool(host='127.0.0.1', port=5006): Max retries exceeded with url: /api/2.0/mlflow-artifacts/artifacts/1/14bf51e70f58417291ef58de4d1d958b/artifacts/model/artifacts/adapter/adapter_model.safetensors (Caused by ReadTimeoutError("HTTPConnectionPool(host='127.0.0.1', port=5006): Read timed out. (read timeout=10)"))
+##### File serving_input_example.json #####
+API request to http://127.0.0.1:5006/api/2.0/mlflow-artifacts/artifacts/1/14bf51e70f58417291ef58de4d1d958b/artifacts/model/serving_input_example.json failed with exception HTTPConnectionPool(host='127.0.0.1', port=5006): Max retries exceeded with url: /api/2.0/mlflow-artifacts/artifacts/1/14bf51e70f58417291ef58de4d1d958b/artifacts/model/serving_input_example.json (Caused by ReadTimeoutError("HTTPConnectionPool(host='127.0.0.1', port=5006): Read timed out. (read timeout=10)"))
+
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 115.48it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 112.42it/s]
+PASS 8. Артефакт пережил пересоздание контейнера
+PASS 9. Есть сравнение, вывод и разбор дефектов (смысл проверяет преподаватель)
+Итог: 8/9
+Отпечаток всех файлов tests/: c42ac7788026
+make[1]: *** [check] Error 1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw67/scripts/run_pipeline.py", line 42, in <module>
+    main()
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw67/scripts/run_pipeline.py", line 37, in main
+    run('make', 'check-all')
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw67/scripts/run_pipeline.py", line 11, in run
+    subprocess.run(command, check=True)
+  File "/Users/revyak/.local/share/uv/python/cpython-3.12.13-macos-x86_64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '('make', 'check-all')' returned non-zero exit status 2.
+make: *** [finish] Error 1

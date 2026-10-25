@@ -1,0 +1,157 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+qv-r4-low step=2 val=2.1689
+qv-r4-low step=4 val=2.1386
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:246: UserWarning: Could not find a config file in Qwen/Qwen3-0.6B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+2026/10/25 17:02:06 INFO mlflow.pyfunc: Validating input example against model signature
+Downloading artifacts:   0%|          | 0/11 [00:00<?, ?it/s]Downloading artifacts:   9%|▉         | 1/11 [00:00<00:00, 1597.22it/s]Downloading artifacts:  18%|█▊        | 2/11 [00:00<00:00, 1335.98it/s]Downloading artifacts:  27%|██▋       | 3/11 [00:00<00:00, 1616.30it/s]Downloading artifacts:  36%|███▋      | 4/11 [00:00<00:00, 1798.39it/s]Downloading artifacts:  45%|████▌     | 5/11 [00:00<00:00, 1981.62it/s]Downloading artifacts:  55%|█████▍    | 6/11 [00:00<00:00, 2189.09it/s]Downloading artifacts:  64%|██████▎   | 7/11 [00:00<00:00, 2385.84it/s]Downloading artifacts:  73%|███████▎  | 8/11 [00:00<00:00, 2574.77it/s]Downloading artifacts:  82%|████████▏ | 9/11 [00:00<00:00, 2745.56it/s]Downloading artifacts:  91%|█████████ | 10/11 [00:00<00:00, 2902.83it/s]Downloading artifacts: 100%|██████████| 11/11 [00:00<00:00, 3053.63it/s]Downloading artifacts: 100%|██████████| 11/11 [00:00<00:00, 2731.47it/s]
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+🏃 View run qv-r4-low at: http://127.0.0.1:5006/#/experiments/1/runs/3b3237e6918f4ea6a7931d6ba983a3d2
+🧪 View experiment at: http://127.0.0.1:5006/#/experiments/1
+qv-r4-high step=2 val=2.1240
+qv-r4-high step=4 val=2.0328
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:246: UserWarning: Could not find a config file in Qwen/Qwen3-0.6B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+2026/10/25 17:05:18 INFO mlflow.pyfunc: Validating input example against model signature
+Downloading artifacts:   0%|          | 0/11 [00:00<?, ?it/s]Downloading artifacts:   9%|▉         | 1/11 [00:00<00:00, 5745.62it/s]Downloading artifacts:  18%|█▊        | 2/11 [00:00<00:00, 1449.06it/s]Downloading artifacts:  27%|██▋       | 3/11 [00:00<00:00, 1512.01it/s]Downloading artifacts:  36%|███▋      | 4/11 [00:00<00:00, 1334.70it/s]Downloading artifacts:  45%|████▌     | 5/11 [00:00<00:00, 1322.37it/s]Downloading artifacts:  55%|█████▍    | 6/11 [00:00<00:00, 1246.57it/s]Downloading artifacts:  64%|██████▎   | 7/11 [00:00<00:00, 1315.71it/s]Downloading artifacts:  73%|███████▎  | 8/11 [00:00<00:00, 1273.70it/s]Downloading artifacts:  82%|████████▏ | 9/11 [00:00<00:00, 1367.16it/s]Downloading artifacts:  91%|█████████ | 10/11 [00:00<00:00, 1054.51it/s]Downloading artifacts: 100%|██████████| 11/11 [00:00<00:00, 621.96it/s] Downloading artifacts: 100%|██████████| 11/11 [00:00<00:00, 609.69it/s]
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+🏃 View run qv-r4-high at: http://127.0.0.1:5006/#/experiments/1/runs/4d0c6700fe274d808e7d94b5089bd815
+🧪 View experiment at: http://127.0.0.1:5006/#/experiments/1
+qv-r8-low step=2 val=2.1444
+qv-r8-low step=4 val=2.0856
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:246: UserWarning: Could not find a config file in Qwen/Qwen3-0.6B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+2026/10/25 17:07:34 INFO mlflow.pyfunc: Validating input example against model signature
+Downloading artifacts:   0%|          | 0/11 [00:00<?, ?it/s]Downloading artifacts:   9%|▉         | 1/11 [00:00<00:00, 8473.34it/s]Downloading artifacts:  18%|█▊        | 2/11 [00:00<00:00, 4132.32it/s]Downloading artifacts:  27%|██▋       | 3/11 [00:00<00:00, 3064.52it/s]Downloading artifacts:  36%|███▋      | 4/11 [00:00<00:00, 3074.44it/s]Downloading artifacts:  45%|████▌     | 5/11 [00:00<00:00, 2915.55it/s]Downloading artifacts:  55%|█████▍    | 6/11 [00:00<00:00, 3047.08it/s]Downloading artifacts:  64%|██████▎   | 7/11 [00:00<00:00, 2525.17it/s]Downloading artifacts:  73%|███████▎  | 8/11 [00:00<00:00, 2427.08it/s]Downloading artifacts:  82%|████████▏ | 9/11 [00:00<00:00, 2375.78it/s]Downloading artifacts:  91%|█████████ | 10/11 [00:00<00:00, 1490.99it/s]Downloading artifacts: 100%|██████████| 11/11 [00:00<00:00, 1248.71it/s]Downloading artifacts: 100%|██████████| 11/11 [00:00<00:00, 1211.21it/s]
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+🏃 View run qv-r8-low at: http://127.0.0.1:5006/#/experiments/1/runs/c00d99773ea9414694e1d04c419f6d14
+🧪 View experiment at: http://127.0.0.1:5006/#/experiments/1
+qv-r8-high step=2 val=2.0612
+qv-r8-high step=4 val=1.9248
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:246: UserWarning: Could not find a config file in Qwen/Qwen3-0.6B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+2026/10/25 17:09:28 INFO mlflow.pyfunc: Validating input example against model signature
+Downloading artifacts:   0%|          | 0/11 [00:00<?, ?it/s]Downloading artifacts:   9%|▉         | 1/11 [00:00<00:00, 8004.40it/s]Downloading artifacts:  18%|█▊        | 2/11 [00:00<00:00, 2541.23it/s]Downloading artifacts:  27%|██▋       | 3/11 [00:00<00:00, 3064.52it/s]Downloading artifacts:  36%|███▋      | 4/11 [00:00<00:00, 2403.61it/s]Downloading artifacts:  45%|████▌     | 5/11 [00:00<00:00, 2634.28it/s]Downloading artifacts:  55%|█████▍    | 6/11 [00:00<00:00, 2698.75it/s]Downloading artifacts:  64%|██████▎   | 7/11 [00:00<00:00, 2599.39it/s]Downloading artifacts:  73%|███████▎  | 8/11 [00:00<00:00, 2724.68it/s]Downloading artifacts:  82%|████████▏ | 9/11 [00:00<00:00, 2800.97it/s]Downloading artifacts:  91%|█████████ | 10/11 [00:00<00:00, 1454.13it/s]Downloading artifacts: 100%|██████████| 11/11 [00:00<00:00, 1076.52it/s]Downloading artifacts: 100%|██████████| 11/11 [00:00<00:00, 1051.90it/s]
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+🏃 View run qv-r8-high at: http://127.0.0.1:5006/#/experiments/1/runs/29c7d830fa57404f83cc289e8a45ce24
+🧪 View experiment at: http://127.0.0.1:5006/#/experiments/1
+all-r8-low step=2 val=2.0774
+all-r8-low step=4 val=1.9511
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:246: UserWarning: Could not find a config file in Qwen/Qwen3-0.6B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+2026/10/25 17:11:13 INFO mlflow.pyfunc: Validating input example against model signature
+Downloading artifacts:   0%|          | 0/11 [00:00<?, ?it/s]Downloading artifacts:   9%|▉         | 1/11 [00:00<00:00, 5817.34it/s]Downloading artifacts:  18%|█▊        | 2/11 [00:00<00:00, 2774.01it/s]Downloading artifacts:  27%|██▋       | 3/11 [00:00<00:00, 3039.35it/s]Downloading artifacts:  36%|███▋      | 4/11 [00:00<00:00, 2720.92it/s]Downloading artifacts:  45%|████▌     | 5/11 [00:00<00:00, 2081.75it/s]Downloading artifacts:  55%|█████▍    | 6/11 [00:00<00:00, 2087.06it/s]Downloading artifacts:  64%|██████▎   | 7/11 [00:00<00:00, 1829.06it/s]Downloading artifacts:  73%|███████▎  | 8/11 [00:00<00:00, 1081.84it/s]Downloading artifacts:  82%|████████▏ | 9/11 [00:00<00:00, 1059.70it/s]Downloading artifacts:  91%|█████████ | 10/11 [00:00<00:00, 840.12it/s]Downloading artifacts: 100%|██████████| 11/11 [00:00<00:00, 868.19it/s]Downloading artifacts: 100%|██████████| 11/11 [00:00<00:00, 848.58it/s]
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+🏃 View run all-r8-low at: http://127.0.0.1:5006/#/experiments/1/runs/0f95e25d39ac4fada42e01b9c068975e
+🧪 View experiment at: http://127.0.0.1:5006/#/experiments/1
+all-r8-high step=2 val=1.9396
+all-r8-high step=4 val=1.7885
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:246: UserWarning: Could not find a config file in Qwen/Qwen3-0.6B - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+2026/10/25 17:13:35 INFO mlflow.pyfunc: Validating input example against model signature
+Downloading artifacts:   0%|          | 0/11 [00:00<?, ?it/s]Downloading artifacts:   9%|▉         | 1/11 [00:00<00:00, 4165.15it/s]Downloading artifacts:  18%|█▊        | 2/11 [00:00<00:00, 990.51it/s] Downloading artifacts:  27%|██▋       | 3/11 [00:00<00:00, 749.43it/s]Downloading artifacts:  36%|███▋      | 4/11 [00:00<00:00, 800.44it/s]Downloading artifacts:  45%|████▌     | 5/11 [00:00<00:00, 817.63it/s]Downloading artifacts:  55%|█████▍    | 6/11 [00:00<00:00, 859.69it/s]Downloading artifacts:  64%|██████▎   | 7/11 [00:00<00:00, 837.02it/s]Downloading artifacts:  73%|███████▎  | 8/11 [00:00<00:00, 869.08it/s]Downloading artifacts:  82%|████████▏ | 9/11 [00:00<00:00, 672.30it/s]Downloading artifacts:  91%|█████████ | 10/11 [00:00<00:00, 564.65it/s]Downloading artifacts: 100%|██████████| 11/11 [00:00<00:00, 433.84it/s]Downloading artifacts: 100%|██████████| 11/11 [00:00<00:00, 426.04it/s]
+/Users/revyak/Documents/ChatGPT/MLops/hw67/.venv/lib/python3.12/site-packages/mlflow/pyfunc/utils/data_validation.py:186: UserWarning: [33mAdd type hints to the `predict` method to enable data validation and automatic signature inference during model logging. Check https://mlflow.org/docs/latest/model/python_model.html#type-hint-usage-in-pythonmodel for more details.[0m
+  color_warning(
+🏃 View run all-r8-high at: http://127.0.0.1:5006/#/experiments/1/runs/14bf51e70f58417291ef58de4d1d958b
+🧪 View experiment at: http://127.0.0.1:5006/#/experiments/1
+🏃 View run sweep at: http://127.0.0.1:5006/#/experiments/1/runs/7c40fb32a9114554b47f9c0bece0d7c3
+🧪 View experiment at: http://127.0.0.1:5006/#/experiments/1
+{
+  "parent_id": "7c40fb32a9114554b47f9c0bece0d7c3",
+  "rows": [
+    {
+      "run_id": "3b3237e6918f4ea6a7931d6ba983a3d2",
+      "name": "qv-r4-low",
+      "base_val_loss": 2.191601145900305,
+      "final_val_loss": 2.138567361462236,
+      "seconds": 93.3892423569996,
+      "steps": 4,
+      "peak_memory_mb": 2407.12109375,
+      "trainable_params": 573440,
+      "adapter_mb": 17.354331016540527
+    },
+    {
+      "run_id": "4d0c6700fe274d808e7d94b5089bd815",
+      "name": "qv-r4-high",
+      "base_val_loss": 2.191601145900305,
+      "final_val_loss": 2.0328098162688004,
+      "seconds": 141.13445062399842,
+      "steps": 4,
+      "peak_memory_mb": 3636.3359375,
+      "trainable_params": 573440,
+      "adapter_mb": 17.354331970214844
+    },
+    {
+      "run_id": "c00d99773ea9414694e1d04c419f6d14",
+      "name": "qv-r8-low",
+      "base_val_loss": 2.191601145900305,
+      "final_val_loss": 2.0856145818743164,
+      "seconds": 104.90665681099927,
+      "steps": 4,
+      "peak_memory_mb": 2754.0078125,
+      "trainable_params": 1146880,
+      "adapter_mb": 19.541885375976562
+    },
+    {
+      "run_id": "29c7d830fa57404f83cc289e8a45ce24",
+      "name": "qv-r8-high",
+      "base_val_loss": 2.191601145900305,
+      "final_val_loss": 1.924844163904231,
+      "seconds": 78.22360926400142,
+      "steps": 4,
+      "peak_memory_mb": 2651.5703125,
+      "trainable_params": 1146880,
+      "adapter_mb": 19.54188632965088
+    },
+    {
+      "run_id": "0f95e25d39ac4fada42e01b9c068975e",
+      "name": "all-r8-low",
+      "base_val_loss": 2.191601145900305,
+      "final_val_loss": 1.9510684570930952,
+      "seconds": 77.89570555700266,
+      "steps": 4,
+      "peak_memory_mb": 4625.23046875,
+      "trainable_params": 5046272,
+      "adapter_mb": 34.45200061798096
+    },
+    {
+      "run_id": "14bf51e70f58417291ef58de4d1d958b",
+      "name": "all-r8-high",
+      "base_val_loss": 2.191601145900305,
+      "final_val_loss": 1.7885095751610514,
+      "seconds": 87.9973636379982,
+      "steps": 4,
+      "peak_memory_mb": 3126.484375,
+      "trainable_params": 5046272,
+      "adapter_mb": 34.45200157165527
+    }
+  ],
+  "provenance": {
+    "git_sha": "12f0bc963d323f51625928dd75b5e25ddd85aeb2",
+    "git_dirty": "True",
+    "code_sha256": "1bb74d8a395c725c9777fcaedf5e2b84b25e0febfc8de68821e4db0b0a485024",
+    "data_train_sha256": "6fea7fa82b620dc49ce08f169deb63782de477d36b11cb105315b4aa69169694",
+    "data_val_sha256": "753f1006a1f4545e805aa1614afa8b4ab1abb2de6d81d6931d8a03aa74867172",
+    "config_sha256": "6ec2f701f083d3e7327f1d84d368ecdc6f2daf22a746ebbc50a92fda2ac7d5b3"
+  }
+}
