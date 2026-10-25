@@ -7,5 +7,8 @@ uv run python tests/check_storage.py
  Container mlops-hw6-mlflow-1  Healthy
 🏃 View run storage-probe at: http://127.0.0.1:5006/#/experiments/1/runs/f8796815f6484c66ad07f5cd0ac432ab
 🧪 View experiment at: http://127.0.0.1:5006/#/experiments/1
-Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 4854.52it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 1231.45it/s]
+
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]
+Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 4854.52it/s]
+Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 1231.45it/s]
 PASS: новый контейнер вернул тот же артефакт, SHA256 совпал
