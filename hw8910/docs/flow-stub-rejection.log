@@ -1,0 +1,135 @@
+15:52:11.071 | INFO    | Flow run 'hypersonic-aardwolf' - Beginning flow run 'hypersonic-aardwolf' for flow 'hw8910-release'
+15:52:11.087 | INFO    | Flow run 'hypersonic-aardwolf' - View at http://127.0.0.1:63192/runs/flow-run/449128d3-593e-4458-bbe8-a39badf083fb
+15:52:11.162 | INFO    | Task run 'prepare-e74' - Finished in state Cached(type=COMPLETED)
+15:52:11.163 | INFO    | Flow run 'hypersonic-aardwolf' - PREPARATION_STATE Cached 01a1a177-94f8-7cd4-9a6a-613a1b58f268
+15:52:11.206 | INFO    | Task run 'obtain_artifact-8f2' - Read existing artifact; NO training: fixture-B
+15:52:11.211 | INFO    | Task run 'obtain_artifact-8f2' - Finished in state Completed()
+15:52:11.253 | INFO    | Task run 'evaluate_gate-63d' - Gate passed=False decision=None
+15:52:11.263 | INFO    | Task run 'evaluate_gate-63d' - Finished in state Completed()
+15:52:11.312 | ERROR   | Task run 'publication-72d' - Task run failed with exception: ValueError('Incomplete evaluation or quality rejection')
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 872, in run_context
+    yield self
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1514, in run_task_sync
+    engine.call_task_fn(txn)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 889, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables.py", line 210, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 109, in publication
+    identity=publish_event(Path(root),manifest,evaluation,fail_after_pointer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/release.py", line 129, in publish_event
+    validate_release(manifest, report)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/release.py", line 52, in validate_release
+    raise ValueError('Incomplete evaluation or quality rejection')
+ValueError: Incomplete evaluation or quality rejection
+15:52:11.325 | ERROR   | Task run 'publication-72d' - Finished in state Failed('Task run encountered an exception ValueError: Incomplete evaluation or quality rejection')
+15:52:11.327 | ERROR   | Flow run 'hypersonic-aardwolf' - Encountered exception during execution: ValueError('Incomplete evaluation or quality rejection')
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 788, in run_context
+    yield self
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1409, in run_flow_sync
+    engine.call_flow_fn()
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 808, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables.py", line 210, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 130, in release_flow
+    return publication(str(root),artifact,report,fail_after_pointer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/tasks.py", line 1138, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1741, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1516, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 493, in result
+    raise self._raised
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 872, in run_context
+    yield self
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1514, in run_task_sync
+    engine.call_task_fn(txn)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 889, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables.py", line 210, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 109, in publication
+    identity=publish_event(Path(root),manifest,evaluation,fail_after_pointer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/release.py", line 129, in publish_event
+    validate_release(manifest, report)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/release.py", line 52, in validate_release
+    raise ValueError('Incomplete evaluation or quality rejection')
+ValueError: Incomplete evaluation or quality rejection
+15:52:11.367 | INFO    | Flow run 'hypersonic-aardwolf' - Finished in state Failed('Flow run encountered an exception: ValueError: Incomplete evaluation or quality rejection')
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 145, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 142, in main
+    release_flow(str(a.workspace),a.synthetic,a.fail_after_prepare,a.fail_after_pointer,a.manifest,a.report)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flows.py", line 1708, in __call__
+    return run_flow(
+           ^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1566, in run_flow
+    ret_val = run_flow_sync(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1411, in run_flow_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 361, in result
+    raise self._raised
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 788, in run_context
+    yield self
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1409, in run_flow_sync
+    engine.call_flow_fn()
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 808, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables.py", line 210, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 130, in release_flow
+    return publication(str(root),artifact,report,fail_after_pointer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/tasks.py", line 1138, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1741, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1516, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 493, in result
+    raise self._raised
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 872, in run_context
+    yield self
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1514, in run_task_sync
+    engine.call_task_fn(txn)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 889, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables.py", line 210, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 109, in publication
+    identity=publish_event(Path(root),manifest,evaluation,fail_after_pointer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/release.py", line 129, in publish_event
+    validate_release(manifest, report)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/release.py", line 52, in validate_release
+    raise ValueError('Incomplete evaluation or quality rejection')
+ValueError: Incomplete evaluation or quality rejection
+
+EXIT_CODE=1

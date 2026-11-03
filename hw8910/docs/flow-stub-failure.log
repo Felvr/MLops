@@ -1,0 +1,55 @@
+15:51:37.429 | INFO    | Flow run 'bouncy-gharial' - Beginning flow run 'bouncy-gharial' for flow 'hw8910-release'
+15:51:37.446 | INFO    | Flow run 'bouncy-gharial' - View at http://127.0.0.1:63192/runs/flow-run/984f285d-281d-4ed2-a2a5-4e1db6104719
+15:51:37.511 | INFO    | Task run 'prepare-584' - PREPARED 8dcef6afa40c9a9f7c3be11715ebdfa56b62e5a028234a5d9744c3a41ef49ac9
+15:51:37.528 | INFO    | Task run 'prepare-584' - Finished in state Completed()
+15:51:37.530 | INFO    | Flow run 'bouncy-gharial' - PREPARATION_STATE Completed 01a1a177-118d-73e8-956c-972c6e7a6068
+15:51:37.536 | ERROR   | Flow run 'bouncy-gharial' - Encountered exception during execution: RuntimeError('Injected failure after preparation')
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 788, in run_context
+    yield self
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1409, in run_flow_sync
+    engine.call_flow_fn()
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 808, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables.py", line 210, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 127, in release_flow
+    if fail_after_prepare: raise RuntimeError('Injected failure after preparation')
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Injected failure after preparation
+15:51:37.594 | INFO    | Flow run 'bouncy-gharial' - Finished in state Failed('Flow run encountered an exception: RuntimeError: Injected failure after preparation')
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 145, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 142, in main
+    release_flow(str(a.workspace),a.synthetic,a.fail_after_prepare,a.fail_after_pointer,a.manifest,a.report)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flows.py", line 1708, in __call__
+    return run_flow(
+           ^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1566, in run_flow
+    ret_val = run_flow_sync(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1411, in run_flow_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 361, in result
+    raise self._raised
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 788, in run_context
+    yield self
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1409, in run_flow_sync
+    engine.call_flow_fn()
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 808, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables.py", line 210, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 127, in release_flow
+    if fail_after_prepare: raise RuntimeError('Injected failure after preparation')
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Injected failure after preparation
+
+EXIT_CODE=1

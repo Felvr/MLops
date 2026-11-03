@@ -1,0 +1,21 @@
+{
+  "platform": "macOS-26.5.1-x86_64-i386-64bit",
+  "machine": "x86_64",
+  "python": "3.12.13",
+  "cpu": "Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz",
+  "logical_cpus": 16,
+  "ram_bytes": 17179869184,
+  "torch_threads": 4,
+  "device": "cpu",
+  "dtype": "float32",
+  "packages": {
+    "torch": "2.2.2",
+    "transformers": "4.56.2",
+    "peft": "0.14.0",
+    "prefect": "3.4.25",
+    "fastapi": "0.116.1",
+    "uvicorn": "0.35.0",
+    "SQLAlchemy": "2.0.43",
+    "importlib-metadata": "8.7.0"
+  }
+}

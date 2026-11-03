@@ -1,7 +1,5 @@
-"""Исполняемый прототип для расследования. Только синтетические данные, без модели.
-
-Запускайте в отдельном каталоге .lab. Этот последовательный прототип надо
-превратить в корректный Prefect-flow; его зелёный статус не доказывает корректность.
+"""Совместимый исправленный CLI для интеграционных опытов STUB ONLY.
+Реальный Prefect-процесс: pipeline.py.
 """
 import argparse
 import hashlib
@@ -62,13 +60,13 @@ def prepare(root):
     write(entry,result);print('PREPARED',result['input_sha256']);return result
 
 
-def run(root,report_name,fail_after_prepare=False):
+def run(root,report_name,fail_after_prepare=False, fail_after_pointer=False, manifest_name="manifest-B.json"):
+    with (root/"attempts.jsonl").open("a") as f:
+        f.write(json.dumps({"attempt_id": __import__("uuid").uuid4().hex, "report": report_name})+"\n")
     prepared=prepare(root)
     if fail_after_prepare:raise RuntimeError('Инъекция сбоя после подготовки')
-    manifest=read(root/'manifest-B.json');report=read(root/report_name)
-    release.publish(manifest,report,root/'accepted.json')
-    with (root/'publications.jsonl').open('a') as f:
-        f.write(json.dumps({'model_id':manifest['model_id'],'prepared':prepared['input_sha256']})+'\n')
+    manifest=read(root/manifest_name);report=read(root/report_name)
+    release.publish_event(root,manifest,report,fail_after_pointer)
     print('PUBLISHED',manifest['model_id'])
 
 
@@ -76,9 +74,11 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('--workspace',type=Path,default=Path('.lab'))
     sub=parser.add_subparsers(dest='command',required=True);sub.add_parser('init')
     run_parser=sub.add_parser('run');run_parser.add_argument('--report',default='report-B.json');run_parser.add_argument('--fail-after-prepare',action='store_true')
+    run_parser.add_argument('--fail-after-pointer',action='store_true')
+    run_parser.add_argument('--manifest',default='manifest-B.json')
     args=parser.parse_args()
     if args.command=='init':initialize(args.workspace)
-    else:run(args.workspace,args.report,args.fail_after_prepare)
+    else:run(args.workspace,args.report,args.fail_after_prepare,args.fail_after_pointer,args.manifest)
 
 
 if __name__=='__main__':main()

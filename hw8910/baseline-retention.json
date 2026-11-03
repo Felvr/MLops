@@ -1,0 +1,1 @@
+{"action":"retain previously pinned baseline","baseline_evaluation_run_id":"4ff816cc42de4325aa616c5ef3ee1d44","manifest_sha256":"43ce94b8dea769ca7a747a4c281708832ce0593d20338e4fb849326db11ccb62","passed":false,"reason":"Candidate failed mandatory behavioral gate; no promotion"}

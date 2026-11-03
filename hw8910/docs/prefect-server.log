@@ -1,0 +1,56 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/__main__.py", line 1, in <module>
+    from prefect.cli import app
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/cli/__init__.py", line 29, in <module>
+    import prefect.cli.work_pool
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/cli/work_pool.py", line 46, in <module>
+    from prefect.workers.utilities import (
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/workers/__init__.py", line 1, in <module>
+    from .process import ProcessWorker
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/workers/process.py", line 42, in <module>
+    from prefect.workers.base import (
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/workers/base.py", line 26, in <module>
+    from importlib_metadata import (
+ModuleNotFoundError: No module named 'importlib_metadata'
+
+ ___ ___ ___ ___ ___ ___ _____
+| _ \ _ \ __| __| __/ __|_   _|
+|  _/   / _|| _|| _| (__  | |
+|_| |_|_\___|_| |___\___| |_|
+
+Configure Prefect to communicate with the server with:
+
+    prefect config set PREFECT_API_URL=http://127.0.0.1:63192/api
+
+View the API reference documentation at http://127.0.0.1:63192/docs
+
+Check out the dashboard at http://127.0.0.1:63192
+
+
+
+15:51:32.354 | WARNING | prefect.server - Unable to write to memo_store.toml at /Users/revyak/.prefect/memo_store.toml after block auto-registration: FileNotFoundError(2, 'No such file or directory').
+ Subsequent server start ups will perform block auto-registration, which may result in slower server startup.
+/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2350: UnsupportedFieldAttributeWarning: The 'deprecated' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'deprecated' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+
+ ___ ___ ___ ___ ___ ___ _____
+| _ \ _ \ __| __| __/ __|_   _|
+|  _/   / _|| _|| _| (__  | |
+|_| |_|_\___|_| |___\___| |_|
+
+Configure Prefect to communicate with the server with:
+
+    prefect config set PREFECT_API_URL=http://127.0.0.1:63886/api
+
+View the API reference documentation at http://127.0.0.1:63886/docs
+
+Check out the dashboard at http://127.0.0.1:63886
+
+
+
+15:53:16.026 | WARNING | prefect.server - Unable to write to memo_store.toml at /Users/revyak/.prefect/memo_store.toml after block auto-registration: FileNotFoundError(2, 'No such file or directory').
+ Subsequent server start ups will perform block auto-registration, which may result in slower server startup.
+/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2350: UnsupportedFieldAttributeWarning: The 'deprecated' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'deprecated' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(

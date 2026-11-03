@@ -1,0 +1,126 @@
+15:53:20.390 | INFO    | Flow run 'loose-marten' - Beginning flow run 'loose-marten' for flow 'hw8910-release'
+15:53:20.403 | INFO    | Flow run 'loose-marten' - View at http://127.0.0.1:63886/runs/flow-run/03ab9670-f639-49c7-b832-287a7a0b4a25
+15:53:29.437 | INFO    | Task run 'prepare-f92' - PREPARED 0dbcf504b3c13ab8a893927d2e68132e38fe2075c31d3db59961e7f3eb73bb2a
+15:53:29.454 | INFO    | Task run 'prepare-f92' - Finished in state Completed()
+15:53:29.455 | INFO    | Flow run 'loose-marten' - PREPARATION_STATE Completed 01a1a178-a3be-72eb-86e3-e4fb0e13b092
+15:53:37.258 | ERROR   | Task run 'obtain_artifact-242' - Task run failed with exception: ValueError('Evaluation source changed: evidence/golden.jsonl')
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 872, in run_context
+    yield self
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1514, in run_task_sync
+    engine.call_task_fn(txn)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 889, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables.py", line 210, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 86, in obtain_artifact
+    if not synthetic: verify_sources(manifest,root)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/provenance.py", line 28, in verify_sources
+    raise ValueError('Evaluation source changed: '+name)
+ValueError: Evaluation source changed: evidence/golden.jsonl
+15:53:37.269 | ERROR   | Task run 'obtain_artifact-242' - Finished in state Failed('Task run encountered an exception ValueError: Evaluation source changed: evidence/golden.jsonl')
+15:53:37.270 | ERROR   | Flow run 'loose-marten' - Encountered exception during execution: ValueError('Evaluation source changed: evidence/golden.jsonl')
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 788, in run_context
+    yield self
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1409, in run_flow_sync
+    engine.call_flow_fn()
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 808, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables.py", line 210, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 128, in release_flow
+    artifact=obtain_artifact(str(root),synthetic,manifest_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/tasks.py", line 1138, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1741, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1516, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 493, in result
+    raise self._raised
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 872, in run_context
+    yield self
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1514, in run_task_sync
+    engine.call_task_fn(txn)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 889, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables.py", line 210, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 86, in obtain_artifact
+    if not synthetic: verify_sources(manifest,root)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/provenance.py", line 28, in verify_sources
+    raise ValueError('Evaluation source changed: '+name)
+ValueError: Evaluation source changed: evidence/golden.jsonl
+15:53:37.320 | INFO    | Flow run 'loose-marten' - Finished in state Failed('Flow run encountered an exception: ValueError: Evaluation source changed: evidence/golden.jsonl')
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 145, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 142, in main
+    release_flow(str(a.workspace),a.synthetic,a.fail_after_prepare,a.fail_after_pointer,a.manifest,a.report)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flows.py", line 1708, in __call__
+    return run_flow(
+           ^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1566, in run_flow
+    ret_val = run_flow_sync(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1411, in run_flow_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 361, in result
+    raise self._raised
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 788, in run_context
+    yield self
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1409, in run_flow_sync
+    engine.call_flow_fn()
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 808, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables.py", line 210, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 128, in release_flow
+    artifact=obtain_artifact(str(root),synthetic,manifest_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/tasks.py", line 1138, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1741, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1516, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 493, in result
+    raise self._raised
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 872, in run_context
+    yield self
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 1514, in run_task_sync
+    engine.call_task_fn(txn)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/task_engine.py", line 889, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/utilities/callables.py", line 210, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 86, in obtain_artifact
+    if not synthetic: verify_sources(manifest,root)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/provenance.py", line 28, in verify_sources
+    raise ValueError('Evaluation source changed: '+name)
+ValueError: Evaluation source changed: evidence/golden.jsonl
+
+EXIT_CODE=1

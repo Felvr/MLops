@@ -1,0 +1,143 @@
+test_atomic_disk_failure_keeps_old_pointer (test_integration.IntegrationTests.test_atomic_disk_failure_keeps_old_pointer) ... FAIL
+test_cache_recovery_and_changed_bytes (test_integration.IntegrationTests.test_cache_recovery_and_changed_bytes) ... FAIL
+test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) ...
+  test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) (body={'prompt': ''}) ... FAIL
+  test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) (body={'prompt': 'x', 'max_new_tokens': 0}) ... FAIL
+  test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) (body={'prompt': 'x', 'max_new_tokens': 100000}) ... FAIL
+  test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) (body={'prompt': 'x', 'max_new_tokens': '16'}) ... FAIL
+  test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) (body={'prompt': 'x', 'max_new_tokens': True}) ... FAIL
+  test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) (body=[]) ... FAIL
+test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) ... FAIL
+test_http_loaded_version_restart_and_rollback (test_integration.IntegrationTests.test_http_loaded_version_restart_and_rollback) ... FAIL
+test_http_readiness_blocks_backend (test_integration.IntegrationTests.test_http_readiness_blocks_backend) ... FAIL
+test_repeat_across_processes_one_event (test_integration.IntegrationTests.test_repeat_across_processes_one_event) ... FAIL
+test_reports_fail_closed_and_preserve_bytes (test_integration.IntegrationTests.test_reports_fail_closed_and_preserve_bytes) ...
+  test_reports_fail_closed_and_preserve_bytes (test_integration.IntegrationTests.test_reports_fail_closed_and_preserve_bytes) (report='report-incomplete.json') ... FAIL
+  test_reports_fail_closed_and_preserve_bytes (test_integration.IntegrationTests.test_reports_fail_closed_and_preserve_bytes) (report='report-A.json') ... FAIL
+
+======================================================================
+FAIL: test_atomic_disk_failure_keeps_old_pointer (test_integration.IntegrationTests.test_atomic_disk_failure_keeps_old_pointer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 171, in test_atomic_disk_failure_keeps_old_pointer
+    self.assertEqual(r.returncode,0,r.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 9, in <module>
+AssertionError: Expected atomic replace to fail
+
+
+======================================================================
+FAIL: test_cache_recovery_and_changed_bytes (test_integration.IntegrationTests.test_cache_recovery_and_changed_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 91, in test_cache_recovery_and_changed_bytes
+    self.assertIn('PREPARED', r.stdout)
+AssertionError: 'PREPARED' not found in 'CACHE_HIT 88bbd559a04a7a432693a1c611ef2704bb711ac17dd5e22203ee9e5020f59fd4\nPUBLISHED fixture-B\n'
+
+======================================================================
+FAIL: test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) (body={'prompt': ''})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 149, in test_http_invalid_requests_never_call_backend
+    self.assertIn(http(port,'/generate',body)[0],range(400,500))
+AssertionError: 200 not found in range(400, 500)
+
+======================================================================
+FAIL: test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) (body={'prompt': 'x', 'max_new_tokens': 0})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 149, in test_http_invalid_requests_never_call_backend
+    self.assertIn(http(port,'/generate',body)[0],range(400,500))
+AssertionError: 200 not found in range(400, 500)
+
+======================================================================
+FAIL: test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) (body={'prompt': 'x', 'max_new_tokens': 100000})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 149, in test_http_invalid_requests_never_call_backend
+    self.assertIn(http(port,'/generate',body)[0],range(400,500))
+AssertionError: 200 not found in range(400, 500)
+
+======================================================================
+FAIL: test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) (body={'prompt': 'x', 'max_new_tokens': '16'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 149, in test_http_invalid_requests_never_call_backend
+    self.assertIn(http(port,'/generate',body)[0],range(400,500))
+AssertionError: 200 not found in range(400, 500)
+
+======================================================================
+FAIL: test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) (body={'prompt': 'x', 'max_new_tokens': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 149, in test_http_invalid_requests_never_call_backend
+    self.assertIn(http(port,'/generate',body)[0],range(400,500))
+AssertionError: 200 not found in range(400, 500)
+
+======================================================================
+FAIL: test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) (body=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 150, in test_http_invalid_requests_never_call_backend
+    self.assertEqual(http(port,'/debug')[1]['calls'],before)
+AssertionError: 5 != 0
+
+======================================================================
+FAIL: test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 153, in test_http_invalid_requests_never_call_backend
+    self.assertEqual(http(port,'/debug')[1]['calls'],before+1)
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_http_loaded_version_restart_and_rollback (test_integration.IntegrationTests.test_http_loaded_version_restart_and_rollback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 134, in test_http_loaded_version_restart_and_rollback
+    self.assertEqual(answer['model_id'],'fixture-A')
+AssertionError: 'fixture-B' != 'fixture-A'
+- fixture-B
+?         ^
++ fixture-A
+?         ^
+
+
+======================================================================
+FAIL: test_http_readiness_blocks_backend (test_integration.IntegrationTests.test_http_readiness_blocks_backend)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 118, in test_http_readiness_blocks_backend
+    self.assertEqual(http(port,'/ready')[0], 503)
+AssertionError: 200 != 503
+
+======================================================================
+FAIL: test_repeat_across_processes_one_event (test_integration.IntegrationTests.test_repeat_across_processes_one_event)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 113, in test_repeat_across_processes_one_event
+    self.assertEqual(len((self.work/'publications.jsonl').read_text().splitlines()), 1)
+AssertionError: 2 != 1
+
+======================================================================
+FAIL: test_reports_fail_closed_and_preserve_bytes (test_integration.IntegrationTests.test_reports_fail_closed_and_preserve_bytes) (report='report-incomplete.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 103, in test_reports_fail_closed_and_preserve_bytes
+    self.assertNotEqual(r.returncode, 0, 'Bad report accepted: '+report)
+AssertionError: 0 == 0 : Bad report accepted: report-incomplete.json
+
+======================================================================
+FAIL: test_reports_fail_closed_and_preserve_bytes (test_integration.IntegrationTests.test_reports_fail_closed_and_preserve_bytes) (report='report-A.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/tests/test_integration.py", line 103, in test_reports_fail_closed_and_preserve_bytes
+    self.assertNotEqual(r.returncode, 0, 'Bad report accepted: '+report)
+AssertionError: 0 == 0 : Bad report accepted: report-A.json
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.495s
+
+FAILED (failures=14)
+
+EXIT_CODE=1

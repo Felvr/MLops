@@ -1,0 +1,64 @@
+
+Downloading artifacts:   0%|          | 0/19 [00:00<?, ?it/s]
+Downloading artifacts:   5%|▌         | 1/19 [00:00<00:00, 2590.68it/s]
+Downloading artifacts:  11%|█         | 2/19 [00:00<00:00, 1706.39it/s]
+Downloading artifacts:  16%|█▌        | 3/19 [00:00<00:00, 1823.61it/s]
+Downloading artifacts:  21%|██        | 4/19 [00:00<00:00, 2041.52it/s]
+Downloading artifacts:  26%|██▋       | 5/19 [00:00<00:00, 1032.62it/s]
+Downloading artifacts:  32%|███▏      | 6/19 [00:00<00:00, 235.59it/s]
+Downloading artifacts:  37%|███▋      | 7/19 [00:00<00:00, 180.56it/s]
+Downloading artifacts:  42%|████▏     | 8/19 [00:00<00:00, 183.01it/s]
+Downloading artifacts:  47%|████▋     | 9/19 [00:00<00:00, 150.12it/s]
+Downloading artifacts:  53%|█████▎    | 10/19 [00:00<00:00, 134.60it/s]
+Downloading artifacts:  58%|█████▊    | 11/19 [00:00<00:00, 141.80it/s]
+Downloading artifacts:  63%|██████▎   | 12/19 [00:00<00:00, 148.94it/s]
+Downloading artifacts:  68%|██████▊   | 13/19 [00:00<00:00, 119.64it/s]
+Downloading artifacts:  68%|██████▊   | 13/19 [00:00<00:00, 119.64it/s]
+Downloading artifacts:  74%|███████▎  | 14/19 [00:00<00:00, 119.64it/s]
+Downloading artifacts:  79%|███████▉  | 15/19 [00:00<00:00, 119.64it/s]
+Downloading artifacts:  84%|████████▍ | 16/19 [00:00<00:00, 119.64it/s]
+Downloading artifacts:  89%|████████▉ | 17/19 [00:01<00:00, 119.64it/s]
+Downloading artifacts:  95%|█████████▍| 18/19 [00:03<00:00, 119.64it/s]
+Downloading artifacts: 100%|██████████| 19/19 [00:16<00:00, 119.64it/s]
+Downloading artifacts: 100%|██████████| 19/19 [00:16<00:00,  1.18it/s]
+{
+  "training_run_id": "14bf51e70f58417291ef58de4d1d958b",
+  "model_spec": {
+    "kind": "adapter",
+    "name": "my-qwen-adapter",
+    "version": "1",
+    "run_id": "14bf51e70f58417291ef58de4d1d958b",
+    "uri": "models:/my-qwen-adapter/1"
+  },
+  "artifact_manifest": {
+    "model": {
+      "name": "Qwen/Qwen3-0.6B",
+      "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "device": "cpu",
+      "dtype": "float32",
+      "enable_thinking": false
+    },
+    "generation": {
+      "max_new_tokens": 16,
+      "system": "Выбери один правильный вариант. Ответь номером и текстом ответа.",
+      "prompts": [
+        "Метод подтверждения пневмонии: 0. общий анализ крови; 1. рентгенография грудной клетки; 2. спирометрия.",
+        "Показатель запасов железа: 0. сывороточное железо; 1. ферритин; 2. гемоглобин."
+      ]
+    },
+    "candidate": {
+      "name": "all-r8-high",
+      "r": 8,
+      "lr": 0.0003,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    }
+  }
+}

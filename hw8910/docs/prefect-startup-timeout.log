@@ -1,0 +1,48 @@
+15:48:40.435 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8052
+See https://docs.prefect.io/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+Traceback (most recent call last):
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 144, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/pipeline.py", line 141, in main
+    release_flow(str(a.workspace),a.synthetic,a.fail_after_prepare,a.fail_after_pointer,a.manifest,a.report)
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flows.py", line 1708, in __call__
+    return run_flow(
+           ^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1566, in run_flow
+    ret_val = run_flow_sync(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 1406, in run_flow_sync
+    with engine.start():
+         ^^^^^^^^^^^^^^
+  File "/Users/revyak/.local/share/uv/python/cpython-3.12.13-macos-x86_64-none/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 765, in start
+    with self.initialize_run():
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/.local/share/uv/python/cpython-3.12.13-macos-x86_64-none/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/flow_engine.py", line 686, in initialize_run
+    with SyncClientContext.get_or_create() as client_ctx:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/.local/share/uv/python/cpython-3.12.13-macos-x86_64-none/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/context.py", line 267, in get_or_create
+    with cls() as ctx:
+         ^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/context.py", line 240, in __init__
+    client=get_client(sync_client=True, httpx_settings=httpx_settings),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/client/orchestration/__init__.py", line 237, in get_client
+    server.start()
+  File "/Users/revyak/Documents/ChatGPT/MLops/hw8910/.venv/lib/python3.12/site-packages/prefect/server/api/server.py", line 921, in start
+    raise RuntimeError(error_message)
+RuntimeError: Timed out while attempting to connect to ephemeral Prefect API server.
+15:49:01.482 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8052
+15:49:02.043 | WARNING | prefect.server - Unable to write to memo_store.toml at /Users/revyak/.prefect/memo_store.toml after block auto-registration: FileNotFoundError(2, 'No such file or directory').
+ Subsequent server start ups will perform block auto-registration, which may result in slower server startup.
+
+EXIT_CODE=1
