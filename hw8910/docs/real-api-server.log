@@ -1,0 +1,411 @@
+INFO:     Started server process [80948]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:60206 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60219 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60220 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60221 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60223 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60224 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60225 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60226 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60227 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60228 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60229 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60230 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60231 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60232 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60233 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60234 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60235 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60236 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60237 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60238 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60239 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60240 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60241 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60243 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60244 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60245 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60246 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60247 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60248 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60249 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60250 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60251 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60252 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60253 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60254 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60255 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60256 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60257 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60258 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60259 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60260 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60261 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60262 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60263 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60264 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60265 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60266 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60267 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60268 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60269 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60270 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60271 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60272 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60273 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60274 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60275 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60276 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60278 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60279 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60280 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60281 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60282 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60283 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60284 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60285 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60286 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60287 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60288 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60289 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60290 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60291 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60292 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60293 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60294 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60295 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60301 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60302 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60305 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60306 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60307 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60310 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60312 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60313 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60316 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60317 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60318 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60321 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60322 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60323 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60326 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60327 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60328 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60331 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60333 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60334 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60338 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60339 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60340 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60343 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60344 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60345 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60348 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60349 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60350 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60353 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60354 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60355 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60358 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60359 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60360 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60363 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60364 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60365 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60368 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60369 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60371 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60374 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60375 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60376 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60379 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60380 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60381 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60384 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60385 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60386 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60389 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60390 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60391 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60394 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60395 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60396 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60399 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60400 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60401 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60404 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60405 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60406 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60409 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60410 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60411 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60414 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60415 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60416 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60419 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60420 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60421 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60424 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60425 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60426 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60429 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60430 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60431 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60434 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60435 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60436 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60439 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60440 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60441 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60444 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60445 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60446 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60448 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60449 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60450 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60451 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60452 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60453 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60454 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60455 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60456 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60457 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60458 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60459 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60460 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60461 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60462 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60463 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60464 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60465 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60466 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60467 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60468 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60469 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60470 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60471 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60472 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60473 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60474 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60475 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60476 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60477 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60478 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60479 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60480 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60481 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60482 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60483 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60484 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60485 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60486 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60487 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60488 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60489 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60490 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60491 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60492 - "GET /debug HTTP/1.1" 200 OK
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO:     127.0.0.1:60493 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60494 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60495 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60496 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60497 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60498 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60499 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60500 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60501 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60502 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60503 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60504 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60507 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60508 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60509 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60512 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60513 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60514 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60517 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60518 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60519 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60522 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60524 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60525 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60528 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60529 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60530 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60533 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60534 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60535 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60538 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60539 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60540 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60543 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60544 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60545 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60548 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60549 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60551 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60554 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60555 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60556 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60559 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60560 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60561 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60564 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60565 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60566 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60569 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60570 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60571 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60574 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60575 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60576 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60579 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60581 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60582 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60585 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60586 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60587 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60590 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60591 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60592 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60595 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60596 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60597 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60600 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60602 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60603 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60606 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60607 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60608 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60612 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60613 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60614 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60617 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60618 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60619 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60622 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60623 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60624 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60627 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60628 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60629 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60632 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60633 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60634 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60637 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60638 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60639 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60642 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60643 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60644 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60647 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60649 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60650 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60653 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60654 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60655 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60658 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60659 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60660 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60662 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60663 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60664 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60666 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60667 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60668 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60669 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60670 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60671 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60672 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60673 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60674 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60676 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60677 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60678 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60680 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60681 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60682 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60684 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60685 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60686 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60687 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60688 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60689 - "GET /debug HTTP/1.1" 200 OK
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+INFO:     127.0.0.1:60690 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60691 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60692 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60693 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60694 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60695 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60697 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60698 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60699 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60700 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60701 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60702 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60703 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60704 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60705 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60706 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60707 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60708 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60709 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60710 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60711 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60712 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60713 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60714 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60715 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60716 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60717 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60718 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60719 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60720 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60721 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60722 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60723 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60724 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60725 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60726 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60727 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60728 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60729 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60730 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60731 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60732 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60733 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60734 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:60735 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60736 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60737 - "GET /ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60738 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60739 - "POST /generate HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:60740 - "GET /debug HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60741 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60742 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60760 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60797 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60828 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60847 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60848 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60850 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60868 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60897 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60898 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60925 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60950 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60951 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60952 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60966 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60994 - "POST /generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61050 - "GET /debug HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [80948]

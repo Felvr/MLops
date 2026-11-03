@@ -1,0 +1,103 @@
+INTENTIONAL MUTATION: input bytes/config omitted from cache key
+test_atomic_disk_failure_keeps_old_pointer (test_integration.IntegrationTests.test_atomic_disk_failure_keeps_old_pointer) ... ok
+test_cache_recovery_and_changed_bytes (test_integration.IntegrationTests.test_cache_recovery_and_changed_bytes) ... FAIL
+test_http_invalid_requests_never_call_backend (test_integration.IntegrationTests.test_http_invalid_requests_never_call_backend) ... ok
+test_http_loaded_version_restart_and_rollback (test_integration.IntegrationTests.test_http_loaded_version_restart_and_rollback) ... ok
+test_http_readiness_blocks_backend (test_integration.IntegrationTests.test_http_readiness_blocks_backend) ... ok
+test_repeat_across_processes_one_event (test_integration.IntegrationTests.test_repeat_across_processes_one_event) ... ok
+test_reports_fail_closed_and_preserve_bytes (test_integration.IntegrationTests.test_reports_fail_closed_and_preserve_bytes) ... ok
+test_crash_between_pointer_and_journal_recovers_once (test_recovery.RecoveryTests.test_crash_between_pointer_and_journal_recovers_once) ... ok
+test_error_before_replace_preserves_pointer (test_recovery.RecoveryTests.test_error_before_replace_preserves_pointer) ... ok
+test_release_identity_binds_runtime_and_decision (test_recovery.RecoveryTests.test_release_identity_binds_runtime_and_decision) ... ok
+test_tampered_artifact_rejected_before_publish (test_recovery.RecoveryTests.test_tampered_artifact_rejected_before_publish) ... ok
+test_changed_bytes_at_same_path_invalidate_cache (test_release.ReleaseContractTests.test_changed_bytes_at_same_path_invalidate_cache) ... FAIL
+test_complete_bound_report_allowed (test_release.ReleaseContractTests.test_complete_bound_report_allowed) ... ok
+test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) ...
+  test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) (key='tokenizer_revision') ... FAIL
+  test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) (key='template_sha256') ... FAIL
+  test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) (key='max_length') ... FAIL
+  test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) (key='code_revision') ... FAIL
+test_failed_atomic_replace_preserves_previous_bytes (test_release.ReleaseContractTests.test_failed_atomic_replace_preserves_previous_bytes) ... ok
+test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests.test_incomplete_false_and_truthy_string_rejected) ... ok
+test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests.test_invalid_digest_and_schema_rejected) ... ok
+test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) ... ok
+test_key_ignores_path_and_mapping_order (test_release.ReleaseContractTests.test_key_ignores_path_and_mapping_order) ... FAIL
+test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) ... ok
+test_publish_and_repeat (test_release.ReleaseContractTests.test_publish_and_repeat) ... ok
+test_rejection_preserves_previous_bytes (test_release.ReleaseContractTests.test_rejection_preserves_previous_bytes) ... ok
+test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.test_report_binding_mismatch_rejected) ... ok
+test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests.test_runtime_change_with_stale_hash_rejected) ... ok
+
+======================================================================
+FAIL: test_cache_recovery_and_changed_bytes (test_integration.IntegrationTests.test_cache_recovery_and_changed_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/yd/rsl9pmcd685fdt22t3tmb_tr0000gn/T/tmpuu1ylqw9/tests/test_integration.py", line 91, in test_cache_recovery_and_changed_bytes
+    self.assertIn('PREPARED', r.stdout)
+AssertionError: 'PREPARED' not found in 'CACHE_HIT 88bbd559a04a7a432693a1c611ef2704bb711ac17dd5e22203ee9e5020f59fd4\nPUBLISHED fixture-B\n'
+
+======================================================================
+FAIL: test_changed_bytes_at_same_path_invalidate_cache (test_release.ReleaseContractTests.test_changed_bytes_at_same_path_invalidate_cache)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/yd/rsl9pmcd685fdt22t3tmb_tr0000gn/T/tmpuu1ylqw9/tests/test_release.py", line 42, in test_changed_bytes_at_same_path_invalidate_cache
+    self.assertNotEqual(old,release.cache_key(self.data,self.config))
+AssertionError: '599fa82df5043a481242d3785a08ea252d02bd0c52e86ae89f3465bd1724ae7d' == '599fa82df5043a481242d3785a08ea252d02bd0c52e86ae89f3465bd1724ae7d'
+
+======================================================================
+FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) (key='tokenizer_revision')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/yd/rsl9pmcd685fdt22t3tmb_tr0000gn/T/tmpuu1ylqw9/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
+    config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'a441c0136182bccaf1ebed3c6b95201df5a703c32119a0687878980ce50adeba' == 'a441c0136182bccaf1ebed3c6b95201df5a703c32119a0687878980ce50adeba'
+
+======================================================================
+FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) (key='template_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/yd/rsl9pmcd685fdt22t3tmb_tr0000gn/T/tmpuu1ylqw9/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
+    config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'a441c0136182bccaf1ebed3c6b95201df5a703c32119a0687878980ce50adeba' == 'a441c0136182bccaf1ebed3c6b95201df5a703c32119a0687878980ce50adeba'
+
+======================================================================
+FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) (key='max_length')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/yd/rsl9pmcd685fdt22t3tmb_tr0000gn/T/tmpuu1ylqw9/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
+    config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'a441c0136182bccaf1ebed3c6b95201df5a703c32119a0687878980ce50adeba' == 'a441c0136182bccaf1ebed3c6b95201df5a703c32119a0687878980ce50adeba'
+
+======================================================================
+FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) (key='code_revision')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/yd/rsl9pmcd685fdt22t3tmb_tr0000gn/T/tmpuu1ylqw9/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
+    config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'a441c0136182bccaf1ebed3c6b95201df5a703c32119a0687878980ce50adeba' == 'a441c0136182bccaf1ebed3c6b95201df5a703c32119a0687878980ce50adeba'
+
+======================================================================
+FAIL: test_key_ignores_path_and_mapping_order (test_release.ReleaseContractTests.test_key_ignores_path_and_mapping_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/yd/rsl9pmcd685fdt22t3tmb_tr0000gn/T/tmpuu1ylqw9/tests/test_release.py", line 38, in test_key_ignores_path_and_mapping_order
+    self.assertEqual(key,release.cache_key(other,dict(reversed(list(self.config.items())))))
+AssertionError: 'b95a0dcaab9249fee969f4aa5b536ad0f5a5b44d17abf336d4c555219792cd35' != '12b1365fa88b7f515d04eb6f2de1d618fea8ef0f50453ca3a5051a965c5c035a'
+- b95a0dcaab9249fee969f4aa5b536ad0f5a5b44d17abf336d4c555219792cd35
++ 12b1365fa88b7f515d04eb6f2de1d618fea8ef0f50453ca3a5051a965c5c035a
+
+
+----------------------------------------------------------------------
+Ran 24 tests in 14.025s
+
+FAILED (failures=7)
+Создан синтетический стенд: /var/folders/yd/rsl9pmcd685fdt22t3tmb_tr0000gn/T/tmp9eec298f/w
+Создан синтетический стенд: /var/folders/yd/rsl9pmcd685fdt22t3tmb_tr0000gn/T/tmphff5_hrp/w
+Создан синтетический стенд: /var/folders/yd/rsl9pmcd685fdt22t3tmb_tr0000gn/T/tmp3ev59asj/w
+Создан синтетический стенд: /var/folders/yd/rsl9pmcd685fdt22t3tmb_tr0000gn/T/tmpgd2lr600/w
+
+EXIT_CODE=1

@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "accepted_sha256": "7e3c483870116f11444f230ece989bd08deda7c5099d5ba2ecd315e7b3ae802c",
+  "fast_tests": 24,
+  "previous_hw67_tests": 29,
+  "primary_integration_tests": 7,
+  "primary_integration_original_exit": 1,
+  "mutation_exit": 1,
+  "real_http_requests": 16,
+  "successful_real_http_requests": 16,
+  "real_restart_verified": true,
+  "real_gate_passed": false,
+  "real_input_restored": true,
+  "source_hashes_verified": true,
+  "artifact_files_verified": true,
+  "video_recorded": false,
+  "github_push_performed": false
+}

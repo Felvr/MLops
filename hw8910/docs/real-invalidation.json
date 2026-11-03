@@ -1,0 +1,9 @@
+{
+  "input_before": "9930cf810f94b114e8df015a9aa9b8bde92b1a1932574ee44ef5e7652dff84e1",
+  "input_changed": "08af624ed41c2e0443926d0db499d8eace2fcbbab90811a481836f80bf41de5e",
+  "input_after_restore": "9930cf810f94b114e8df015a9aa9b8bde92b1a1932574ee44ef5e7652dff84e1",
+  "pointer_before": "7e3c483870116f11444f230ece989bd08deda7c5099d5ba2ecd315e7b3ae802c",
+  "pointer_after": "7e3c483870116f11444f230ece989bd08deda7c5099d5ba2ecd315e7b3ae802c",
+  "restored": true,
+  "exit_code": 1
+}

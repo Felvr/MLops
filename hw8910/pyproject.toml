@@ -1,0 +1,13 @@
+[project]
+name = "mlops-hw8910"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = ["prefect==3.4.25", "fastapi==0.116.1", "uvicorn==0.35.0", "httpx==0.28.1",
+                "importlib-metadata==8.7.0", "SQLAlchemy==2.0.43"]
+
+[project.optional-dependencies]
+model = [
+  "torch==2.2.2; sys_platform == 'darwin' and platform_machine == 'x86_64'",
+  "torch==2.5.1; sys_platform != 'darwin' or platform_machine != 'x86_64'",
+  "transformers==4.56.2", "peft==0.14.0", "accelerate==1.9.0", "numpy==1.26.4",
+]

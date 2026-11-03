@@ -1,0 +1,12 @@
+15:51:45.530 | INFO    | Flow run 'marvellous-woodpecker' - Beginning flow run 'marvellous-woodpecker' for flow 'hw8910-release'
+15:51:45.547 | INFO    | Flow run 'marvellous-woodpecker' - View at http://127.0.0.1:63192/runs/flow-run/704d60cb-855a-4b98-806b-24c8f790c660
+15:51:45.638 | INFO    | Task run 'prepare-2aa' - Finished in state Cached(type=COMPLETED)
+15:51:45.640 | INFO    | Flow run 'marvellous-woodpecker' - PREPARATION_STATE Cached 01a1a177-313e-7bcb-b511-b9bf0d365836
+15:51:45.693 | INFO    | Task run 'obtain_artifact-361' - Read existing artifact; NO training: fixture-B
+15:51:45.700 | INFO    | Task run 'obtain_artifact-361' - Finished in state Completed()
+15:51:45.753 | INFO    | Task run 'evaluate_gate-747' - Gate passed=True decision=None
+15:51:45.758 | INFO    | Task run 'evaluate_gate-747' - Finished in state Completed()
+15:51:45.815 | INFO    | Task run 'publication-29e' - Finished in state Completed()
+15:51:45.856 | INFO    | Flow run 'marvellous-woodpecker' - Finished in state Completed()
+
+EXIT_CODE=0

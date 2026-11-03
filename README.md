@@ -12,11 +12,13 @@
 | [ДЗ4](hw4/README.md) | Токенизация MedQuAD, шаблон чата, маска лосса и паддинг | [defects.md](hw4/docs/defects.md), [tokenize_report.md](hw4/docs/tokenize_report.md) |
 | [ДЗ5](hw5/README.md) | LoRA-прогон на 32/8 примерах MedQuAD, все 9 проверок пройдены | [defects.md](hw5/docs/defects.md), [compare.md](hw5/docs/compare.md) |
 | [ДЗ6+7](hw67/README.md) | Шесть LoRA-конфигураций, MLflow, golden set и gate качества | [conclusion.md](hw67/docs/conclusion.md), [defects.md](hw67/docs/defects.md) |
+| [ДЗ8+9+10](hw8910/README.md) | Prefect, строгий выпуск, FastAPI и реальный CPU benchmark Qwen3 | [report.md](hw8910/docs/report.md), [defects.csv](hw8910/defects.csv) |
 
 ## Запуск
 
 Команды выполняются из папки соответствующей работы. Каждая работа имеет свой
-`pyproject.toml`, `uv.lock`, `params.yaml` и локальное окружение `.venv`.
+`pyproject.toml`, `uv.lock` и локальное окружение `.venv`; конфигурация задаётся
+через `params.yaml` или manifest JSON соответствующей работы.
 
 ```bash
 cd hw1
@@ -66,7 +68,8 @@ make check
 
 ## Структура и новые работы
 
-В Git включаются `hw1/`, `hw2/` и будущие папки `hw3/` … `hw999/`, а также этот
+В Git включаются `hw1/`, `hw2/` и будущие папки `hw3/` … `hw999/`,
+объединённая работа `hw8910/`, а также этот
 README, `agent.md`, `AGENTS.md` и корневые настройки Git. Внутри работ хранятся код, конфигурация,
 зафиксированные зависимости, проверки и материалы, необходимые для сдачи.
 

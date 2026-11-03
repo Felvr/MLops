@@ -1,0 +1,52 @@
+{
+  "accepted_before_reject_sha256": "127ceb246bc351d54a6076230caf41aa78e7b4b552e2cc974353296980ed69e0",
+  "accepted_after_reject_sha256": "127ceb246bc351d54a6076230caf41aa78e7b4b552e2cc974353296980ed69e0",
+  "publications": [
+    {
+      "evaluation_run_id": "fixture-eval-B",
+      "model_id": "fixture-B",
+      "release_id": "cdfa2da746093e2a2c185d1166718c0d01747ac18884945b0faa68c9ad9c3082",
+      "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547"
+    },
+    {
+      "evaluation_run_id": "fixture-eval-B-second",
+      "model_id": "fixture-B",
+      "release_id": "2830d5d270bdad17c967624b11028a997de661d9ac2a63f91017a5b4f4264d97",
+      "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547"
+    }
+  ],
+  "attempts": [
+    {
+      "attempt_id": "3cb1d5a03277416e8e06ec7808a7131c",
+      "manifest": "manifest-B.json"
+    },
+    {
+      "attempt_id": "fe884363082d42c89ef1521720422485",
+      "manifest": "manifest-B.json"
+    },
+    {
+      "attempt_id": "aca6500ba8d144b39344c5fefafdd82d",
+      "manifest": "manifest-B.json"
+    },
+    {
+      "attempt_id": "94a738a2b85a452492d447bdf2c3f0db",
+      "manifest": "manifest-B.json"
+    },
+    {
+      "attempt_id": "8007a2ef23394603bb115a890ca34748",
+      "manifest": "manifest-B.json"
+    },
+    {
+      "attempt_id": "2a33d3cd327d48b69ecdd29334fcb672",
+      "manifest": "manifest-B.json"
+    },
+    {
+      "attempt_id": "d8f874ab4b1e4bd6b4c0d98b8799962c",
+      "manifest": "manifest-B.json"
+    },
+    {
+      "attempt_id": "61584d174b294b95bec18c207a382b75",
+      "manifest": "manifest-B.json"
+    }
+  ]
+}

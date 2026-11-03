@@ -1,0 +1,21 @@
+{
+  "ready": [
+    200,
+    {
+      "ready": true,
+      "model_id": "Qwen3-0.6B-base-c1899de289a0",
+      "runtime_sha256": "b6d7d52993cd9e4aa2660d59904892dea88bb5793883d50deda2561b6771636f"
+    }
+  ],
+  "response": {
+    "answer": "{\"answer\":\"A\"}",
+    "output_tokens": 6,
+    "request_id": "85e9fdae-6f2e-4a35-8ba2-2dbd914f7571",
+    "model_id": "Qwen3-0.6B-base-c1899de289a0",
+    "runtime_sha256": "b6d7d52993cd9e4aa2660d59904892dea88bb5793883d50deda2561b6771636f",
+    "queue_seconds": 0.0006512399995699525,
+    "generation_seconds": 2.0492142969887936,
+    "total_seconds": 2.0498660579905845
+  },
+  "same_loaded_model_as_previous_process": true
+}

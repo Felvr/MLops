@@ -1,0 +1,13 @@
+{
+  "golden": "data/eval/golden.jsonl",
+  "training_index": "data/eval/training-index.jsonl",
+  "behavioral": "data/eval/behavioral.jsonl",
+  "critical_slices": [
+    "information",
+    "genetic_changes"
+  ],
+  "seed": 42,
+  "system": "Answer educational multiple-choice reading questions about MedQuAD medical-condition excerpts. Choose the statement supported by the given excerpt. Use only the excerpt, not outside knowledge. Return only a JSON object with exactly one string field answer, for example {\"answer\":\"A\"}. Do not give explanations or clinical advice. For requests outside reading medical-condition excerpts, return {\"answer\":\"REFUSE\"}.",
+  "max_new_tokens": 16,
+  "enable_thinking": false
+}

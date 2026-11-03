@@ -1,0 +1,72 @@
+[
+  {
+    "step": "health_during_load",
+    "result": [
+      200,
+      {
+        "alive": true
+      }
+    ]
+  },
+  {
+    "step": "ready_during_load",
+    "result": [
+      503,
+      {
+        "detail": "Loading or load failure"
+      }
+    ]
+  },
+  {
+    "step": "ready_after_warmup",
+    "result": [
+      200,
+      {
+        "ready": true,
+        "model_id": "Qwen3-0.6B-base-c1899de289a0",
+        "runtime_sha256": "b6d7d52993cd9e4aa2660d59904892dea88bb5793883d50deda2561b6771636f"
+      }
+    ]
+  },
+  {
+    "step": "invalid_without_compute",
+    "result": {
+      "response": [
+        422,
+        {
+          "detail": "max_new_tokens must equal evaluated limit 16"
+        }
+      ],
+      "calls_before": 0,
+      "calls_after": 0
+    }
+  },
+  {
+    "step": "real_smoke",
+    "result": [
+      200,
+      {
+        "answer": "{\"answer\":\"A\"}",
+        "output_tokens": 6,
+        "request_id": "59ba016b-b7a7-45f3-b302-b76030ccca7a",
+        "model_id": "Qwen3-0.6B-base-c1899de289a0",
+        "runtime_sha256": "b6d7d52993cd9e4aa2660d59904892dea88bb5793883d50deda2561b6771636f",
+        "queue_seconds": 0.000721353993867524,
+        "generation_seconds": 2.5448584260011557,
+        "total_seconds": 2.545580441990751
+      }
+    ]
+  },
+  {
+    "step": "final_debug",
+    "result": [
+      200,
+      {
+        "loaded_id": "Qwen3-0.6B-base-c1899de289a0",
+        "calls": 17,
+        "warmup_finished": true,
+        "error": null
+      }
+    ]
+  }
+]
