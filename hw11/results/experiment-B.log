@@ -1,0 +1,13 @@
+Release "hw11" has been upgraded. Happy Helming!
+B-uniform-plain-1 {'completed': 716, 'rejected': 4}
+B-uniform-sticky-1 {'completed': 720}
+B-80pct-plain-1 {'completed': 709, 'rejected': 11}
+B-80pct-sticky-1 {'completed': 516, 'rejected': 204}
+B-uniform-sticky-2 {'completed': 720}
+B-uniform-plain-2 {'completed': 714, 'rejected': 6}
+B-80pct-sticky-2 {'completed': 515, 'rejected': 205}
+B-80pct-plain-2 {'completed': 710, 'rejected': 10}
+B-uniform-plain-3 {'completed': 712, 'rejected': 8}
+B-uniform-sticky-3 {'completed': 712, 'rejected': 8}
+B-80pct-plain-3 {'completed': 699, 'rejected': 21}
+B-80pct-sticky-3 {'completed': 503, 'rejected': 217}

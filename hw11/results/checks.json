@@ -1,0 +1,98 @@
+[
+  {
+    "check": "cold request reached the defective deployment",
+    "passed": true,
+    "request_ids": [
+      "A-warm-broken-0014",
+      "A-warm-broken-0015",
+      "A-warm-broken-0016",
+      "A-warm-broken-0017",
+      "A-warm-broken-0020",
+      "A-warm-broken-0022",
+      "A-warm-broken-0024",
+      "A-warm-broken-0025",
+      "A-warm-broken-0026",
+      "A-warm-broken-0027",
+      "A-warm-broken-0028",
+      "A-warm-broken-0029",
+      "A-warm-broken-0030",
+      "A-warm-broken-0031",
+      "A-warm-broken-0032",
+      "A-warm-broken-0033",
+      "A-warm-broken-0034",
+      "A-warm-broken-0035",
+      "A-warm-broken-0036",
+      "A-warm-broken-0037",
+      "A-warm-broken-0038",
+      "A-warm-broken-0039",
+      "A-warm-broken-0040",
+      "A-warm-broken-0041",
+      "A-warm-broken-0042",
+      "A-warm-broken-0043",
+      "A-warm-broken-0044",
+      "A-warm-broken-0045",
+      "A-warm-broken-0046",
+      "A-warm-broken-0047",
+      "A-warm-broken-0048",
+      "A-warm-broken-0049",
+      "A-warm-broken-0050",
+      "A-warm-broken-0052",
+      "A-warm-broken-0053",
+      "A-warm-broken-0054",
+      "A-warm-broken-0056"
+    ]
+  },
+  {
+    "check": "corrected warmup never receives a cold request",
+    "passed": true,
+    "request_ids": []
+  },
+  {
+    "check": "old stream completes while healthy B rolls out",
+    "passed": true,
+    "stream": "A-rollout-0000"
+  },
+  {
+    "check": "bad B excluded; actual A hash after Helm rollback",
+    "passed": true,
+    "rollback_to": "5",
+    "expected_sha256": "6995276d1329f06f245f4b86cb925e3b44e7dcce8c01a0caacdb50745e1df378"
+  },
+  {
+    "check": "replacement restores verified version and dialogue",
+    "passed": true,
+    "replaced_pod": "hw11-api-5f748dc9c6-jnfdc"
+  },
+  {
+    "check": "dialogues stay isolated",
+    "passed": true
+  },
+  {
+    "check": "forced kill counts admissions, rejections and interrupted streams separately",
+    "passed": true
+  },
+  {
+    "check": "active old stream completes after Pod enters Terminating",
+    "passed": true,
+    "proof": [
+      {
+        "request_id": "A-drain-old-0-0000",
+        "pod": "hw11-api-5f748dc9c6-k5sgh",
+        "sent_at": 1794950658.4436414,
+        "first_at": 1794950659.079137,
+        "ended_at": 1794950682.0802662,
+        "terminating_observed_at": 1794950697.481936,
+        "crossed": false
+      },
+      {
+        "request_id": "A-drain-old-1-0000",
+        "pod": "hw11-api-5f748dc9c6-mhsgz",
+        "sent_at": 1794950658.442744,
+        "first_at": 1794950659.0286834,
+        "ended_at": 1794950682.030391,
+        "terminating_observed_at": 1794950672.466528,
+        "crossed": true
+      }
+    ]
+  }
+]

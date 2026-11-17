@@ -1,0 +1,117 @@
+{{- $model := required "modelVersion must reference a packaged model" (.Files.Get (printf "models/%s.json" .Values.modelVersion)) -}}
+{{- range $path, $_ := .Files.Glob "models/*.json" }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hw11-model-{{ base $path | trimSuffix ".json" | lower }}
+immutable: true
+data:
+  model.json: |
+{{ $.Files.Get $path | indent 4 }}
+---
+{{- end }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hw11-api
+spec:
+  {{- if not .Values.hpa.enabled }}
+  replicas: {{ .Values.replicas }}
+  {{- end }}
+  revisionHistoryLimit: 4
+  progressDeadlineSeconds: 100
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: {maxSurge: 1, maxUnavailable: 0}
+  selector:
+    matchLabels: {app: hw11-api}
+  template:
+    metadata:
+      labels: {app: hw11-api}
+      annotations:
+        prometheus.io/scrape: "true"
+    spec:
+      terminationGracePeriodSeconds: 45
+      automountServiceAccountToken: false
+      containers:
+        - name: api
+          image: {{ .Values.image | quote }}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - {name: http, containerPort: 8080}
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef: {fieldPath: metadata.name}
+            - {name: MODEL_PATH, value: /model/model.json}
+            - {name: MODEL_VERSION, value: {{ .Values.modelVersion | quote }}}
+            - {name: MODEL_SHA256, value: {{ ternary "invalid" (sha256sum $model) .Values.corruptChecksum | quote }}}
+            - {name: WARMUP_SECONDS, value: {{ .Values.warmupSeconds | quote }}}
+            - {name: PROBE_MODE, value: {{ .Values.probeMode | quote }}}
+            - {name: SLOTS, value: {{ .Values.slots | quote }}}
+            - {name: QUEUE_LIMIT, value: {{ .Values.queueLimit | quote }}}
+            - {name: CACHE_SIZE, value: {{ .Values.cacheSize | quote }}}
+            - {name: HIT_MS, value: {{ .Values.hitMs | quote }}}
+            - {name: MISS_MS, value: {{ .Values.missMs | quote }}}
+          startupProbe:
+            httpGet: {path: /startup, port: http}
+            periodSeconds: 2
+            timeoutSeconds: 1
+            failureThreshold: {{ div (add (.Values.warmupSeconds | int) 42) 2 }}
+          readinessProbe:
+            httpGet: {path: /ready, port: http}
+            periodSeconds: 1
+            timeoutSeconds: 1
+            failureThreshold: 1
+          livenessProbe:
+            httpGet: {path: /health, port: http}
+            periodSeconds: 5
+            timeoutSeconds: 2
+            failureThreshold: 3
+          lifecycle:
+            preStop:
+              exec:
+                command: ["sleep", "5"]
+          resources: {{ .Values.resources | toJson }}
+          volumeMounts:
+            - {name: model, mountPath: /model, readOnly: true}
+      volumes:
+        - name: model
+          configMap: {name: hw11-model-{{ .Values.modelVersion | lower }}}
+{{- range list "plain" "sticky" }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hw11-{{ . }}
+spec:
+  selector: {app: hw11-api}
+  ports:
+    - {port: 8080, targetPort: http}
+  {{- if eq . "sticky" }}
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+    clientIP: {timeoutSeconds: 10800}
+  {{- else }}
+  sessionAffinity: None
+  {{- end }}
+{{- end }}
+{{- if .Values.hpa.enabled }}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: hw11-api
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: hw11-api}
+  minReplicas: 2
+  maxReplicas: 3
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target: {type: Utilization, averageUtilization: {{ .Values.hpa.targetCPU }}}
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: {{ .Values.hpa.downscaleSeconds }}
+{{- end }}

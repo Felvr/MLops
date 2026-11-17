@@ -1,0 +1,5 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+{"ts": 1794948491.193548, "event": "load_failed", "error": "artifact checksum mismatch", "pod": "hw11-api-6b5d47f7d9-fkmk5", "model_id": null, "runtime_sha256": null, "backend_mode": "simulated"}
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)

@@ -1,0 +1,8 @@
+test_200_without_terminal_frame_is_aborted (test_client.AccountingTests.test_200_without_terminal_frame_is_aborted) ... ok
+test_completed_frame_requires_the_declared_number_of_parts (test_client.AccountingTests.test_completed_frame_requires_the_declared_number_of_parts) ... ok
+test_refusal_has_no_chunk_or_ttfc (test_client.AccountingTests.test_refusal_has_no_chunk_or_ttfc) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.025s
+
+OK

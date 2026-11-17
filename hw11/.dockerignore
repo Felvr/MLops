@@ -1,0 +1,6 @@
+*
+!pyproject.toml
+!uv.lock
+!service.py
+!scripts/
+!scripts/client.py

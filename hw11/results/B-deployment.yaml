@@ -1,0 +1,145 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "8"
+    meta.helm.sh/release-name: hw11
+    meta.helm.sh/release-namespace: hw11
+  creationTimestamp: "2026-11-17T20:40:10Z"
+  generation: 8
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: hw11-api
+  namespace: hw11
+  resourceVersion: "2537"
+  uid: 2e47a489-2348-49d3-9697-f3248e00b879
+spec:
+  progressDeadlineSeconds: 100
+  replicas: 2
+  revisionHistoryLimit: 4
+  selector:
+    matchLabels:
+      app: hw11-api
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+      creationTimestamp: null
+      labels:
+        app: hw11-api
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: MODEL_PATH
+          value: /model/model.json
+        - name: MODEL_VERSION
+          value: A
+        - name: MODEL_SHA256
+          value: 6995276d1329f06f245f4b86cb925e3b44e7dcce8c01a0caacdb50745e1df378
+        - name: WARMUP_SECONDS
+          value: "20"
+        - name: PROBE_MODE
+          value: correct
+        - name: SLOTS
+          value: "1"
+        - name: QUEUE_LIMIT
+          value: "5"
+        - name: CACHE_SIZE
+          value: "32"
+        - name: HIT_MS
+          value: "35"
+        - name: MISS_MS
+          value: "180"
+        image: mlops-hw11:1.0.0
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          preStop:
+            exec:
+              command:
+              - sleep
+              - "5"
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /health
+            port: http
+            scheme: HTTP
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 2
+        name: api
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 1
+          httpGet:
+            path: /ready
+            port: http
+            scheme: HTTP
+          periodSeconds: 1
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: 750m
+            memory: 192Mi
+          requests:
+            cpu: 100m
+            memory: 64Mi
+        startupProbe:
+          failureThreshold: 31
+          httpGet:
+            path: /startup
+            port: http
+            scheme: HTTP
+          periodSeconds: 2
+          successThreshold: 1
+          timeoutSeconds: 1
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /model
+          name: model
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 45
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: hw11-model-a
+        name: model
+status:
+  availableReplicas: 2
+  conditions:
+  - lastTransitionTime: "2026-11-17T20:50:01Z"
+    lastUpdateTime: "2026-11-17T20:50:01Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2026-11-17T20:40:10Z"
+    lastUpdateTime: "2026-11-17T20:52:22Z"
+    message: ReplicaSet "hw11-api-7c7fcdc7b9" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 8
+  readyReplicas: 2
+  replicas: 2
+  updatedReplicas: 2

@@ -1,0 +1,23 @@
+{
+  "update_started": 1794950646.435254,
+  "streams": [
+    {
+      "request_id": "A-drain-old-0-0000",
+      "pod": "hw11-api-5f748dc9c6-k5sgh",
+      "sent_at": 1794950658.4436414,
+      "first_at": 1794950659.079137,
+      "ended_at": 1794950682.0802662,
+      "terminating_observed_at": 1794950697.481936,
+      "crossed": false
+    },
+    {
+      "request_id": "A-drain-old-1-0000",
+      "pod": "hw11-api-5f748dc9c6-mhsgz",
+      "sent_at": 1794950658.442744,
+      "first_at": 1794950659.0286834,
+      "ended_at": 1794950682.030391,
+      "terminating_observed_at": 1794950672.466528,
+      "crossed": true
+    }
+  ]
+}

@@ -1,0 +1,2384 @@
+{
+  "start": 1794948750.2789152,
+  "duration": 120,
+  "rate": 6,
+  "window": [
+    1794948748.2789152,
+    1794948872.624914,
+    2
+  ],
+  "buckets_before": [
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "0.025",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "0.05",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "41"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "0.075",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "41"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "0.1",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "41"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "0.15",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "41"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "0.2",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "0.3",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "0.45",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "0.65",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "0.85",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "1.1",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "1.5",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "2.0",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "3.0",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "5.0",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "8.0",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "12.0",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "20.0",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "35.0",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.23:8080",
+        "job": "api",
+        "le": "+Inf",
+        "pod": "hw11-api-5f748dc9c6-j9ffw"
+      },
+      "value": [
+        1794948746.274,
+        "53"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.025",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.05",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.075",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.1",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.15",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.2",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.3",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.45",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.65",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.85",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "1.1",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "1.5",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "2.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "3.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "5.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "8.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "12.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "20.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "35.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "+Inf",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.025",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.05",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.075",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.1",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.15",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.2",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.3",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.45",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.65",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.85",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "1.1",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "1.5",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "2.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "3.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "5.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "8.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "12.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "20.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "35.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "+Inf",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948746.274,
+        "0"
+      ]
+    }
+  ],
+  "buckets_after": [
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.025",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.05",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "101"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.075",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "109"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.1",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "114"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.15",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "130"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.2",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "182"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.3",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "220"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.45",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "256"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.65",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "289"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "0.85",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "307"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "1.1",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "327"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "1.5",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "339"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "2.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "339"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "3.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "339"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "5.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "339"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "8.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "339"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "12.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "339"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "20.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "339"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "35.0",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "339"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "le": "+Inf",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "value": [
+        1794948874.862,
+        "339"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.025",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "0"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.05",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "52"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.075",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "55"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.1",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "66"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.15",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "87"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.2",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "132"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.3",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "188"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.45",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "247"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.65",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "304"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "0.85",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "339"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "1.1",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "361"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "1.5",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "376"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "2.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "377"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "3.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "377"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "5.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "377"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "8.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "377"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "12.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "377"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "20.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "377"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "35.0",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "377"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_ttfc_seconds_bucket",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "le": "+Inf",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "value": [
+        1794948874.862,
+        "377"
+      ]
+    }
+  ],
+  "waiting": [
+    {
+      "metric": {
+        "__name__": "hw11_waiting",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "values": [
+        [
+          1794948748.279,
+          "0"
+        ],
+        [
+          1794948750.279,
+          "0"
+        ],
+        [
+          1794948752.279,
+          "2"
+        ],
+        [
+          1794948754.279,
+          "2"
+        ],
+        [
+          1794948756.279,
+          "3"
+        ],
+        [
+          1794948758.279,
+          "2"
+        ],
+        [
+          1794948760.279,
+          "0"
+        ],
+        [
+          1794948762.279,
+          "0"
+        ],
+        [
+          1794948764.279,
+          "0"
+        ],
+        [
+          1794948766.279,
+          "0"
+        ],
+        [
+          1794948768.279,
+          "0"
+        ],
+        [
+          1794948770.279,
+          "1"
+        ],
+        [
+          1794948772.279,
+          "1"
+        ],
+        [
+          1794948774.279,
+          "0"
+        ],
+        [
+          1794948776.279,
+          "2"
+        ],
+        [
+          1794948778.279,
+          "0"
+        ],
+        [
+          1794948780.279,
+          "0"
+        ],
+        [
+          1794948782.279,
+          "0"
+        ],
+        [
+          1794948784.279,
+          "0"
+        ],
+        [
+          1794948786.279,
+          "1"
+        ],
+        [
+          1794948788.279,
+          "2"
+        ],
+        [
+          1794948790.279,
+          "2"
+        ],
+        [
+          1794948792.279,
+          "2"
+        ],
+        [
+          1794948794.279,
+          "1"
+        ],
+        [
+          1794948796.279,
+          "0"
+        ],
+        [
+          1794948798.279,
+          "0"
+        ],
+        [
+          1794948800.279,
+          "1"
+        ],
+        [
+          1794948802.279,
+          "0"
+        ],
+        [
+          1794948804.279,
+          "1"
+        ],
+        [
+          1794948806.279,
+          "0"
+        ],
+        [
+          1794948808.279,
+          "1"
+        ],
+        [
+          1794948810.279,
+          "0"
+        ],
+        [
+          1794948812.279,
+          "0"
+        ],
+        [
+          1794948814.279,
+          "1"
+        ],
+        [
+          1794948816.279,
+          "0"
+        ],
+        [
+          1794948818.279,
+          "0"
+        ],
+        [
+          1794948820.279,
+          "1"
+        ],
+        [
+          1794948822.279,
+          "0"
+        ],
+        [
+          1794948824.279,
+          "1"
+        ],
+        [
+          1794948826.279,
+          "0"
+        ],
+        [
+          1794948828.279,
+          "0"
+        ],
+        [
+          1794948830.279,
+          "0"
+        ],
+        [
+          1794948832.279,
+          "1"
+        ],
+        [
+          1794948834.279,
+          "0"
+        ],
+        [
+          1794948836.279,
+          "0"
+        ],
+        [
+          1794948838.279,
+          "1"
+        ],
+        [
+          1794948840.279,
+          "0"
+        ],
+        [
+          1794948842.279,
+          "0"
+        ],
+        [
+          1794948844.279,
+          "1"
+        ],
+        [
+          1794948846.279,
+          "0"
+        ],
+        [
+          1794948848.279,
+          "0"
+        ],
+        [
+          1794948850.279,
+          "1"
+        ],
+        [
+          1794948852.279,
+          "0"
+        ],
+        [
+          1794948854.279,
+          "2"
+        ],
+        [
+          1794948856.279,
+          "4"
+        ],
+        [
+          1794948858.279,
+          "1"
+        ],
+        [
+          1794948860.279,
+          "1"
+        ],
+        [
+          1794948862.279,
+          "0"
+        ],
+        [
+          1794948864.279,
+          "0"
+        ],
+        [
+          1794948866.279,
+          "1"
+        ],
+        [
+          1794948868.279,
+          "0"
+        ],
+        [
+          1794948870.279,
+          "0"
+        ],
+        [
+          1794948872.279,
+          "0"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_waiting",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "values": [
+        [
+          1794948748.279,
+          "0"
+        ],
+        [
+          1794948750.279,
+          "0"
+        ],
+        [
+          1794948752.279,
+          "2"
+        ],
+        [
+          1794948754.279,
+          "3"
+        ],
+        [
+          1794948756.279,
+          "2"
+        ],
+        [
+          1794948758.279,
+          "3"
+        ],
+        [
+          1794948760.279,
+          "4"
+        ],
+        [
+          1794948762.279,
+          "4"
+        ],
+        [
+          1794948764.279,
+          "2"
+        ],
+        [
+          1794948766.279,
+          "0"
+        ],
+        [
+          1794948768.279,
+          "1"
+        ],
+        [
+          1794948770.279,
+          "0"
+        ],
+        [
+          1794948772.279,
+          "1"
+        ],
+        [
+          1794948774.279,
+          "2"
+        ],
+        [
+          1794948776.279,
+          "0"
+        ],
+        [
+          1794948778.279,
+          "1"
+        ],
+        [
+          1794948780.279,
+          "1"
+        ],
+        [
+          1794948782.279,
+          "0"
+        ],
+        [
+          1794948784.279,
+          "1"
+        ],
+        [
+          1794948786.279,
+          "0"
+        ],
+        [
+          1794948788.279,
+          "0"
+        ],
+        [
+          1794948790.279,
+          "0"
+        ],
+        [
+          1794948792.279,
+          "0"
+        ],
+        [
+          1794948794.279,
+          "1"
+        ],
+        [
+          1794948796.279,
+          "1"
+        ],
+        [
+          1794948798.279,
+          "1"
+        ],
+        [
+          1794948800.279,
+          "0"
+        ],
+        [
+          1794948802.279,
+          "1"
+        ],
+        [
+          1794948804.279,
+          "1"
+        ],
+        [
+          1794948806.279,
+          "1"
+        ],
+        [
+          1794948808.279,
+          "0"
+        ],
+        [
+          1794948810.279,
+          "3"
+        ],
+        [
+          1794948812.279,
+          "3"
+        ],
+        [
+          1794948814.279,
+          "1"
+        ],
+        [
+          1794948816.279,
+          "1"
+        ],
+        [
+          1794948818.279,
+          "1"
+        ],
+        [
+          1794948820.279,
+          "0"
+        ],
+        [
+          1794948822.279,
+          "1"
+        ],
+        [
+          1794948824.279,
+          "0"
+        ],
+        [
+          1794948826.279,
+          "1"
+        ],
+        [
+          1794948828.279,
+          "2"
+        ],
+        [
+          1794948830.279,
+          "3"
+        ],
+        [
+          1794948832.279,
+          "1"
+        ],
+        [
+          1794948834.279,
+          "0"
+        ],
+        [
+          1794948836.279,
+          "2"
+        ],
+        [
+          1794948838.279,
+          "1"
+        ],
+        [
+          1794948840.279,
+          "2"
+        ],
+        [
+          1794948842.279,
+          "0"
+        ],
+        [
+          1794948844.279,
+          "1"
+        ],
+        [
+          1794948846.279,
+          "0"
+        ],
+        [
+          1794948848.279,
+          "0"
+        ],
+        [
+          1794948850.279,
+          "1"
+        ],
+        [
+          1794948852.279,
+          "3"
+        ],
+        [
+          1794948854.279,
+          "0"
+        ],
+        [
+          1794948856.279,
+          "0"
+        ],
+        [
+          1794948858.279,
+          "0"
+        ],
+        [
+          1794948860.279,
+          "0"
+        ],
+        [
+          1794948862.279,
+          "1"
+        ],
+        [
+          1794948864.279,
+          "1"
+        ],
+        [
+          1794948866.279,
+          "0"
+        ],
+        [
+          1794948868.279,
+          "1"
+        ],
+        [
+          1794948870.279,
+          "1"
+        ],
+        [
+          1794948872.279,
+          "0"
+        ]
+      ]
+    }
+  ],
+  "running": [
+    {
+      "metric": {
+        "__name__": "hw11_running",
+        "instance": "10.244.0.27:8080",
+        "job": "api",
+        "pod": "hw11-api-7c7fcdc7b9-dhsdb"
+      },
+      "values": [
+        [
+          1794948748.279,
+          "0"
+        ],
+        [
+          1794948750.279,
+          "0"
+        ],
+        [
+          1794948752.279,
+          "1"
+        ],
+        [
+          1794948754.279,
+          "1"
+        ],
+        [
+          1794948756.279,
+          "1"
+        ],
+        [
+          1794948758.279,
+          "1"
+        ],
+        [
+          1794948760.279,
+          "0"
+        ],
+        [
+          1794948762.279,
+          "1"
+        ],
+        [
+          1794948764.279,
+          "1"
+        ],
+        [
+          1794948766.279,
+          "1"
+        ],
+        [
+          1794948768.279,
+          "0"
+        ],
+        [
+          1794948770.279,
+          "1"
+        ],
+        [
+          1794948772.279,
+          "1"
+        ],
+        [
+          1794948774.279,
+          "0"
+        ],
+        [
+          1794948776.279,
+          "1"
+        ],
+        [
+          1794948778.279,
+          "1"
+        ],
+        [
+          1794948780.279,
+          "1"
+        ],
+        [
+          1794948782.279,
+          "1"
+        ],
+        [
+          1794948784.279,
+          "1"
+        ],
+        [
+          1794948786.279,
+          "1"
+        ],
+        [
+          1794948788.279,
+          "1"
+        ],
+        [
+          1794948790.279,
+          "1"
+        ],
+        [
+          1794948792.279,
+          "1"
+        ],
+        [
+          1794948794.279,
+          "1"
+        ],
+        [
+          1794948796.279,
+          "1"
+        ],
+        [
+          1794948798.279,
+          "1"
+        ],
+        [
+          1794948800.279,
+          "1"
+        ],
+        [
+          1794948802.279,
+          "0"
+        ],
+        [
+          1794948804.279,
+          "1"
+        ],
+        [
+          1794948806.279,
+          "1"
+        ],
+        [
+          1794948808.279,
+          "1"
+        ],
+        [
+          1794948810.279,
+          "0"
+        ],
+        [
+          1794948812.279,
+          "1"
+        ],
+        [
+          1794948814.279,
+          "1"
+        ],
+        [
+          1794948816.279,
+          "1"
+        ],
+        [
+          1794948818.279,
+          "1"
+        ],
+        [
+          1794948820.279,
+          "1"
+        ],
+        [
+          1794948822.279,
+          "0"
+        ],
+        [
+          1794948824.279,
+          "1"
+        ],
+        [
+          1794948826.279,
+          "1"
+        ],
+        [
+          1794948828.279,
+          "1"
+        ],
+        [
+          1794948830.279,
+          "0"
+        ],
+        [
+          1794948832.279,
+          "1"
+        ],
+        [
+          1794948834.279,
+          "1"
+        ],
+        [
+          1794948836.279,
+          "0"
+        ],
+        [
+          1794948838.279,
+          "1"
+        ],
+        [
+          1794948840.279,
+          "0"
+        ],
+        [
+          1794948842.279,
+          "1"
+        ],
+        [
+          1794948844.279,
+          "1"
+        ],
+        [
+          1794948846.279,
+          "1"
+        ],
+        [
+          1794948848.279,
+          "1"
+        ],
+        [
+          1794948850.279,
+          "1"
+        ],
+        [
+          1794948852.279,
+          "0"
+        ],
+        [
+          1794948854.279,
+          "1"
+        ],
+        [
+          1794948856.279,
+          "1"
+        ],
+        [
+          1794948858.279,
+          "1"
+        ],
+        [
+          1794948860.279,
+          "1"
+        ],
+        [
+          1794948862.279,
+          "1"
+        ],
+        [
+          1794948864.279,
+          "1"
+        ],
+        [
+          1794948866.279,
+          "1"
+        ],
+        [
+          1794948868.279,
+          "1"
+        ],
+        [
+          1794948870.279,
+          "1"
+        ],
+        [
+          1794948872.279,
+          "0"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "hw11_running",
+        "instance": "10.244.0.28:8080",
+        "job": "api",
+        "pod": "hw11-api-7c7fcdc7b9-cct9h"
+      },
+      "values": [
+        [
+          1794948748.279,
+          "0"
+        ],
+        [
+          1794948750.279,
+          "0"
+        ],
+        [
+          1794948752.279,
+          "1"
+        ],
+        [
+          1794948754.279,
+          "1"
+        ],
+        [
+          1794948756.279,
+          "1"
+        ],
+        [
+          1794948758.279,
+          "1"
+        ],
+        [
+          1794948760.279,
+          "1"
+        ],
+        [
+          1794948762.279,
+          "1"
+        ],
+        [
+          1794948764.279,
+          "1"
+        ],
+        [
+          1794948766.279,
+          "1"
+        ],
+        [
+          1794948768.279,
+          "1"
+        ],
+        [
+          1794948770.279,
+          "1"
+        ],
+        [
+          1794948772.279,
+          "1"
+        ],
+        [
+          1794948774.279,
+          "1"
+        ],
+        [
+          1794948776.279,
+          "1"
+        ],
+        [
+          1794948778.279,
+          "1"
+        ],
+        [
+          1794948780.279,
+          "1"
+        ],
+        [
+          1794948782.279,
+          "0"
+        ],
+        [
+          1794948784.279,
+          "1"
+        ],
+        [
+          1794948786.279,
+          "0"
+        ],
+        [
+          1794948788.279,
+          "0"
+        ],
+        [
+          1794948790.279,
+          "1"
+        ],
+        [
+          1794948792.279,
+          "1"
+        ],
+        [
+          1794948794.279,
+          "1"
+        ],
+        [
+          1794948796.279,
+          "1"
+        ],
+        [
+          1794948798.279,
+          "1"
+        ],
+        [
+          1794948800.279,
+          "1"
+        ],
+        [
+          1794948802.279,
+          "1"
+        ],
+        [
+          1794948804.279,
+          "1"
+        ],
+        [
+          1794948806.279,
+          "1"
+        ],
+        [
+          1794948808.279,
+          "1"
+        ],
+        [
+          1794948810.279,
+          "1"
+        ],
+        [
+          1794948812.279,
+          "1"
+        ],
+        [
+          1794948814.279,
+          "1"
+        ],
+        [
+          1794948816.279,
+          "1"
+        ],
+        [
+          1794948818.279,
+          "1"
+        ],
+        [
+          1794948820.279,
+          "1"
+        ],
+        [
+          1794948822.279,
+          "1"
+        ],
+        [
+          1794948824.279,
+          "0"
+        ],
+        [
+          1794948826.279,
+          "1"
+        ],
+        [
+          1794948828.279,
+          "1"
+        ],
+        [
+          1794948830.279,
+          "1"
+        ],
+        [
+          1794948832.279,
+          "1"
+        ],
+        [
+          1794948834.279,
+          "1"
+        ],
+        [
+          1794948836.279,
+          "1"
+        ],
+        [
+          1794948838.279,
+          "1"
+        ],
+        [
+          1794948840.279,
+          "1"
+        ],
+        [
+          1794948842.279,
+          "1"
+        ],
+        [
+          1794948844.279,
+          "1"
+        ],
+        [
+          1794948846.279,
+          "1"
+        ],
+        [
+          1794948848.279,
+          "0"
+        ],
+        [
+          1794948850.279,
+          "1"
+        ],
+        [
+          1794948852.279,
+          "1"
+        ],
+        [
+          1794948854.279,
+          "0"
+        ],
+        [
+          1794948856.279,
+          "1"
+        ],
+        [
+          1794948858.279,
+          "1"
+        ],
+        [
+          1794948860.279,
+          "1"
+        ],
+        [
+          1794948862.279,
+          "1"
+        ],
+        [
+          1794948864.279,
+          "1"
+        ],
+        [
+          1794948866.279,
+          "0"
+        ],
+        [
+          1794948868.279,
+          "1"
+        ],
+        [
+          1794948870.279,
+          "1"
+        ],
+        [
+          1794948872.279,
+          "0"
+        ]
+      ]
+    }
+  ],
+  "p95": [
+    {
+      "metric": {},
+      "value": [
+        1794948872.625,
+        "1.0535535978848516"
+      ]
+    }
+  ],
+  "count": [
+    {
+      "metric": {},
+      "value": [
+        1794948872.625,
+        "719.3547799158051"
+      ]
+    }
+  ]
+}

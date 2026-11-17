@@ -1,0 +1,227 @@
+{
+  "kind": "PodMetricsList",
+  "apiVersion": "metrics.k8s.io/v1beta1",
+  "metadata": {},
+  "items": [
+    {
+      "metadata": {
+        "name": "hw11-api-545ffc6bc8-mc5k6",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T21:25:54Z",
+        "labels": {
+          "app": "hw11-api",
+          "pod-template-hash": "545ffc6bc8"
+        }
+      },
+      "timestamp": "2026-11-17T21:25:30Z",
+      "window": "10.259s",
+      "containers": [
+        {
+          "name": "api",
+          "usage": {
+            "cpu": "4229067n",
+            "memory": "37508Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "hw11-api-7c7fcdc7b9-9hvnc",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T21:25:54Z",
+        "labels": {
+          "app": "hw11-api",
+          "pod-template-hash": "7c7fcdc7b9"
+        }
+      },
+      "timestamp": "2026-11-17T21:25:33Z",
+      "window": "15.011s",
+      "containers": [
+        {
+          "name": "api",
+          "usage": {
+            "cpu": "3646725n",
+            "memory": "37520Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "hw11-api-7c7fcdc7b9-lcnmb",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T21:25:54Z",
+        "labels": {
+          "app": "hw11-api",
+          "pod-template-hash": "7c7fcdc7b9"
+        }
+      },
+      "timestamp": "2026-11-17T21:25:41Z",
+      "window": "11.423205952s",
+      "containers": [
+        {
+          "name": "api",
+          "usage": {
+            "cpu": "139161983n",
+            "memory": "37328Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "hw11-client-0",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T21:25:54Z",
+        "labels": {
+          "app": "hw11-client",
+          "app.kubernetes.io/managed-by": "Helm"
+        }
+      },
+      "timestamp": "2026-11-17T21:25:34Z",
+      "window": "15.823s",
+      "containers": [
+        {
+          "name": "client",
+          "usage": {
+            "cpu": "0",
+            "memory": "908Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "hw11-client-1",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T21:25:54Z",
+        "labels": {
+          "app": "hw11-client",
+          "app.kubernetes.io/managed-by": "Helm"
+        }
+      },
+      "timestamp": "2026-11-17T21:25:38Z",
+      "window": "24.96s",
+      "containers": [
+        {
+          "name": "client",
+          "usage": {
+            "cpu": "0",
+            "memory": "1040Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "hw11-client-2",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T21:25:54Z",
+        "labels": {
+          "app": "hw11-client",
+          "app.kubernetes.io/managed-by": "Helm"
+        }
+      },
+      "timestamp": "2026-11-17T21:25:34Z",
+      "window": "13.229s",
+      "containers": [
+        {
+          "name": "client",
+          "usage": {
+            "cpu": "0",
+            "memory": "704Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "hw11-client-3",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T21:25:54Z",
+        "labels": {
+          "app": "hw11-client",
+          "app.kubernetes.io/managed-by": "Helm"
+        }
+      },
+      "timestamp": "2026-11-17T21:25:35Z",
+      "window": "11.404s",
+      "containers": [
+        {
+          "name": "client",
+          "usage": {
+            "cpu": "0",
+            "memory": "968Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "hw11-grafana-5747799c5-jxrlk",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T21:25:54Z",
+        "labels": {
+          "app": "hw11-grafana",
+          "pod-template-hash": "5747799c5"
+        }
+      },
+      "timestamp": "2026-11-17T21:25:30Z",
+      "window": "11.691s",
+      "containers": [
+        {
+          "name": "grafana",
+          "usage": {
+            "cpu": "3793003n",
+            "memory": "89676Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "hw11-kube-state-687f49775b-cx7v6",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T21:25:54Z",
+        "labels": {
+          "app": "hw11-kube-state",
+          "pod-template-hash": "687f49775b"
+        }
+      },
+      "timestamp": "2026-11-17T21:25:41Z",
+      "window": "26.904s",
+      "containers": [
+        {
+          "name": "kube-state",
+          "usage": {
+            "cpu": "472754n",
+            "memory": "12912Ki"
+          }
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "name": "hw11-prometheus-6d75db8cdf-mjxdh",
+        "namespace": "hw11",
+        "creationTimestamp": "2026-11-17T21:25:54Z",
+        "labels": {
+          "app": "hw11-prometheus",
+          "pod-template-hash": "6d75db8cdf"
+        }
+      },
+      "timestamp": "2026-11-17T21:25:40Z",
+      "window": "29.175s",
+      "containers": [
+        {
+          "name": "prometheus",
+          "usage": {
+            "cpu": "6504850n",
+            "memory": "76460Ki"
+          }
+        }
+      ]
+    }
+  ]
+}

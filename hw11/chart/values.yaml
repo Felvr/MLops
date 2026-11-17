@@ -1,0 +1,23 @@
+image: mlops-hw11:1.0.0
+replicas: 2
+modelVersion: A
+corruptChecksum: false
+probeMode: correct
+warmupSeconds: 20
+slots: 1
+queueLimit: 5
+cacheSize: 32
+hitMs: 35
+missMs: 180
+resources:
+  requests: {cpu: 100m, memory: 64Mi}
+  limits: {cpu: 750m, memory: 192Mi}
+hpa:
+  enabled: false
+  targetCPU: 65
+  downscaleSeconds: 60
+monitoring:
+  enabled: true
+  prometheusImage: prom/prometheus:v3.2.1
+  grafanaImage: grafana/grafana:11.6.0
+  kubeStateImage: registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0
