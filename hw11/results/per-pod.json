@@ -1,0 +1,542 @@
+[
+  {
+    "phase": "A-bad-B",
+    "pod": "hw11-api-5f748dc9c6-j9ffw",
+    "arrived": 16,
+    "completed": 16,
+    "ttfc_p95": 0.6317423834999545,
+    "queue_p95": 0.0016348830000652015,
+    "cache_hit_fraction": 0.5
+  },
+  {
+    "phase": "A-bad-B",
+    "pod": "hw11-api-5f748dc9c6-jnfdc",
+    "arrived": 14,
+    "completed": 14,
+    "ttfc_p95": 0.6947081597500073,
+    "queue_p95": 0.0007325340500528909,
+    "cache_hit_fraction": 0.2857142857142857
+  },
+  {
+    "phase": "A-dialogue-after",
+    "pod": "hw11-api-5f748dc9c6-pfdxg",
+    "arrived": 2,
+    "completed": 2,
+    "ttfc_p95": 0.6632961022001496,
+    "queue_p95": 0.0005058883499714284,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-dialogue-before",
+    "pod": "hw11-api-5f748dc9c6-jnfdc",
+    "arrived": 1,
+    "completed": 1,
+    "ttfc_p95": 1.006386085000031,
+    "queue_p95": 0.00047164800002974516,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-drain-old-0",
+    "pod": "hw11-api-5f748dc9c6-k5sgh",
+    "arrived": 1,
+    "completed": 1,
+    "ttfc_p95": 0.6354955970000447,
+    "queue_p95": 0.000677172999985487,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-drain-old-1",
+    "pod": "hw11-api-5f748dc9c6-mhsgz",
+    "arrived": 1,
+    "completed": 1,
+    "ttfc_p95": 0.5859396020000531,
+    "queue_p95": 0.0006147980002424447,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-drain-service",
+    "pod": "hw11-api-545ffc6bc8-mc5k6",
+    "arrived": 3,
+    "completed": 3,
+    "ttfc_p95": 0.18822622759998922,
+    "queue_p95": 0.0006261424000967963,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-drain-service",
+    "pod": "hw11-api-5f748dc9c6-k5sgh",
+    "arrived": 12,
+    "completed": 12,
+    "ttfc_p95": 0.6785467905998301,
+    "queue_p95": 0.0008156948999385346,
+    "cache_hit_fraction": 0.25
+  },
+  {
+    "phase": "A-drain-service",
+    "pod": "hw11-api-5f748dc9c6-mhsgz",
+    "arrived": 8,
+    "completed": 8,
+    "ttfc_p95": 1.4679060840001277,
+    "queue_p95": 1.1581827712002442,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-force",
+    "pod": "hw11-api-5f748dc9c6-pfdxg",
+    "arrived": 11,
+    "completed": 0,
+    "ttfc_p95": null,
+    "queue_p95": null,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-force-bind",
+    "pod": "hw11-api-5f748dc9c6-pfdxg",
+    "arrived": 1,
+    "completed": 1,
+    "ttfc_p95": 0.5787989109999216,
+    "queue_p95": 0.0005067040001449641,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-force-recovery",
+    "pod": "hw11-api-5f748dc9c6-j9ffw",
+    "arrived": 27,
+    "completed": 27,
+    "ttfc_p95": 0.4325690839999424,
+    "queue_p95": 0.0006056163000721426,
+    "cache_hit_fraction": 0.9629629629629629
+  },
+  {
+    "phase": "A-force-recovery",
+    "pod": "hw11-api-5f748dc9c6-pfdxg",
+    "arrived": 9,
+    "completed": 9,
+    "ttfc_p95": 0.1873843234001015,
+    "queue_p95": 0.0007063920000746292,
+    "cache_hit_fraction": 0.1111111111111111
+  },
+  {
+    "phase": "A-restore-A",
+    "pod": "hw11-api-545ffc6bc8-6rvlf",
+    "arrived": 17,
+    "completed": 17,
+    "ttfc_p95": 0.6039311034000091,
+    "queue_p95": 0.0006850303999726748,
+    "cache_hit_fraction": 0.7647058823529411
+  },
+  {
+    "phase": "A-restore-A",
+    "pod": "hw11-api-545ffc6bc8-9krct",
+    "arrived": 13,
+    "completed": 13,
+    "ttfc_p95": 0.6918693922000102,
+    "queue_p95": 0.0006705567999915729,
+    "cache_hit_fraction": 0.23076923076923078
+  },
+  {
+    "phase": "A-restore-A",
+    "pod": "hw11-api-5f748dc9c6-j9ffw",
+    "arrived": 2,
+    "completed": 2,
+    "ttfc_p95": 0.18935721850000958,
+    "queue_p95": 0.0005144343999177181,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-rollback",
+    "pod": "hw11-api-5f748dc9c6-j9ffw",
+    "arrived": 8,
+    "completed": 8,
+    "ttfc_p95": 0.7247326472000224,
+    "queue_p95": 0.0016713044000482566,
+    "cache_hit_fraction": 0.875
+  },
+  {
+    "phase": "A-rollback",
+    "pod": "hw11-api-5f748dc9c6-jnfdc",
+    "arrived": 2,
+    "completed": 2,
+    "ttfc_p95": 0.6115053662500202,
+    "queue_p95": 0.0005528291500127124,
+    "cache_hit_fraction": 1.0
+  },
+  {
+    "phase": "A-rollout",
+    "pod": "hw11-api-545ffc6bc8-6rvlf",
+    "arrived": 6,
+    "completed": 6,
+    "ttfc_p95": 0.1890961747499489,
+    "queue_p95": 0.0006693210000037197,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-rollout",
+    "pod": "hw11-api-5f748dc9c6-mm2gs",
+    "arrived": 9,
+    "completed": 9,
+    "ttfc_p95": 0.6944918435999853,
+    "queue_p95": 0.0006852944000229399,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-rollout",
+    "pod": "hw11-api-5f748dc9c6-zshqf",
+    "arrived": 9,
+    "completed": 9,
+    "ttfc_p95": 0.19187655640000684,
+    "queue_p95": 0.0009949963999815734,
+    "cache_hit_fraction": 0.5555555555555556
+  },
+  {
+    "phase": "A-warm-broken",
+    "pod": "hw11-api-7bdc68f87c-5ct82",
+    "arrived": 29,
+    "completed": 10,
+    "ttfc_p95": 0.18934135829999263,
+    "queue_p95": 0.0006759625500080801,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-warm-broken",
+    "pod": "hw11-api-7bdc68f87c-g9qcd",
+    "arrived": 23,
+    "completed": 5,
+    "ttfc_p95": 0.18848776899994846,
+    "queue_p95": 0.0006431999999676918,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-warm-broken",
+    "pod": "hw11-api-7c7fcdc7b9-9xzqp",
+    "arrived": 13,
+    "completed": 13,
+    "ttfc_p95": 1.0324295491999684,
+    "queue_p95": 0.07290841720002819,
+    "cache_hit_fraction": 0.23076923076923078
+  },
+  {
+    "phase": "A-warm-broken",
+    "pod": "hw11-api-7c7fcdc7b9-nwjlv",
+    "arrived": 5,
+    "completed": 5,
+    "ttfc_p95": 0.6706413880000581,
+    "queue_p95": 0.025908039800037835,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "A-warm-fixed",
+    "pod": "hw11-api-5f748dc9c6-zshqf",
+    "arrived": 7,
+    "completed": 7,
+    "ttfc_p95": 0.18987715559999288,
+    "queue_p95": 0.0009229968000568076,
+    "cache_hit_fraction": 0.14285714285714285
+  },
+  {
+    "phase": "A-warm-fixed",
+    "pod": "hw11-api-7bdc68f87c-5ct82",
+    "arrived": 37,
+    "completed": 37,
+    "ttfc_p95": 0.6677616472000405,
+    "queue_p95": 0.0010781941999766773,
+    "cache_hit_fraction": 0.9459459459459459
+  },
+  {
+    "phase": "A-warm-fixed",
+    "pod": "hw11-api-7bdc68f87c-g9qcd",
+    "arrived": 26,
+    "completed": 26,
+    "ttfc_p95": 0.18812243674994988,
+    "queue_p95": 0.0009866822499873251,
+    "cache_hit_fraction": 0.7692307692307693
+  },
+  {
+    "phase": "B-80pct-plain-1",
+    "pod": "hw11-api-7c7fcdc7b9-cct9h",
+    "arrived": 375,
+    "completed": 367,
+    "ttfc_p95": 1.373972709699933,
+    "queue_p95": 1.3199491519000275,
+    "cache_hit_fraction": 0.9673024523160763
+  },
+  {
+    "phase": "B-80pct-plain-1",
+    "pod": "hw11-api-7c7fcdc7b9-dhsdb",
+    "arrived": 345,
+    "completed": 342,
+    "ttfc_p95": 1.2262159373499344,
+    "queue_p95": 1.1814366446998974,
+    "cache_hit_fraction": 0.9649122807017544
+  },
+  {
+    "phase": "B-80pct-plain-2",
+    "pod": "hw11-api-7c7fcdc7b9-cct9h",
+    "arrived": 376,
+    "completed": 371,
+    "ttfc_p95": 1.065489459499986,
+    "queue_p95": 0.9825713049999649,
+    "cache_hit_fraction": 0.967654986522911
+  },
+  {
+    "phase": "B-80pct-plain-2",
+    "pod": "hw11-api-7c7fcdc7b9-dhsdb",
+    "arrived": 344,
+    "completed": 339,
+    "ttfc_p95": 1.3081919257000203,
+    "queue_p95": 1.2609246597000483,
+    "cache_hit_fraction": 0.9646017699115044
+  },
+  {
+    "phase": "B-80pct-plain-3",
+    "pod": "hw11-api-7c7fcdc7b9-cct9h",
+    "arrived": 366,
+    "completed": 353,
+    "ttfc_p95": 1.3136408166001259,
+    "queue_p95": 1.1802013342002282,
+    "cache_hit_fraction": 0.9660056657223796
+  },
+  {
+    "phase": "B-80pct-plain-3",
+    "pod": "hw11-api-7c7fcdc7b9-dhsdb",
+    "arrived": 354,
+    "completed": 346,
+    "ttfc_p95": 1.3067070235000529,
+    "queue_p95": 1.2266287747503384,
+    "cache_hit_fraction": 0.9653179190751445
+  },
+  {
+    "phase": "B-80pct-sticky-1",
+    "pod": "hw11-api-7c7fcdc7b9-cct9h",
+    "arrived": 96,
+    "completed": 96,
+    "ttfc_p95": 0.1882491689999597,
+    "queue_p95": 0.0008979649999787398,
+    "cache_hit_fraction": 0.9166666666666666
+  },
+  {
+    "phase": "B-80pct-sticky-1",
+    "pod": "hw11-api-7c7fcdc7b9-dhsdb",
+    "arrived": 624,
+    "completed": 420,
+    "ttfc_p95": 1.4597023913999574,
+    "queue_p95": 1.4111387760500405,
+    "cache_hit_fraction": 0.9714285714285714
+  },
+  {
+    "phase": "B-80pct-sticky-2",
+    "pod": "hw11-api-7c7fcdc7b9-cct9h",
+    "arrived": 96,
+    "completed": 96,
+    "ttfc_p95": 0.18749115199995003,
+    "queue_p95": 0.001028062749981018,
+    "cache_hit_fraction": 0.9166666666666666
+  },
+  {
+    "phase": "B-80pct-sticky-2",
+    "pod": "hw11-api-7c7fcdc7b9-dhsdb",
+    "arrived": 624,
+    "completed": 419,
+    "ttfc_p95": 1.4548322416999326,
+    "queue_p95": 1.412680451600022,
+    "cache_hit_fraction": 0.9713603818615751
+  },
+  {
+    "phase": "B-80pct-sticky-3",
+    "pod": "hw11-api-7c7fcdc7b9-cct9h",
+    "arrived": 96,
+    "completed": 96,
+    "ttfc_p95": 0.3464726507498881,
+    "queue_p95": 0.0007430022501466738,
+    "cache_hit_fraction": 0.9166666666666666
+  },
+  {
+    "phase": "B-80pct-sticky-3",
+    "pod": "hw11-api-7c7fcdc7b9-dhsdb",
+    "arrived": 624,
+    "completed": 407,
+    "ttfc_p95": 1.4943502731000535,
+    "queue_p95": 1.4363278136000188,
+    "cache_hit_fraction": 0.9705159705159705
+  },
+  {
+    "phase": "B-uniform-plain-1",
+    "pod": "hw11-api-7c7fcdc7b9-cct9h",
+    "arrived": 381,
+    "completed": 377,
+    "ttfc_p95": 1.0452810060000501,
+    "queue_p95": 0.9898064335999605,
+    "cache_hit_fraction": 0.9681697612732095
+  },
+  {
+    "phase": "B-uniform-plain-1",
+    "pod": "hw11-api-7c7fcdc7b9-dhsdb",
+    "arrived": 339,
+    "completed": 339,
+    "ttfc_p95": 1.051728460599952,
+    "queue_p95": 0.9481221897999365,
+    "cache_hit_fraction": 0.9646017699115044
+  },
+  {
+    "phase": "B-uniform-plain-2",
+    "pod": "hw11-api-7c7fcdc7b9-cct9h",
+    "arrived": 383,
+    "completed": 377,
+    "ttfc_p95": 1.3759390546001213,
+    "queue_p95": 1.3261987841998688,
+    "cache_hit_fraction": 0.9681697612732095
+  },
+  {
+    "phase": "B-uniform-plain-2",
+    "pod": "hw11-api-7c7fcdc7b9-dhsdb",
+    "arrived": 337,
+    "completed": 337,
+    "ttfc_p95": 0.8097245669999659,
+    "queue_p95": 0.7521537249999255,
+    "cache_hit_fraction": 0.9643916913946587
+  },
+  {
+    "phase": "B-uniform-plain-3",
+    "pod": "hw11-api-7c7fcdc7b9-cct9h",
+    "arrived": 361,
+    "completed": 361,
+    "ttfc_p95": 0.9232506119997197,
+    "queue_p95": 0.8606406190001508,
+    "cache_hit_fraction": 0.9667590027700831
+  },
+  {
+    "phase": "B-uniform-plain-3",
+    "pod": "hw11-api-7c7fcdc7b9-dhsdb",
+    "arrived": 359,
+    "completed": 351,
+    "ttfc_p95": 1.3306746235000446,
+    "queue_p95": 1.263003147000063,
+    "cache_hit_fraction": 0.9658119658119658
+  },
+  {
+    "phase": "B-uniform-sticky-1",
+    "pod": "hw11-api-7c7fcdc7b9-cct9h",
+    "arrived": 360,
+    "completed": 360,
+    "ttfc_p95": 0.3761702959999758,
+    "queue_p95": 0.2832062551001405,
+    "cache_hit_fraction": 0.9833333333333333
+  },
+  {
+    "phase": "B-uniform-sticky-1",
+    "pod": "hw11-api-7c7fcdc7b9-dhsdb",
+    "arrived": 360,
+    "completed": 360,
+    "ttfc_p95": 0.40210597005001375,
+    "queue_p95": 0.3086440964999048,
+    "cache_hit_fraction": 0.9833333333333333
+  },
+  {
+    "phase": "B-uniform-sticky-2",
+    "pod": "hw11-api-7c7fcdc7b9-cct9h",
+    "arrived": 360,
+    "completed": 360,
+    "ttfc_p95": 0.3357695747501798,
+    "queue_p95": 0.24143457679991853,
+    "cache_hit_fraction": 0.9833333333333333
+  },
+  {
+    "phase": "B-uniform-sticky-2",
+    "pod": "hw11-api-7c7fcdc7b9-dhsdb",
+    "arrived": 360,
+    "completed": 360,
+    "ttfc_p95": 0.3598073465498947,
+    "queue_p95": 0.2590825843498698,
+    "cache_hit_fraction": 0.9833333333333333
+  },
+  {
+    "phase": "B-uniform-sticky-3",
+    "pod": "hw11-api-7c7fcdc7b9-cct9h",
+    "arrived": 360,
+    "completed": 356,
+    "ttfc_p95": 0.9012621510000827,
+    "queue_p95": 0.8474783562497805,
+    "cache_hit_fraction": 0.9831460674157303
+  },
+  {
+    "phase": "B-uniform-sticky-3",
+    "pod": "hw11-api-7c7fcdc7b9-dhsdb",
+    "arrived": 360,
+    "completed": 356,
+    "ttfc_p95": 0.8844513962498013,
+    "queue_p95": 0.8093443292499387,
+    "cache_hit_fraction": 0.9831460674157303
+  },
+  {
+    "phase": "C-baseline",
+    "pod": "hw11-api-7c7fcdc7b9-9hvnc",
+    "arrived": 38,
+    "completed": 38,
+    "ttfc_p95": 0.39644909260009614,
+    "queue_p95": 0.0007882606001430754,
+    "cache_hit_fraction": 0.6842105263157895
+  },
+  {
+    "phase": "C-baseline",
+    "pod": "hw11-api-7c7fcdc7b9-lcnmb",
+    "arrived": 42,
+    "completed": 42,
+    "ttfc_p95": 0.18828819649991146,
+    "queue_p95": 0.0007532083498745123,
+    "cache_hit_fraction": 0.7142857142857143
+  },
+  {
+    "phase": "C-cpu-plain",
+    "pod": "hw11-api-7c7fcdc7b9-9hvnc",
+    "arrived": 215,
+    "completed": 153,
+    "ttfc_p95": 2.876251942399995,
+    "queue_p95": 2.4458553653999844,
+    "cache_hit_fraction": 1.0
+  },
+  {
+    "phase": "C-cpu-plain",
+    "pod": "hw11-api-7c7fcdc7b9-hvcqn",
+    "arrived": 205,
+    "completed": 149,
+    "ttfc_p95": 3.119072827399941,
+    "queue_p95": 2.5805906313999913,
+    "cache_hit_fraction": 0.9194630872483222
+  },
+  {
+    "phase": "C-cpu-plain",
+    "pod": "hw11-api-7c7fcdc7b9-lcnmb",
+    "arrived": 180,
+    "completed": 153,
+    "ttfc_p95": 2.9055457027998273,
+    "queue_p95": 2.4846647428000326,
+    "cache_hit_fraction": 1.0
+  },
+  {
+    "phase": "C-cpu-sticky",
+    "pod": "hw11-api-7c7fcdc7b9-9hvnc",
+    "arrived": 448,
+    "completed": 162,
+    "ttfc_p95": 2.9894930999499594,
+    "queue_p95": 2.5546122897999335,
+    "cache_hit_fraction": 1.0
+  },
+  {
+    "phase": "C-cpu-sticky",
+    "pod": "hw11-api-7c7fcdc7b9-hvcqn",
+    "arrived": 0,
+    "completed": 0,
+    "ttfc_p95": null,
+    "queue_p95": null,
+    "cache_hit_fraction": 0.0
+  },
+  {
+    "phase": "C-cpu-sticky",
+    "pod": "hw11-api-7c7fcdc7b9-lcnmb",
+    "arrived": 32,
+    "completed": 32,
+    "ttfc_p95": 0.4715099198498365,
+    "queue_p95": 0.000833725950178632,
+    "cache_hit_fraction": 1.0
+  }
+]

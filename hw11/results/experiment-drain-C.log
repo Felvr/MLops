@@ -1,0 +1,10 @@
+Release "hw11" has been upgraded. Happy Helming! --set slots=2
+Release "hw11" has been upgraded. Happy Helming! --set modelVersion=B,slots=2
+A-drain-old-1 {'completed': 1}
+A-drain-old-0 {'completed': 1}
+A-drain-service {'completed': 23}
+PASS active old stream completes after Pod enters Terminating
+Release "hw11" has been upgraded. Happy Helming! --set hpa.enabled=true
+C-baseline {'completed': 80}
+C-cpu-sticky {'completed': 194, 'rejected': 286}
+C-cpu-plain {'completed': 455, 'rejected': 145}

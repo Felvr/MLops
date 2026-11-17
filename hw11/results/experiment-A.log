@@ -1,0 +1,23 @@
+Release "hw11" has been upgraded. Happy Helming! --set probeMode=http-only,slots=2
+A-warm-broken {'completed': 33, 'rejected': 37}
+Release "hw11" has been upgraded. Happy Helming! --set probeMode=correct,slots=2
+A-warm-fixed {'completed': 70}
+PASS cold request reached the defective deployment
+PASS corrected warmup never receives a cold request
+Release "hw11" has been upgraded. Happy Helming! --set modelVersion=B,slots=2
+A-rollout {'completed': 24}
+PASS old stream completes while healthy B rolls out
+Release "hw11" has been upgraded. Happy Helming! --set slots=2
+A-restore-A {'completed': 32}
+Release "hw11" has been upgraded. Happy Helming! --set modelVersion=B,corruptChecksum=true,slots=2
+A-bad-B {'completed': 30}
+A-rollback {'completed': 10}
+PASS bad B excluded; actual A hash after Helm rollback
+A-dialogue-before {'completed': 1}
+A-dialogue-after {'completed': 2}
+PASS replacement restores verified version and dialogue
+PASS dialogues stay isolated
+A-force-bind {'completed': 1}
+A-force {'rejected': 4, 'aborted': 7}
+A-force-recovery {'completed': 36}
+PASS forced kill counts admissions, rejections and interrupted streams separately

@@ -1,0 +1,90 @@
+{
+  "recorded_utc": "2026-11-17T21:31:44.490781+00:00",
+  "kubernetes": {
+    "clientVersion": {
+      "major": "1",
+      "minor": "31",
+      "gitVersion": "v1.31.2",
+      "gitCommit": "5864a4677267e6adeae276ad85882a8714d69d9d",
+      "gitTreeState": "clean",
+      "buildDate": "2024-10-22T20:28:12Z",
+      "goVersion": "go1.23.2",
+      "compiler": "gc",
+      "platform": "darwin/amd64"
+    },
+    "kustomizeVersion": "v5.4.2",
+    "serverVersion": {
+      "major": "1",
+      "minor": "32",
+      "gitVersion": "v1.32.2",
+      "gitCommit": "67a30c0adcf52bd3f56ff0893ce19966be12991f",
+      "gitTreeState": "clean",
+      "buildDate": "2025-02-12T21:19:47Z",
+      "goVersion": "go1.23.6",
+      "compiler": "gc",
+      "platform": "linux/amd64"
+    }
+  },
+  "docker": "29.1.3",
+  "cpu": 8,
+  "docker_memory_bytes": 4101136384,
+  "kind": "kind v0.27.0 go1.23.6 darwin/amd64",
+  "helm": "v3.17.3+ge4da497",
+  "uv": "uv 0.11.14 (3fdfdc7d4 2026-05-12 x86_64-apple-darwin)",
+  "images": [
+    {
+      "tag": "mlops-hw11:1.0.0",
+      "id": "sha256:4c5c68a8e420556da3b0a4b95e56f029d992b86bde0575eac8ff4a992261c4ba",
+      "repo_digests": [],
+      "bytes": 141164710
+    },
+    {
+      "tag": "kindest/node:v1.32.2",
+      "id": "sha256:5f5ba64589a5fdd1a126809c43ca3e95d5f4c91a94361b90dadacc66b84394c5",
+      "repo_digests": [
+        "kindest/node@sha256:142f543559cc55d64e1ab9341df08e5ced84bd2e893736da8f51320f26f5950b"
+      ],
+      "bytes": 1036698158
+    },
+    {
+      "tag": "prom/prometheus:v3.2.1",
+      "id": "sha256:503e04849f1c820b73ed19f348cb8da0c9728f38b6a4f68eb68d8c3eb0e1869f",
+      "repo_digests": [
+        "prom/prometheus@sha256:6927e0919a144aa7616fd0137d4816816d42f6b816de3af269ab065250859a62"
+      ],
+      "bytes": 295205045
+    },
+    {
+      "tag": "grafana/grafana:11.6.0",
+      "id": "sha256:5c42a1c2e40bdbf0d7c55cbef9f51ba8a8c928678ac16421e321f4ca246e2ac3",
+      "repo_digests": [
+        "grafana/grafana@sha256:62d2b9d20a19714ebfe48d1bb405086081bc602aa053e28cf6d73c7537640dfb"
+      ],
+      "bytes": 662561515
+    },
+    {
+      "tag": "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0",
+      "id": "sha256:8650a5270cac27775505014f40150e948b78ed474379ebcf3ab3a1da9402e71d",
+      "repo_digests": [
+        "registry.k8s.io/kube-state-metrics/kube-state-metrics@sha256:db384bf43222b066c378e77027a675d4cd9911107adba46c2922b3a55e10d6fb"
+      ],
+      "bytes": 51367043
+    },
+    {
+      "tag": "registry.k8s.io/metrics-server/metrics-server:v0.7.2",
+      "id": "sha256:48d9cfaaf3904a3821b1e71e50d7cbcf52fb19d5286c59e0f86b1389d189b19c",
+      "repo_digests": [
+        "registry.k8s.io/metrics-server/metrics-server@sha256:ffcb2bf004d6aa0a17d90e0247cf94f2865c8901dcab4427034c341951c239f9"
+      ],
+      "bytes": 67074530
+    }
+  ],
+  "image_logical_bytes": 2254071001,
+  "node_writable_bytes": 2970924,
+  "node_var_volume_bytes": 3604418560,
+  "approximate_lab_logical_bytes": 5861460485,
+  "sizing_method": "Docker image Size sum plus dedicated kind node SizeRw and allocated /var volume blocks. Shared layers and sparse host allocation differ.",
+  "containers": "CONTAINER ID   IMAGE                  COMMAND                  CREATED          STATUS          PORTS                       NAMES                      SIZE\n3fc2565c2216   kindest/node:v1.32.2   \"/usr/local/bin/entr…\"   53 minutes ago   Up 53 minutes   127.0.0.1:52765->6443/tcp   mlops-hw11-control-plane   2.97MB (virtual 1.04GB)",
+  "namespaces": "NAME                               READY   STATUS    RESTARTS   AGE     IP            NODE                       NOMINATED NODE   READINESS GATES\nhw11-api-7c7fcdc7b9-9hvnc          1/1     Running   0          6m43s   10.244.0.33   mlops-hw11-control-plane   <none>           <none>\nhw11-api-7c7fcdc7b9-lcnmb          1/1     Running   0          6m19s   10.244.0.35   mlops-hw11-control-plane   <none>           <none>\nhw11-client-0                      1/1     Running   0          51m     10.244.0.8    mlops-hw11-control-plane   <none>           <none>\nhw11-client-1                      1/1     Running   0          51m     10.244.0.7    mlops-hw11-control-plane   <none>           <none>\nhw11-client-2                      1/1     Running   0          51m     10.244.0.10   mlops-hw11-control-plane   <none>           <none>\nhw11-client-3                      1/1     Running   0          51m     10.244.0.9    mlops-hw11-control-plane   <none>           <none>\nhw11-grafana-5747799c5-jxrlk       1/1     Running   0          51m     10.244.0.14   mlops-hw11-control-plane   <none>           <none>\nhw11-kube-state-687f49775b-cx7v6   1/1     Running   0          51m     10.244.0.13   mlops-hw11-control-plane   <none>           <none>\nhw11-prometheus-6d75db8cdf-mjxdh   1/1     Running   0          47m     10.244.0.16   mlops-hw11-control-plane   <none>           <none>",
+  "disk": "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk1s1   932Gi   331Gi   580Gi    37%    2.1M  6.1G    0%   /System/Volumes/Data"
+}

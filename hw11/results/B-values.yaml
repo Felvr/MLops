@@ -1,0 +1,28 @@
+COMPUTED VALUES:
+cacheSize: 32
+corruptChecksum: false
+hitMs: 35
+hpa:
+  downscaleSeconds: 60
+  enabled: false
+  targetCPU: 65
+image: mlops-hw11:1.0.0
+missMs: 180
+modelVersion: A
+monitoring:
+  enabled: true
+  grafanaImage: grafana/grafana:11.6.0
+  kubeStateImage: registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.15.0
+  prometheusImage: prom/prometheus:v3.2.1
+probeMode: correct
+queueLimit: 5
+replicas: 2
+resources:
+  limits:
+    cpu: 750m
+    memory: 192Mi
+  requests:
+    cpu: 100m
+    memory: 64Mi
+slots: 1
+warmupSeconds: 20

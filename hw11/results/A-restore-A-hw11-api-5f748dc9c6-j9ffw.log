@@ -1,0 +1,10 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+{"ts": 1794948439.532833, "event": "loaded", "pod": "hw11-api-5f748dc9c6-j9ffw", "model_id": "A", "runtime_sha256": "6995276d1329f06f245f4b86cb925e3b44e7dcce8c01a0caacdb50745e1df378", "backend_mode": "simulated"}
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+{"ts": 1794948459.5344312, "event": "warm", "pod": "hw11-api-5f748dc9c6-j9ffw", "model_id": "A", "runtime_sha256": "6995276d1329f06f245f4b86cb925e3b44e7dcce8c01a0caacdb50745e1df378", "backend_mode": "simulated"}
+{"ts": 1794948464.7213783, "event": "received", "warm": true, "request_id": "A-restore-A-0030", "pod": "hw11-api-5f748dc9c6-j9ffw", "model_id": "A", "runtime_sha256": "6995276d1329f06f245f4b86cb925e3b44e7dcce8c01a0caacdb50745e1df378", "backend_mode": "simulated", "session_id": "client-2", "peer": "10.244.0.10"}
+{"ts": 1794948464.9035954, "event": "finished", "outcome": "ok", "request_id": "A-restore-A-0030", "pod": "hw11-api-5f748dc9c6-j9ffw", "model_id": "A", "runtime_sha256": "6995276d1329f06f245f4b86cb925e3b44e7dcce8c01a0caacdb50745e1df378", "backend_mode": "simulated", "session_id": "client-2", "peer": "10.244.0.10"}
+{"ts": 1794948465.721489, "event": "received", "warm": true, "request_id": "A-restore-A-0031", "pod": "hw11-api-5f748dc9c6-j9ffw", "model_id": "A", "runtime_sha256": "6995276d1329f06f245f4b86cb925e3b44e7dcce8c01a0caacdb50745e1df378", "backend_mode": "simulated", "session_id": "client-3", "peer": "10.244.0.9"}
+{"ts": 1794948465.9034317, "event": "finished", "outcome": "ok", "request_id": "A-restore-A-0031", "pod": "hw11-api-5f748dc9c6-j9ffw", "model_id": "A", "runtime_sha256": "6995276d1329f06f245f4b86cb925e3b44e7dcce8c01a0caacdb50745e1df378", "backend_mode": "simulated", "session_id": "client-3", "peer": "10.244.0.9"}

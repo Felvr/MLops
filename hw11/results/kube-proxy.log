@@ -1,0 +1,2 @@
+I1117 20:38:17.933281       1 server_linux.go:170] "Using iptables Proxier"
+I1117 20:38:17.938018       1 proxier.go:255] "Setting route_localnet=1 to allow node-ports on localhost; to change this either disable iptables.localhostNodePorts (--iptables-localhost-nodeports) or set nodePortAddresses (--nodeport-addresses) to filter loopback addresses" ipFamily="IPv4"

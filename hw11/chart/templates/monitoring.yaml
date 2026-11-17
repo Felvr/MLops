@@ -1,0 +1,161 @@
+{{- if .Values.monitoring.enabled }}
+apiVersion: v1
+kind: ServiceAccount
+metadata: {name: hw11-monitor}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ .Release.Namespace }}-monitor
+rules:
+  - apiGroups: [""]
+    resources: [pods, nodes, nodes/proxy]
+    verbs: [get, list, watch]
+  - apiGroups: [apps]
+    resources: [deployments]
+    verbs: [get, list, watch]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ .Release.Namespace }}-monitor
+roleRef: {apiGroup: rbac.authorization.k8s.io, kind: ClusterRole, name: {{ .Release.Namespace }}-monitor}
+subjects:
+  - {kind: ServiceAccount, name: hw11-monitor, namespace: {{ .Release.Namespace }}}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: hw11-prometheus}
+data:
+  prometheus.yml: |
+{{ .Files.Get "monitoring/prometheus.yml" | indent 4 }}
+  rules.yml: |
+{{ .Files.Get "monitoring/rules.yml" | indent 4 }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: hw11-prometheus}
+spec:
+  replicas: 1
+  strategy: {type: Recreate}
+  selector:
+    matchLabels: {app: hw11-prometheus}
+  template:
+    metadata:
+      labels: {app: hw11-prometheus}
+      annotations:
+        config-sha: {{ printf "%s%s" (.Files.Get "monitoring/prometheus.yml") (.Files.Get "monitoring/rules.yml") | sha256sum }}
+    spec:
+      serviceAccountName: hw11-monitor
+      securityContext: {fsGroup: 65534}
+      containers:
+        - name: prometheus
+          image: {{ .Values.monitoring.prometheusImage | quote }}
+          args:
+            - --config.file=/etc/prometheus/prometheus.yml
+            - --storage.tsdb.path=/prometheus
+            - --storage.tsdb.retention.time=8h
+            - --storage.tsdb.retention.size=128MB
+          ports: [{containerPort: 9090}]
+          resources:
+            requests: {cpu: 50m, memory: 96Mi}
+            limits: {cpu: 300m, memory: 256Mi}
+          volumeMounts:
+            - {name: config, mountPath: /etc/prometheus, readOnly: true}
+            - {name: data, mountPath: /prometheus}
+      volumes:
+        - name: config
+          configMap: {name: hw11-prometheus}
+        - name: data
+          emptyDir: {sizeLimit: 256Mi}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: hw11-kube-state}
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: hw11-kube-state}
+  template:
+    metadata:
+      labels: {app: hw11-kube-state}
+    spec:
+      serviceAccountName: hw11-monitor
+      containers:
+        - name: kube-state
+          image: {{ .Values.monitoring.kubeStateImage | quote }}
+          args: ["--resources=deployments", "--namespaces={{ .Release.Namespace }}"]
+          ports: [{containerPort: 8080}]
+          resources:
+            requests: {cpu: 20m, memory: 32Mi}
+            limits: {cpu: 150m, memory: 96Mi}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: hw11-grafana}
+data:
+  datasource.yaml: |
+    apiVersion: 1
+    datasources:
+      - name: Prometheus
+        uid: hw11-prom
+        type: prometheus
+        url: http://hw11-prometheus:9090
+        access: proxy
+        isDefault: true
+  provider.yaml: |
+    apiVersion: 1
+    providers:
+      - name: hw11
+        type: file
+        options: {path: /dashboard}
+  dashboard.json: |
+{{ .Files.Get "monitoring/dashboard.json" | indent 4 }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: hw11-grafana}
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: hw11-grafana}
+  template:
+    metadata:
+      labels: {app: hw11-grafana}
+      annotations:
+        dashboard-sha: {{ .Files.Get "monitoring/dashboard.json" | sha256sum }}
+    spec:
+      automountServiceAccountToken: false
+      securityContext: {fsGroup: 472}
+      containers:
+        - name: grafana
+          image: {{ .Values.monitoring.grafanaImage | quote }}
+          ports: [{containerPort: 3000}]
+          env:
+            - {name: GF_AUTH_ANONYMOUS_ENABLED, value: "true"}
+            - {name: GF_AUTH_ANONYMOUS_ORG_ROLE, value: Viewer}
+            - {name: GF_AUTH_DISABLE_LOGIN_FORM, value: "true"}
+            - {name: GF_ANALYTICS_REPORTING_ENABLED, value: "false"}
+          resources:
+            requests: {cpu: 40m, memory: 96Mi}
+            limits: {cpu: 350m, memory: 256Mi}
+          volumeMounts:
+            - {name: grafana, mountPath: /etc/grafana/provisioning/datasources/datasource.yaml, subPath: datasource.yaml}
+            - {name: grafana, mountPath: /etc/grafana/provisioning/dashboards/provider.yaml, subPath: provider.yaml}
+            - {name: grafana, mountPath: /dashboard/dashboard.json, subPath: dashboard.json}
+            - {name: data, mountPath: /var/lib/grafana}
+      volumes:
+        - name: grafana
+          configMap: {name: hw11-grafana}
+        - name: data
+          emptyDir: {sizeLimit: 128Mi}
+{{- range list (list "prometheus" 9090) (list "grafana" 3000) (list "kube-state" 8080) }}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: hw11-{{ index . 0 }}}
+spec:
+  selector: {app: hw11-{{ index . 0 }}}
+  ports: [{port: {{ index . 1 }} }]
+{{- end }}
+{{- end }}

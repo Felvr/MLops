@@ -13,6 +13,7 @@
 | [ДЗ5](hw5/README.md) | LoRA-прогон на 32/8 примерах MedQuAD, все 9 проверок пройдены | [defects.md](hw5/docs/defects.md), [compare.md](hw5/docs/compare.md) |
 | [ДЗ6+7](hw67/README.md) | Шесть LoRA-конфигураций, MLflow, golden set и gate качества | [conclusion.md](hw67/docs/conclusion.md), [defects.md](hw67/docs/defects.md) |
 | [ДЗ8+9+10](hw8910/README.md) | Prefect, строгий выпуск, FastAPI и реальный CPU benchmark Qwen3 | [report.md](hw8910/docs/report.md), [defects.csv](hw8910/defects.csv) |
+| [ДЗ11](hw11/README.md) | Kubernetes, Helm, streaming API, прогрев, маршрутизация и CPU HPA | [report.html](hw11/report.html) |
 
 ## Запуск
 

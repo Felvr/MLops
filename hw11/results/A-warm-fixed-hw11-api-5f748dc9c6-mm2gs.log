@@ -1,0 +1,6 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+{"ts": 1794948350.3459806, "event": "loaded", "pod": "hw11-api-5f748dc9c6-mm2gs", "model_id": "A", "runtime_sha256": "6995276d1329f06f245f4b86cb925e3b44e7dcce8c01a0caacdb50745e1df378", "backend_mode": "simulated"}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+{"ts": 1794948370.344866, "event": "warm", "pod": "hw11-api-5f748dc9c6-mm2gs", "model_id": "A", "runtime_sha256": "6995276d1329f06f245f4b86cb925e3b44e7dcce8c01a0caacdb50745e1df378", "backend_mode": "simulated"}
