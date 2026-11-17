@@ -102,7 +102,7 @@ curl -N http://localhost:18080/generate \
 - `results/checks.json` — собственные проверки через Kubernetes Service.
 - `results/B-*-metrics.json`, `C-metrics.json` — выгрузки Prometheus.
 - `chart/`, Dockerfile, `uv.lock` и тесты.
-- [Сценарий самостоятельной записи видео](video.md).
+- [Готовый видеообзор на 2 минуты](video.mp4) и [сценарий](video.md).
 
 Файл модели — небольшой JSON в immutable ConfigMap.
 Процесс проверяет SHA-256 и model_id перед прогревом. Все реплики получают
